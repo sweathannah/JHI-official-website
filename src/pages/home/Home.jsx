@@ -1,4 +1,12 @@
+import React, { useState } from 'react';
+
 const Home = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <div className="font-[Montserrat]">
       <header>
@@ -34,10 +42,10 @@ const Home = () => {
         </section>
 
         {/* Mobile Navbar */}
-        <div id="mobileMenu" className="lg:hidden fixed inset-0 bg-white z-20 transform -translate-x-full transition-transform duration-300">
+        <div className={`lg:hidden fixed w-[80%] inset-0 bg-white z-20 transform ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300`}>
           {/* Close Button (X icon) */}
-          <button id="closeMenuButton" className="absolute top-4 right-4">
-            <img src="./Assets/Images/close_icon.svg" alt="Close Icon" />
+          <button onClick={toggleMobileMenu} className="absolute top-4 right-4">
+            <img src="../public/images/close_icon.svg" alt="Close Icon" />
           </button>
           <nav className="p-8">
             <ul className="text-[#333333] text-lg space-y-6">
@@ -54,7 +62,7 @@ const Home = () => {
         <section className="lg:px-[6.25rem] px-[1rem] py-[1.6rem] bg-white flex items-center justify-between">
           <div className="flex flex-row items-center lg:w-[12rem] w-full">
             <img src="../public/images/jhi_logo.svg" alt="JHI logo" className="w-[11rem] z-10" />
-            <button id="menuButton" className="lg:hidden ml-auto">
+            <button onClick={toggleMobileMenu} className="lg:hidden ml-auto">
               <img src="../public/images/menu_icon.svg" alt="Menu Icon" className="w-8" />
             </button>
           </div>
@@ -72,7 +80,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="w-f h-[100vh] bg-cover bg-no-repeat" style={{ backgroundImage: 'url(../public/images/header.jpeg)' }}>
+        <section className="w-full h-[100vh] bg-cover bg-no-repeat" style={{ backgroundImage: 'url(../public/images/header.jpeg)' }}>
         </section>
       </header>
     </div>
