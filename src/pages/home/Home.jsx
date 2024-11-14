@@ -13,9 +13,7 @@ const Home = () => {
             <a href="tel:+2348179969112" className="w-fit">
               +234-817-996-9112 /
             </a>
-            <a href="tel:+234-708-707-0523">
-              +234-708-707-0523
-            </a>
+            
           </div>
           <div className="flex flex-row text-[#fff] space-x-[1.25rem]">
             <a href="https://x.com/jhinitiative01?s=21" className="flex flex-row space-x-[0.5rem] items-center">
