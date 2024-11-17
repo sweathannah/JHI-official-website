@@ -7,9 +7,11 @@ import Mentorship from './pages/mentorship/Mentorship.jsx';
 import Program from './pages/program/Program.jsx';
 import Team from './pages/team/Team.jsx';
 import './index.css'
+import Header from './components/layout/Header.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <Header />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="board" element={<Board />} />
