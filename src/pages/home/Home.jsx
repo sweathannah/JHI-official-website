@@ -70,7 +70,7 @@ const Home = () => {
           <div className="lg:flex hidden">
             <nav>
               <ul className="font-[400] text-[1rem] text-[#333333] flex flex-row space-x-[2.6rem]">
-                <li><a href="./index.html" className="nav-link">Home</a></li>
+                <li><a href="./index.html" className="font-[400] text-[1rem]">Home</a></li>
                 <li><a href="./about.html" className="nav-link">About Us</a></li>
                 <li><a href="./programs.html" className="nav-link">Programs</a></li>
                 <li><a href="./media.html" className="nav-link">Media</a></li>
