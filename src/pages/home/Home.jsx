@@ -63,9 +63,12 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='px-[6.25rem] py-[10rem] flex flex-row'>
-        <article className='w-[50%]'>
-          <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] rounded-[0.3rem] '>About Us</h3>
+      <section className='lg:px-[6.25rem] p-[2rem] lg:py-[10rem] flex flex-row'>
+        <article className='lg:w-[50%]'>
+          <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] '>About Us</h3>
+          <h4 className='my-[1.25rem] text-[#292666] font-[600] lg:text-[2.5rem] text-[1.2rem] '>
+            Founded On Principles Of Empathy, Empowerment & Community
+          </h4>
         </article>
         <article></article>
       </section>
