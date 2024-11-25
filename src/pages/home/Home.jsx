@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import './styles/home.css'
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// Swiper modules
+import { Pagination, Navigation } from 'swiper/modules';
+
 
 const Home = () => {
   
@@ -101,6 +109,7 @@ const Home = () => {
           <img src="./images/about_image.svg" alt="about_image" />
         </article>
       </section>
+
       <section style={{ backgroundImage: 'url(/images/impact_image.svg)'}} className='w-full h-fit bg-cover bg-no-repeat py-[10rem]'>
         <h2 className='w-fit m-auto lg:pt-0 pt-[8rem] lg:text-[2.5rem] text-[2rem] text-[#292666] font-semibold '>Our Impact</h2>
         <article className="w-fit m-auto mt-[5rem] flex flex-wrap justify-center items-center lg:flex-row flex-col text-[#292666] lg:space-x-[2.75rem] space-x-0 space-y-[2.75rem] lg:space-y-0 px-1">
@@ -129,6 +138,72 @@ const Home = () => {
             <h3 className='font-medium bold text-[1.5rem] mb-[0.25rem] '>About 20+</h3>
             <p className='font-normal text-[1rem] '>Schools Supported</p>
           </div>
+        </article>
+      </section>
+
+      <section className='lg:px-[4rem] p-[2rem] lg:pt-[10rem] flex flex-col space-y-[3.4rem] '>
+        <article className='flex flex-row flex-wrap items-center lg:gap-[10.56rem] gap-[3rem]'>
+          <div className='max-w-[55.69rem]'>
+            <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] '>Programs</h3>
+            <h4 className='my-[1.25rem] text-[#292666] font-[600] lg:text-[2.5rem] text-[1.8rem] '>
+              Nurturing Impactful Initiatives For Positive Change
+            </h4>
+            <p className='font-[400] text-[1.125rem] leading-[1.9rem] text-[#333333]'>
+              Our Positive Impact Projects tackle social, economic, and environmental issues, while our Community Building Initiatives promote social cohesion through events and training. Our approach emphasizes collaboration, sustainability, cultural sensitivity, and empowerment. By focusing on these principles, we aim to drive transformative change and enable individuals and communities to reach their full potential.
+            </p>
+          </div>
+          <div>
+            <a href="#" className='bg-[#258CCF] rounded-[0.5rem] py-[1.25rem] px-[3.06rem] '>
+              <button className='text-[#FFFFFF] font-[700] text-[1rem] Mulish'>
+                See More
+              </button>
+            </a>
+          </div>
+        </article>
+        <article className="relative w-full">
+          <Swiper
+            modules={[Pagination, Navigation]}
+            pagination={{ clickable: true }}
+            navigation
+            spaceBetween={30}
+            slidesPerView={1}
+            className="w-full h-fit"
+          >
+            <SwiperSlide>
+              <div className="flex justify-center">
+                <img src="/images/header_image2.svg" alt="slide-2" className='w-[50%] rounded-s-[1.875rem] h-fit' />
+                <div className="p-[1.875rem] bg-[#292666] rounded-e-[1.875rem] w-[50%]">
+                  <div className='bg-white rounded-[1.875rem] p-[1.875rem] h-full text-[#333333]'>
+                    <h3 className=' font-[600] text-[1.5rem] mb-[0.75rem] '>Mentorship Programs</h3>
+                    <p className='font-[400] text-[1rem] leading-[1.93rem]'>
+                      Our Positive Impact Projects tackle social, economic, and environmental issues, while our Community Building Initiatives promote social cohesion through events and training. Our approach emphasizes collaboration, sustainability, cultural sensitivity, and empowerment. By focusing on these principles, we aim to drive transformative change and enable individuals and communities to reach their full potential.
+                    </p>
+                    <a href="#" className='text-[#FFAA00] font-normal text-[1rem] my-[1.5rem] '>
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex items-center space-x-4">
+                <img src="/images/about_image.svg" alt="slide-1" />
+                <div className="p-4 bg-[#f3f3f3] rounded-lg">
+                  <h3>Mentorship Programs</h3>
+                  <p>Your slide content goes here.</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex items-center space-x-4">
+                <img src="/images/header_image3.svg" alt="slide-3" />
+                <div className="p-4 bg-[#f3f3f3] rounded-lg">
+                  <h3>Impact Projects</h3>
+                  <p>Your slide content goes here.</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </article>
       </section>
     </div>
