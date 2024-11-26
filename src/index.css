@@ -2,6 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.rotate45{
-    -webkit-transform: rotate(90deg);
-}
