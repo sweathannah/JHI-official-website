@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div className="font-[Montserrat]">
       
-      <section className="w-full h-[100vh] bg-cover bg-no-repeat flex flex-col justify-between" style={{ backgroundImage: 'url(../public/images/header.jpeg)' }}>
+      <section className="w-full h-[100vh] bg-cover bg-no-repeat flex flex-col justify-between" style={{ backgroundImage: 'url(/images/header.jpeg)' }}>
         {/* Background Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-45 lg:mt-[10rem] mt-[6rem] h-full"></div>
 
