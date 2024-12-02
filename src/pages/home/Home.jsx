@@ -142,7 +142,7 @@ const Home = () => {
       </section>
 
       <section className='lg:px-[4rem] p-[2rem] lg:pt-[10rem] flex flex-col space-y-[3.4rem] '>
-        <article className='flex flex-row flex-wrap items-center lg:gap-[10.56rem] gap-[3rem]'>
+        <article className='flex flex-row flex-wrap items-center lg:gap-[8rem] gap-[3rem]'>
           <div className='max-w-[55.69rem]'>
             <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] '>Programs</h3>
             <h4 className='my-[1.25rem] text-[#292666] font-[600] lg:text-[2.5rem] text-[1.8rem] '>
@@ -170,12 +170,12 @@ const Home = () => {
             className="w-full h-fit"
           >
             <SwiperSlide>
-              <div className="flex justify-center">
-                <img src="/images/header_image2.svg" alt="slide-2" className='w-[50%] rounded-s-[1.875rem] h-fit' />
+              <div className="flex justify-center h-full">
+                <img src="/images/header_image2.svg" alt="slide-2" className='w-[50%] rounded-s-[1.875rem] h-full' />
                 <div className="p-[1.875rem] bg-[#292666] rounded-e-[1.875rem] w-[50%]">
-                  <div className='bg-white rounded-[1.875rem] p-[1.875rem] h-full text-[#333333]'>
-                    <h3 className=' font-[600] text-[1.5rem] mb-[0.75rem] '>Mentorship Programs</h3>
-                    <p className='font-[400] text-[1rem] leading-[1.93rem]'>
+                  <div className='bg-white rounded-[1.875rem] p-[1.875rem] h-full text-[#333333]  mb-[8rem]'>
+                    <h3 className=' font-[600] text-[1.5rem] mb-[0.9rem] '>Mentorship Programs</h3>
+                    <p className='font-[400] text-[0.9rem] leading-[1.5rem] w-[90%] mb-[1.5rem]'>
                       Our Positive Impact Projects tackle social, economic, and environmental issues, while our Community Building Initiatives promote social cohesion through events and training. Our approach emphasizes collaboration, sustainability, cultural sensitivity, and empowerment. By focusing on these principles, we aim to drive transformative change and enable individuals and communities to reach their full potential.
                     </p>
                     <a href="#" className='text-[#FFAA00] font-normal text-[1rem] my-[1.5rem] '>
