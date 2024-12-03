@@ -49,11 +49,11 @@ const Header = () => {
       </button>
       <nav className="p-8">
         <ul className="text-[#333333] text-lg space-y-6">
-          <li><a href="./index.html" className="nav-link">Home</a></li>
-          <li><a href="./about.html" className="nav-link">About Us</a></li>
-          <li><a href="./programs.html" className="nav-link">Programs</a></li>
-          <li><a href="./media.html" className="nav-link">Media</a></li>
-          <li><a href="./join.html" className="nav-link">Join Us</a></li>
+          <li><a href="/" className="nav-link">Home</a></li>
+          <li><a href="/about" className="nav-link">About Us</a></li> 
+          <li><a href="/programs" className="nav-link">Programs</a></li>
+           <li><a href="/media" className="nav-link">Media</a></li>
+          <li><a href="/join" className="nav-link">Join Us</a></li>
         </ul>
       </nav>
     </div>
@@ -70,11 +70,11 @@ const Header = () => {
       <div className="lg:flex hidden">
         <nav>
           <ul className="font-[400] text-[1rem] text-[#333333] flex flex-row space-x-[2.6rem]">
-            <li><a href="./index.html" className="nav-link">Home</a></li>
-            <li><a href="./about.html" className="nav-link">About Us</a></li>
-            <li><a href="./programs.html" className="nav-link">Programs</a></li>
-            <li><a href="./media.html" className="nav-link">Media</a></li>
-            <li><a href="./join.html" className="nav-link">Join Us</a></li>
+            <li><a href="/" className="nav-link">Home</a></li>
+            <li><a href="/about" className="nav-link">About Us</a></li>
+            <li><a href="/programs" className="nav-link">Programs</a></li>
+            <li><a href="/media" className="nav-link">Media</a></li>
+            <li><a href="/join" className="nav-link">Join Us</a></li>
           </ul>
         </nav>
       </div>

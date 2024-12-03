@@ -216,6 +216,20 @@ const Home = () => {
           </Swiper>
         </article>
       </section>
+
+      <section style={{ backgroundImage: 'url(/images/media_background.svg)'}} className='w-full h-fit bg-cover bg-no-repeat py-[10rem]'>
+        <article className='w-fit m-auto text-center flex flex-col items-center'>
+          <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] '>
+            Media
+          </h3>
+          <h4 className='my-[1.25rem] text-[#292666] font-[600] lg:text-[2.3rem] text-[1.8rem] w-[70%] '>
+            How We Have Drive Transformative Change And Enable Individuals & Communities
+          </h4>
+          <p className='font-[400] text-[1.125rem] leading-[1.9rem] text-[#333333]'>
+          By focusing on these principles, we aim to drive transformative change and enable individuals and communities to reach their full potential.
+          </p>
+        </article>
+      </section>
     </div>
   );
 };
