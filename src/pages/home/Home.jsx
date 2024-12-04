@@ -193,16 +193,75 @@ const Home = () => {
       </section>
 
       <section style={{ backgroundImage: 'url(/images/media_background.svg)'}} className='w-full h-fit bg-cover bg-no-repeat py-[10rem]'>
-        <article className='w-fit m-auto text-center flex flex-col items-center'>
+        <article className='w-fit m-auto text-center flex flex-col items-center max-w-[52rem]'>
           <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] '>
             Media
           </h3>
-          <h4 className='my-[1.25rem] text-[#292666] font-[600] lg:text-[2.3rem] text-[1.8rem] w-[70%] '>
+          <h4 className='my-[1.25rem] text-[#292666] font-[600] lg:text-[2.3rem] text-[1.8rem]'>
             How We Have Drive Transformative Change And Enable Individuals & Communities
           </h4>
           <p className='font-[400] text-[1.125rem] leading-[1.9rem] text-[#333333]'>
           By focusing on these principles, we aim to drive transformative change and enable individuals and communities to reach their full potential.
           </p>
+          <a href="#" className='bg-[#258CCF] rounded-[0.5rem] py-[1rem] px-[3.06rem] my-[2.5rem]'>
+            <button className='text-[#FFFFFF] font-[700] text-[1rem] Mulish'>
+              See More
+            </button>
+          </a>
+        </article>
+        <article>
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 p-4">
+  {/* Image 1 */}
+  <div className="relative col-span-2 md:col-span-1">
+    <img
+      src="/path/to/image1.jpg"
+      alt="Mentorship Programs"
+      className="w-full h-full object-cover rounded-lg border-2 border-white"
+    />
+    <div className="absolute bottom-0 left-0 w-full h-full bg-blue-700 bg-opacity-50 flex items-center justify-center text-white p-4">
+      <p className="text-center font-semibold">
+        More photos concerning our Mentorship Programs
+      </p>
+    </div>
+  </div>
+
+  {/* News & Stories */}
+  <div className="p-4 bg-yellow-500 rounded-lg text-white">
+    <h3 className="font-bold text-lg">News & Stories</h3>
+    <p className="text-sm mt-2">
+      In marking the 2024 International Day of the Girl Child...
+    </p>
+    <a href="#" className="text-blue-700 mt-2 inline-flex items-center">
+      Read More <span className="ml-2">→</span>
+    </a>
+  </div>
+
+  {/* Image 2 */}
+  <div className="relative col-span-2 md:col-span-1">
+    <img
+      src="/path/to/image2.jpg"
+      alt="Positive Impact Projects"
+      className="w-full h-full object-cover rounded-lg border-2 border-white"
+    />
+    <div className="absolute bottom-0 left-0 w-full h-full bg-blue-700 bg-opacity-50 flex items-center justify-center text-white p-4">
+      <p className="text-center font-semibold">
+        More photos on our Positive Impacts Projects
+      </p>
+    </div>
+  </div>
+
+  {/* Events Section */}
+  <div className="p-4 bg-blue-500 rounded-lg text-white">
+    <h3 className="font-bold text-lg">Events</h3>
+    <p className="text-sm mt-2">
+      The 3H Community had an engaging space on Twitter...
+    </p>
+    <a href="#" className="text-yellow-400 mt-2 inline-flex items-center">
+      See More <span className="ml-2">→</span>
+    </a>
+  </div>
+</div>
+
         </article>
       </section>
     </div>
