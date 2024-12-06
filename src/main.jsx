@@ -1,21 +1,23 @@
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home/Home.jsx';
-import Board from './pages/board/Board.jsx';
-import About from './pages/about/About.jsx';
+import WhoWeAre from './pages/about/WhoWeAre.jsx';
 import Mentorship from './pages/mentorship/MentorShip.jsx';
 import Program from './pages/program/Program.jsx';
 import Team from './pages/team/Team.jsx';
 import './index.css'
 import Header from './components/layout/Header.jsx';
+import OurBoard from './pages/about/OurBoard.jsx';
+import OurTeam from './pages/about/OurTeam.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
     <Header />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="board" element={<Board />} />
-      <Route path="about" element={<About />} />
+      <Route path="/about/ourBoard" element={<OurBoard />} />
+      <Route path='/about/ourTeam' element={<OurTeam />} />
+      <Route path="/about/whoWeAre" element={<WhoWeAre />} />
       <Route path="mentorship" element={<Mentorship />} />
       <Route path="program" element={<Program />} />
       <Route path="team" element={<Team />} />

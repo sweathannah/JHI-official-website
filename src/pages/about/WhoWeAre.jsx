@@ -8,11 +8,11 @@ import { IoIosAdd } from "react-icons/io";
 const About = () => {
   return (
     <>
-      <section className="bg-[url('/images/header.jpeg')] bg-cover bg-no-repeat h-[100vh] w-full relative flex items-center justify-center ">
+      <section className="bg-[url('/images/header.jpeg')] bg-cover bg-no-repeat h-[100vh] w-full relative flex items-center justify-center">
         {/* Background Overlay  */}
         <div className="absolute inset-0 bg-black bg-opacity-45 "></div>
 
-        <h1 className="text-white text-[52px] leading-[62px] text-center font-bold font-[Montserrat] z-10">
+        <h1 className="text-white text-[52px] leading-[62px] text-center font-bold font-[Montserrat] z-30">
           Who we are
         </h1>
       </section>
