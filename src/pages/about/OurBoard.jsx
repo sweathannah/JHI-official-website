@@ -9,7 +9,7 @@ const OurBoard = () => {
       </section>
       <section className='font-[Montserrat] max-w-[76.5rem] mx-auto mt-[6.25rem]'>
         <div>
-            <h2 className='text-[2.5rem] leading-[3rem] font-bold text-[#05175F] text-center'>Board of Trusties</h2>
+            <h2 className='text-[2.5rem] leading-[3rem] font-semibold text-[#05175F] text-center'>Board of Trusties</h2>
             <p className='text-[1.2rem] leading-[1.85rem] text-[#333333] mt-5 text-center'>JHI Board of Trustees serves as a critical community champion for the organization. Members of the Advisory Board share their gifts in service to JHI mission by providing the organization with their professional expertise; their diverse knowledge of constituent perspectives; their connections to local, national and international resources, colleagues and peers; and their philanthropic support or other forms of needed assistance.</p>
         </div>
         <div className="bg-[rgba(37,140,207,0.15)] flex max-xl:flex-col max-xl:items-center max-xl:gap-10 max-xl:text-center justify-between items-start p-10 border border-[rgba(37,140,207,1)] rounded-md mt-20">

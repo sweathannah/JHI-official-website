@@ -8,6 +8,7 @@ import Team from './pages/team/Team.jsx';
 import './index.css'
 import Header from './components/layout/Header.jsx';
 import OurBoard from './pages/about/OurBoard.jsx';
+import OurTeam from './pages/about/OurTeam.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
@@ -15,6 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about/ourBoard" element={<OurBoard />} />
+      <Route path='/about/ourTeam' element={<OurTeam />} />
       <Route path="/about/whoWeAre" element={<WhoWeAre />} />
       <Route path="mentorship" element={<Mentorship />} />
       <Route path="program" element={<Program />} />
