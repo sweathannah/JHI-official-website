@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {NavLink} from 'react-router-dom' 
+import { IoMdArrowDropdown } from "react-icons/io";
+
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -49,17 +51,17 @@ const Header = () => {
       </button>
       <nav className="p-8">
         <ul className="text-[#333333] text-lg space-y-6">
-          <li><a href="/" className="nav-link">Home</a></li>
-          <li><a href="/about" className="nav-link">About Us</a></li> 
-          <li><a href="/programs" className="nav-link">Programs</a></li>
-           <li><a href="/media" className="nav-link">Media</a></li>
-          <li><a href="/join" className="nav-link">Join Us</a></li>
+        <li><NavLink to='/' >Home</NavLink></li>
+            <li><NavLink to='/about' >About Us</NavLink></li>
+            <li><NavLink to='/programs' >Programs</NavLink></li>
+            <li><NavLink to='/media' >Media</NavLink></li>
+            <li><NavLink to='/join' >Join Us</NavLink></li>
         </ul>
       </nav>
     </div>
 
     {/* Header with Logo and Menu Icon */}
-    <section className="lg:px-[6.25rem] px-[1rem] py-[1.6rem] bg-white flex items-center justify-between">
+    <section className="lg:px-[6.25rem] px-[1rem] py-[1.6rem] bg-white flex items-center justify-between font-[Montserrat]">
       <div className="flex flex-row items-center lg:w-[12rem] w-full">
         <img src="/images/jhi_logo.svg" alt="JHI logo" className="w-[11rem] z-10" />
         <button onClick={toggleMobileMenu} className="lg:hidden ml-auto">
@@ -70,17 +72,22 @@ const Header = () => {
       <div className="lg:flex hidden">
         <nav>
           <ul className="font-[400] text-[1rem] text-[#333333] flex flex-row space-x-[2.6rem]">
-            <li><a href="/" className="nav-link">Home</a></li>
-            <li><a href="/about" className="nav-link">About Us</a></li>
-            <li><a href="/programs" className="nav-link">Programs</a></li>
-            <li><a href="/media" className="nav-link">Media</a></li>
-            <li><a href="/join" className="nav-link">Join Us</a></li>
+            <li><NavLink to='/' >Home</NavLink></li>
+            <li className='relative group'>
+              <p className='cursor-pointer flex gap-4 justify-between items-center'>About Us <span className='font-semibold'><IoMdArrowDropdown/></span></p>
+              <div className='absolute hidden group-hover:block w-[11rem] border bg-white rounded-md p-6 space-y-8 text-center -left-10 font-[Mulish] z-20'>
+                <NavLink to='/about/whoWeAre' className='block hover:text-[#258CCF]'>Who we are</NavLink>
+                <NavLink to='/about/ourTeam' className='block hover:text-[#258CCF]'>Our Team</NavLink>
+                <NavLink to='/about/ourBoard'  className='block hover:text-[#258CCF]'>Our Board</NavLink>
+              </div>
+            </li>
+            <li><NavLink to='/programs' >Programs</NavLink></li>
+            <li><NavLink to='/media' >Media</NavLink></li>
+            <li><NavLink to='/join' >Join Us</NavLink></li>
           </ul>
         </nav>
       </div>
     </section>
-
-    
   </header>
   );
 };
