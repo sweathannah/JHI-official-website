@@ -218,22 +218,47 @@ const Home = () => {
               <img src="/images/header.jpeg" alt="Group photo" className='max-w-[18rem] h-[12rem] rounded-[0.5rem]' />
             </div>
          </div>
-         <div className='flex absolute translate-y-[-30%]'>
-            <div className='px-[10rem] flex flex-row flex-wrap gap-[1.25rem] items-end'>
-              <div className="relative max-w-[17rem]">
+         <div className='flex absolute translate-y-[-23%]'>
+            <div className='px-[10rem] flex flex-row flex-wrap gap-[0.8rem] items-end'>
+              <div className="relative max-w-[17rem] ">
                 <img
                   src="/images/header_image2.svg"
                   alt="Mentorship Programs"
                   className="w-full h-full object-cover rounded-[1.25rem]"
                 />
-                <div className="absolute bottom-0 left-0 w-full h-full bg-[#05175FB2] bg-opacity-[70%] flex text-white p-4 rounded-[1.25rem]">
-                  <p className="text-start font-semibold w-10 items-end">
+                <div className="absolute bottom-0 left-0 w-full h-full bg-[#05175FB2] bg-opacity-[70%] flex text-white p-4 rounded-[1.25rem] items-end">
+                  <p className="text-start font-semibold w-[12rem] items-end">
                     More photos concerning our Mentorship Programs
                   </p>
                 </div>
               </div>
-              <div className='bg-[#FFAA00] w-fit h-fit p-[1rem] '>
-                <h5>News & Stories</h5>
+              <div className='bg-[#FFAA00] w-[12rem] h-fit p-[1rem] rounded-[1.25rem] font-[600] text-[#333333]'>
+                <h5 className=' text-[1rem] '>News & Stories</h5>
+                <p className='font-[400] text-[0.75rem] max-w-[12.875rem] my-[0.5rem] '>In marking the 2024 International Day of the Girl Child, the JHI...</p>
+                <a href="#" className='text-[#258CCF] text-[0.75rem] flex items-center gap-[0.2rem]'>
+                  Read More
+                  <img src="/images/blue_arrow.svg" alt="blue_arrow" className='w-[0.8rem]' />
+                </a>
+              </div>
+              <div className='bg-[#258CCF] w-[12rem] h-fit p-[1rem] rounded-[1.25rem] font-[600] text-[#FFFFFF]'>
+                <h5 className=' text-[1rem] '>Events</h5>
+                <p className='font-[400] text-[0.75rem] max-w-[12.875rem] my-[0.5rem] '>The JHI Community had an engaging space on Twitter on Mental Health...</p>
+                <a href="#" className='text-[#292666] text-[0.75rem] flex items-center gap-[0.2rem]'>
+                  See More
+                  <img src="/images/darkblue_arrow.svg" alt="blue_arrow" className='w-[0.8rem]' />
+                </a>
+              </div>
+              <div className="relative max-w-[17rem] ">
+                <img
+                  src="/images/header_image2.svg"
+                  alt="Mentorship Programs"
+                  className="w-full h-full object-cover rounded-[1.25rem]"
+                />
+                <div className="absolute bottom-0 left-0 w-full h-full bg-[#05175FB2] bg-opacity-[70%] flex text-white p-4 rounded-[1.25rem] items-end">
+                  <p className="text-start font-semibold w-[12rem] items-end">
+                    More photos on our Positive Impacts Projects
+                  </p>
+                </div>
               </div>
             </div>
           </div>
