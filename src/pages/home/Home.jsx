@@ -192,7 +192,7 @@ const Home = () => {
         </article>
       </section>
 
-      <section style={{ backgroundImage: 'url(/images/media_background.svg)'}} className='w-full h-fit bg-cover bg-no-repeat py-[10rem]'>
+      <section style={{ backgroundImage: 'url(/images/media_background.svg)'}} className='w-full h-[80rem] bg-cover bg-no-repeat py-[10rem] px-6'>
         <article className='w-fit m-auto text-center flex flex-col items-center max-w-[52rem]'>
           <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] '>
             Media
@@ -209,59 +209,34 @@ const Home = () => {
             </button>
           </a>
         </article>
-        <article>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 p-4">
-  {/* Image 1 */}
-  <div className="relative col-span-2 md:col-span-1">
-    <img
-      src="/path/to/image1.jpg"
-      alt="Mentorship Programs"
-      className="w-full h-full object-cover rounded-lg border-2 border-white"
-    />
-    <div className="absolute bottom-0 left-0 w-full h-full bg-blue-700 bg-opacity-50 flex items-center justify-center text-white p-4">
-      <p className="text-center font-semibold">
-        More photos concerning our Mentorship Programs
-      </p>
-    </div>
-  </div>
-
-  {/* News & Stories */}
-  <div className="p-4 bg-yellow-500 rounded-lg text-white">
-    <h3 className="font-bold text-lg">News & Stories</h3>
-    <p className="text-sm mt-2">
-      In marking the 2024 International Day of the Girl Child...
-    </p>
-    <a href="#" className="text-blue-700 mt-2 inline-flex items-center">
-      Read More <span className="ml-2">→</span>
-    </a>
-  </div>
-
-  {/* Image 2 */}
-  <div className="relative col-span-2 md:col-span-1">
-    <img
-      src="/path/to/image2.jpg"
-      alt="Positive Impact Projects"
-      className="w-full h-full object-cover rounded-lg border-2 border-white"
-    />
-    <div className="absolute bottom-0 left-0 w-full h-full bg-blue-700 bg-opacity-50 flex items-center justify-center text-white p-4">
-      <p className="text-center font-semibold">
-        More photos on our Positive Impacts Projects
-      </p>
-    </div>
-  </div>
-
-  {/* Events Section */}
-  <div className="p-4 bg-blue-500 rounded-lg text-white">
-    <h3 className="font-bold text-lg">Events</h3>
-    <p className="text-sm mt-2">
-      The 3H Community had an engaging space on Twitter...
-    </p>
-    <a href="#" className="text-yellow-400 mt-2 inline-flex items-center">
-      See More <span className="ml-2">→</span>
-    </a>
-  </div>
-</div>
-
+        <article className='mt-5'>
+          <div className='flex flex-row m-auto w-fit gap-[2.5rem] flex-wrap relative z-10'>
+            <div className='w-fit rounded-[0.5rem] lg:rounded-[1.25rem] lg:p-[1.25rem] p-[1rem] m-auto bg-[rgba(255,255,255,0.5)]' >
+              <img src="/images/header_image3.svg" alt="7 jhi's at an event" className='max-w-[18rem] rounded-[0.5rem] ' />
+            </div>
+            <div className='w-fit rounded-[0.5rem] lg:rounded-[1.25rem] lg:p-[1.25rem] p-[1rem] bg-[rgba(255,255,255,0.5)]' >
+              <img src="/images/header.jpeg" alt="Group photo" className='max-w-[18rem] h-[12rem] rounded-[0.5rem]' />
+            </div>
+         </div>
+         <div className='flex absolute translate-y-[-30%]'>
+            <div className='px-[10rem] flex flex-row flex-wrap gap-[1.25rem] items-end'>
+              <div className="relative max-w-[17rem]">
+                <img
+                  src="/images/header_image2.svg"
+                  alt="Mentorship Programs"
+                  className="w-full h-full object-cover rounded-[1.25rem]"
+                />
+                <div className="absolute bottom-0 left-0 w-full h-full bg-[#05175FB2] bg-opacity-[70%] flex text-white p-4 rounded-[1.25rem]">
+                  <p className="text-start font-semibold w-10 items-end">
+                    More photos concerning our Mentorship Programs
+                  </p>
+                </div>
+              </div>
+              <div className='bg-[#FFAA00] w-fit h-fit p-[1rem] '>
+                <h5>News & Stories</h5>
+              </div>
+            </div>
+          </div>
         </article>
       </section>
     </div>
