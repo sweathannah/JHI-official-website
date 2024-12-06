@@ -8,6 +8,7 @@ import 'swiper/css/navigation';
 
 // Swiper modules
 import { Pagination, Navigation } from 'swiper/modules';
+import Hero from '../../components/Hero';
 
 
 const Home = () => {
@@ -16,33 +17,7 @@ const Home = () => {
   return (
     <div className="font-[Montserrat]">
       
-      <section className="w-full h-[100vh] bg-cover bg-no-repeat flex flex-col justify-between" style={{ backgroundImage: 'url(/images/header.jpeg)' }}>
-        {/* Background Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-45 lg:mt-[10rem] mt-[6rem] h-full"></div>
-
-        {/* Content Section */}
-        <div className="relative z-10 h-fit flex flex-col justify-center items-start text-start lg:px-[6.25rem] px-[1rem] lg:space-y-[2.5rem]">
-          <h1 className="text-white text-[1.8rem] lg:text-[3.25rem] font-bold lg:mt-[7rem] mt-[5rem] leading-[2rem] lg:leading-[3.875rem] ">
-            Empowering Individuals & Communities to thrive through Mentorship, Impact Projects & Community Building
-          </h1>
-          <p className="text-white text-lg lg:text-[1.4rem] lg:mt-[1.5rem] mt-[3rem] max-w-2xl">
-            The Jimoh Habibullah Initiative is an NGO dedicated to fostering empathy,
-            empowerment, and community growth. We offer ...
-          </p>
-          <button className="my-[2.125rem] lg:px-[3.06rem] px-[2rem] py-[1.25rem] bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-[700]">
-            Learn More
-          </button>
-        </div>
-
-        {/* Arrows and Tabs Section */}
-        <div className="relative z-10 flex justify-end items-center space-x-[1.3rem] px-4 pb-4">
-          <img src="./images/arrow_left.svg" alt="" className="w-fit" />
-          <img src="./images/tab1.svg" alt="" />
-          <img src="./images/tab2.svg" alt="" />
-          <img src="./images/tab1.svg" alt="" />
-          <img src="./images/arrow_right.svg" alt="" className="w-fit" />
-        </div>
-      </section>
+      <Hero />
 
       <section className='w-full flex justify-between flex-row overflow-x-scroll'>
         <div className='bg-[#258CCF] px-[2.43rem] py-[3rem] '>
@@ -142,7 +117,7 @@ const Home = () => {
       </section>
 
       <section className='lg:px-[4rem] p-[2rem] lg:pt-[10rem] flex flex-col space-y-[3.4rem] '>
-        <article className='flex flex-row flex-wrap items-center lg:gap-[10.56rem] gap-[3rem]'>
+        <article className='flex flex-row flex-wrap items-center lg:gap-[8rem] gap-[3rem]'>
           <div className='max-w-[55.69rem]'>
             <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] '>Programs</h3>
             <h4 className='my-[1.25rem] text-[#292666] font-[600] lg:text-[2.5rem] text-[1.8rem] '>
@@ -170,20 +145,30 @@ const Home = () => {
             className="w-full h-fit"
           >
             <SwiperSlide>
-              <div className="flex justify-center">
-                <img src="/images/header_image2.svg" alt="slide-2" className='w-[50%] rounded-s-[1.875rem] h-fit' />
-                <div className="p-[1.875rem] bg-[#292666] rounded-e-[1.875rem] w-[50%]">
-                  <div className='bg-white rounded-[1.875rem] p-[1.875rem] h-full text-[#333333]'>
-                    <h3 className=' font-[600] text-[1.5rem] mb-[0.75rem] '>Mentorship Programs</h3>
-                    <p className='font-[400] text-[1rem] leading-[1.93rem]'>
-                      Our Positive Impact Projects tackle social, economic, and environmental issues, while our Community Building Initiatives promote social cohesion through events and training. Our approach emphasizes collaboration, sustainability, cultural sensitivity, and empowerment. By focusing on these principles, we aim to drive transformative change and enable individuals and communities to reach their full potential.
-                    </p>
-                    <a href="#" className='text-[#FFAA00] font-normal text-[1rem] my-[1.5rem] '>
-                      Read More
-                    </a>
-                  </div>
+            <div className="flex justify-center h-full">
+              <div className="w-[45%] flex items-stretch">
+                <img src="/images/header_image2.svg" alt="slide-2" className="w-full h-full object-cover rounded-s-[1.875rem]" />
+              </div>
+              <div className='flex flex-col  w-[45%]'>
+                <div className="flex items-start bg-[#292666] text-white px-4 py-2 rounded-t-[1rem] z-10 text-sm w-fit">
+                  Mentorship Programs
+                </div>
+                <div className="p-[1.875rem] bg-[#292666] rounded-e-[1.875rem] ">
+                <div className="bg-white rounded-[1.875rem] p-[1.875rem] h-full text-[#333333] mb-[4rem]">
+                  <h3 className="font-[600] text-[1.5rem] mb-[0.9rem]">Mentorship Programs</h3>
+                  <p className="font-[400] text-[0.9rem] leading-[1.5rem] w-[90%] mb-[1.5rem]">
+                    Our Positive Impact Projects tackle social, economic, and environmental issues, while our Community Building Initiatives promote social cohesion through events and training. Our approach emphasizes collaboration, sustainability, cultural sensitivity, and empowerment. By focusing on these principles, we aim to drive transformative change and enable individuals and communities to reach their full potential.
+                  </p>
+                  <a href="#" className="text-[#FFAA00] font-normal text-[1rem] my-[1.5rem] flex flex-row">
+                    Read More
+                    <img src="/images/yellow_arrow.svg" alt="Yellow arrow right" className='px-[0.6rem]' />
+                  </a>
+                </div>
                 </div>
               </div>
+              
+            </div>
+
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex items-center space-x-4">
@@ -204,6 +189,79 @@ const Home = () => {
               </div>
             </SwiperSlide>
           </Swiper>
+        </article>
+      </section>
+
+      <section style={{ backgroundImage: 'url(/images/media_background.svg)'}} className='w-full h-fit bg-cover bg-no-repeat py-[10rem]'>
+        <article className='w-fit m-auto text-center flex flex-col items-center max-w-[52rem]'>
+          <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] '>
+            Media
+          </h3>
+          <h4 className='my-[1.25rem] text-[#292666] font-[600] lg:text-[2.3rem] text-[1.8rem]'>
+            How We Have Drive Transformative Change And Enable Individuals & Communities
+          </h4>
+          <p className='font-[400] text-[1.125rem] leading-[1.9rem] text-[#333333]'>
+          By focusing on these principles, we aim to drive transformative change and enable individuals and communities to reach their full potential.
+          </p>
+          <a href="#" className='bg-[#258CCF] rounded-[0.5rem] py-[1rem] px-[3.06rem] my-[2.5rem]'>
+            <button className='text-[#FFFFFF] font-[700] text-[1rem] Mulish'>
+              See More
+            </button>
+          </a>
+        </article>
+        <article>
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 p-4">
+  {/* Image 1 */}
+  <div className="relative col-span-2 md:col-span-1">
+    <img
+      src="/path/to/image1.jpg"
+      alt="Mentorship Programs"
+      className="w-full h-full object-cover rounded-lg border-2 border-white"
+    />
+    <div className="absolute bottom-0 left-0 w-full h-full bg-blue-700 bg-opacity-50 flex items-center justify-center text-white p-4">
+      <p className="text-center font-semibold">
+        More photos concerning our Mentorship Programs
+      </p>
+    </div>
+  </div>
+
+  {/* News & Stories */}
+  <div className="p-4 bg-yellow-500 rounded-lg text-white">
+    <h3 className="font-bold text-lg">News & Stories</h3>
+    <p className="text-sm mt-2">
+      In marking the 2024 International Day of the Girl Child...
+    </p>
+    <a href="#" className="text-blue-700 mt-2 inline-flex items-center">
+      Read More <span className="ml-2">→</span>
+    </a>
+  </div>
+
+  {/* Image 2 */}
+  <div className="relative col-span-2 md:col-span-1">
+    <img
+      src="/path/to/image2.jpg"
+      alt="Positive Impact Projects"
+      className="w-full h-full object-cover rounded-lg border-2 border-white"
+    />
+    <div className="absolute bottom-0 left-0 w-full h-full bg-blue-700 bg-opacity-50 flex items-center justify-center text-white p-4">
+      <p className="text-center font-semibold">
+        More photos on our Positive Impacts Projects
+      </p>
+    </div>
+  </div>
+
+  {/* Events Section */}
+  <div className="p-4 bg-blue-500 rounded-lg text-white">
+    <h3 className="font-bold text-lg">Events</h3>
+    <p className="text-sm mt-2">
+      The 3H Community had an engaging space on Twitter...
+    </p>
+    <a href="#" className="text-yellow-400 mt-2 inline-flex items-center">
+      See More <span className="ml-2">→</span>
+    </a>
+  </div>
+</div>
+
         </article>
       </section>
     </div>
