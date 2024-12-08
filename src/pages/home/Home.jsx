@@ -85,9 +85,9 @@ const Home = () => {
         </article>
       </section>
 
-      <section style={{ backgroundImage: 'url(/images/impact_image.svg)'}} className='w-full h-fit bg-cover bg-no-repeat py-[10rem]'>
+      <section style={{ backgroundImage: 'url(/images/bgs/impact_image.svg)'}} className='w-full h-fit bg-cover bg-no-repeat py-[10rem]'>
         <h2 className='w-fit m-auto lg:pt-0 pt-[8rem] lg:text-[2.5rem] text-[2rem] text-[#292666] font-semibold '>Our Impact</h2>
-        <article className="w-fit m-auto mt-[5rem] flex flex-wrap justify-center items-center lg:flex-row flex-col text-[#292666] lg:space-x-[2.75rem] space-x-0 space-y-[2.75rem] lg:space-y-0 px-1">
+        <article className="w-fit m-auto mt-[5rem] flex flex-wrap justify-center items-center  text-[#292666] gap-[2.75rem] px-1">
           <div className="flex flex-col items-center transform transition duration-300 hover:scale-125">
             <img src="./images/people_icon.svg" alt="people_icon"className='mb-[1.19rem]' />
             <h3 className='font-medium bold text-[1.5rem] mb-[0.25rem] '>More than 500+</h3>
@@ -136,14 +136,19 @@ const Home = () => {
           </div>
         </article>
         <article className="relative w-full">
-          <Swiper
-            modules={[Pagination, Navigation]}
-            pagination={{ clickable: true }}
-            navigation
-            spaceBetween={30}
-            slidesPerView={1}
-            className="w-full h-fit"
-          >
+              <Swiper
+        modules={[Pagination, Navigation]}
+        pagination={{ clickable: true }}
+        navigation
+        spaceBetween={30}
+        slidesPerView={1}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="w-full h-fit"
+>
             <SwiperSlide>
             <div className="flex justify-center h-full">
               <div className="w-[45%] flex items-stretch">
@@ -192,8 +197,8 @@ const Home = () => {
         </article>
       </section>
 
-      <section style={{ backgroundImage: 'url(/images/media_background.svg)'}} className='w-full h-[80rem] bg-cover bg-no-repeat py-[10rem] px-6'>
-        <article className='w-fit m-auto text-center flex flex-col items-center max-w-[52rem]'>
+      <section style={{ backgroundImage: 'url(/images/bgs/media_background.svg)'}} className='w-full lg:h-[65rem] h-[140rem] bg-cover bg-no-repeat px-6'>
+        <article className='w-fit m-auto text-center flex flex-col items-center max-w-[52rem] pt-[10rem]'>
           <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] '>
             Media
           </h3>
@@ -218,21 +223,21 @@ const Home = () => {
               <img src="/images/header.jpeg" alt="Group photo" className='max-w-[18rem] h-[12rem] rounded-[0.5rem]' />
             </div>
          </div>
-         <div className='flex absolute translate-y-[-23%]'>
-            <div className='px-[10rem] flex flex-row flex-wrap gap-[0.8rem] items-end'>
-              <div className="relative max-w-[17rem] ">
+         <div className='flex absolute lg:translate-y-[-32%]'>
+            <div className='lg:px-[8rem] flex flex-row flex-wrap lg:gap-[0.8rem] gap-[2.5rem] items-end '>
+              <div className="relative max-w-[19.5rem] lg:mt-0 mt-[2.5rem]">
                 <img
                   src="/images/header_image2.svg"
                   alt="Mentorship Programs"
-                  className="w-full h-full object-cover rounded-[1.25rem]"
+                  className="w-full h-full object-cover lg:rounded-[1.25rem] rounded-[0.5rem]"
                 />
-                <div className="absolute bottom-0 left-0 w-full h-full bg-[#05175FB2] bg-opacity-[70%] flex text-white p-4 rounded-[1.25rem] items-end">
+                <div className="absolute bottom-0 left-0 w-full h-full bg-[#05175FB2] bg-opacity-[70%] flex text-white p-4 lg:rounded-[1.25rem] rounded-[0.5rem] items-end">
                   <p className="text-start font-semibold w-[12rem] items-end">
                     More photos concerning our Mentorship Programs
                   </p>
                 </div>
               </div>
-              <div className='bg-[#FFAA00] w-[12rem] h-fit p-[1rem] rounded-[1.25rem] font-[600] text-[#333333]'>
+              <div className='bg-[#FFAA00] lg:w-[12rem] w-[19rem] lg:h-fit h-[] p-[1rem] rounded-[1.25rem] font-[600] text-[#333333]'>
                 <h5 className=' text-[1rem] '>News & Stories</h5>
                 <p className='font-[400] text-[0.75rem] max-w-[12.875rem] my-[0.5rem] '>In marking the 2024 International Day of the Girl Child, the JHI...</p>
                 <a href="#" className='text-[#258CCF] text-[0.75rem] flex items-center gap-[0.2rem]'>
@@ -248,19 +253,49 @@ const Home = () => {
                   <img src="/images/darkblue_arrow.svg" alt="blue_arrow" className='w-[0.8rem]' />
                 </a>
               </div>
-              <div className="relative max-w-[17rem] ">
+              <div className="relative max-w-[19.5rem] lg:mt-0 mt-[2.5rem]">
                 <img
-                  src="/images/header_image2.svg"
+                  src="/images/skill_image.svg"
                   alt="Mentorship Programs"
-                  className="w-full h-full object-cover rounded-[1.25rem]"
+                  className="w-full h-full object-cover lg:rounded-[1.25rem] rounded-[0.5rem]"
                 />
-                <div className="absolute bottom-0 left-0 w-full h-full bg-[#05175FB2] bg-opacity-[70%] flex text-white p-4 rounded-[1.25rem] items-end">
+                <div className="absolute bottom-0 left-0 w-full h-full flex text-white p-4 lg:rounded-[1.25rem] rounded-[0.5rem] items-end">
                   <p className="text-start font-semibold w-[12rem] items-end">
                     More photos on our Positive Impacts Projects
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+        </article>
+      </section>
+
+      <section>
+        <article className='w-fit m-auto text-center flex flex-col items-center max-w-[52rem] pt-[8rem]'>
+          <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] '>
+            Join Us
+          </h3>
+          <h4 className='my-[1.25rem] text-[#292666] font-[600] lg:text-[2.3rem] text-[1.8rem]'>
+            Meet Our Partners & Sponsors
+          </h4>
+          <p className='font-[400] text-[1.125rem] leading-[1.9rem] text-[#333333]'>
+            Through the gracious support and commitment of our partners, we are able to empower hundreds of people in marginalized communities.
+          </p>
+        </article>
+      </section>
+
+      <section style={{ backgroundImage: 'url(/images/bgs/feedback_background.svg)'}} className='w-full lg:h-[65rem] h-[140rem] bg-cover bg-no-repeat px-6'>
+        <article className='flex flex-row flex-wrap items-center lg:gap-[8rem] gap-[3rem]'>
+          <div className='max-w-[55.69rem]'>
+            <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] '>
+              Who We Are
+            </h3>
+            <h4 className='my-[1.25rem] text-[#292666] font-[600] lg:text-[2.5rem] text-[1.8rem] '>
+              Success Stories From Those Whom JHI Impacted
+            </h4>
+            <p className='font-[400] text-[1.125rem] leading-[1.9rem] text-[#333333]'>
+              Through a blend of innovation, collaboration, and dedicated effort, these success stories illuminate the path towards a more inclusive, equitable, and empowered future.
+            </p>
           </div>
         </article>
       </section>
