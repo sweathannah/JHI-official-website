@@ -24,11 +24,6 @@ const PartnersSection = () => {
       link: 'https://www.reckitt.com',
     },
     {
-      name: 'Dettol',
-      logo: './images/partners_images/dettol.svg',
-      link: 'https://www.dettol.co.uk',
-    },
-    {
       name: 'FHI 360',
       logo: './images/partners_images/fhi360.svg',
       link: 'https://www.fhi360.org',
