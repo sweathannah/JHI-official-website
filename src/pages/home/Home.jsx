@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 // Swiper modules
 import { Pagination, Navigation } from 'swiper/modules';
 import Hero from '../../components/Hero';
+import PartnersSection from '../../components/partners';
 
 
 const Home = () => {
@@ -136,19 +137,14 @@ const Home = () => {
           </div>
         </article>
         <article className="relative w-full">
-              <Swiper
-        modules={[Pagination, Navigation]}
-        pagination={{ clickable: true }}
-        navigation
-        spaceBetween={30}
-        slidesPerView={1}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-        className="w-full h-fit"
->
+          <Swiper
+              modules={[Pagination, Navigation]}
+              pagination={{ clickable: true }}
+              navigation
+              spaceBetween={30}
+              slidesPerView={1}
+              className="w-full h-fit"
+          >
             <SwiperSlide>
             <div className="flex justify-center h-full">
               <div className="w-[45%] flex items-stretch">
@@ -270,22 +266,10 @@ const Home = () => {
         </article>
       </section>
 
-      <section>
-        <article className='w-fit m-auto text-center flex flex-col items-center max-w-[52rem] pt-[8rem]'>
-          <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] '>
-            Join Us
-          </h3>
-          <h4 className='my-[1.25rem] text-[#292666] font-[600] lg:text-[2.3rem] text-[1.8rem]'>
-            Meet Our Partners & Sponsors
-          </h4>
-          <p className='font-[400] text-[1.125rem] leading-[1.9rem] text-[#333333]'>
-            Through the gracious support and commitment of our partners, we are able to empower hundreds of people in marginalized communities.
-          </p>
-        </article>
-      </section>
+      <PartnersSection/>
 
-      <section style={{ backgroundImage: 'url(/images/bgs/feedback_background.svg)'}} className='w-full lg:h-[65rem] h-[140rem] bg-cover bg-no-repeat px-6'>
-        <article className='flex flex-row flex-wrap items-center lg:gap-[8rem] gap-[3rem]'>
+      <section style={{ backgroundImage: 'url(/images/bgs/feedback_background.svg)'}} className='w-full bg-cover bg-no-repeat p-6 '>
+        <article className='flex flex-row flex-wrap items-center lg:gap-[8rem] gap-[3rem] mt-[5rem]'>
           <div className='max-w-[55.69rem]'>
             <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] '>
               Who We Are
@@ -297,6 +281,9 @@ const Home = () => {
               Through a blend of innovation, collaboration, and dedicated effort, these success stories illuminate the path towards a more inclusive, equitable, and empowered future.
             </p>
           </div>
+        </article>
+        <article style={{ backgroundImage: 'url(/images/header_image3.svg)'}} className='w-full bg-cover bg-no-repeat h-screen'>
+        
         </article>
       </section>
     </div>
