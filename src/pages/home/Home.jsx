@@ -268,8 +268,8 @@ const Home = () => {
 
       <PartnersSection/>
 
-      <section style={{ backgroundImage: 'url(/images/bgs/feedback_background.svg)'}} className='w-full bg-cover bg-no-repeat p-6 '>
-        <article className='flex flex-row flex-wrap items-center lg:gap-[8rem] gap-[3rem] mt-[5rem]'>
+      <section style={{ backgroundImage: 'url(/images/bgs/feedback_background.svg)'}} className='w-full bg-cover bg-no-repeat lg:p-[3.75rem] p-[2rem]'>
+        <article className='flex flex-row flex-wrap items-center lg:gap-[8rem] gap-[3rem] my-[4rem]'>
           <div className='max-w-[55.69rem]'>
             <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] '>
               Who We Are
@@ -282,10 +282,67 @@ const Home = () => {
             </p>
           </div>
         </article>
-        <article style={{ backgroundImage: 'url(/images/header_image3.svg)'}} className='w-full bg-cover bg-no-repeat h-screen'>
-        
+        <article
+          style={{ backgroundImage: 'url(/images/header_image3.svg)' }}
+          className="bg-cover bg-no-repeat h-fit flex flex-wrap justify-between items-center lg:gap-[10rem] gap-6 lg:p-0 p-6"
+        >
+          <div className="card bg-[#258CCF] p-8 font-semibold text-white max-w-[28rem] animate-fade-in">
+            <span className="text-sm rounded-full bg-[#FFAA00] py-2 px-4">UO</span>
+            <h2 className="inline text-lg mx-4">Usman Olamide</h2>
+            <p className="text-sm font-normal mt-4">
+              I’m thrilled to receive this certificate after completion of course. A
+              gigantic applause to JHI for such an impactful and meaningful
+              collaborations that foster not just effective leadership aims but also
+              provide opportunities to explore.
+            </p>
+          </div>
+          <div className="card bg-[#258CCF] p-8 font-semibold text-white max-w-[28rem] animate-fade-in">
+            <span className="text-sm rounded-full bg-[#bc05d8] py-2 px-4">RA</span>
+            <h2 className="inline text-lg mx-4">Rukayat Akanbi</h2>
+            <p className="text-sm font-normal mt-4">
+              It is so amazing how small acts of service create a lasting impact. I’m
+              privileged to have participated in Okelele Medical Outreach which was
+              organized by JHI. I worked alongside Medical Professionals in dispensing
+              medications to over 100 people in need.
+            </p>
+          </div>
+          <div className="card bg-[#258CCF] p-8 font-semibold text-white max-w-[28rem] animate-fade-in">
+            <span className="text-sm rounded-full bg-[#1eb805] py-2 px-4">AM</span>
+            <h2 className="inline text-lg mx-4">Adeshina Muiz</h2>
+            <p className="text-sm font-normal mt-4">
+              Volunteering fuels community growth. Grateful to the JHI for this honor
+              and for enabling over 100 people to benefit from the medical outreach.
+              Being a volunteer in this initiative has enhanced my ability to
+              contribute to a healthier, more resilient community.
+            </p>
+          </div>
+          <div className="card bg-[#258CCF] p-8 font-semibold text-white max-w-[28rem] animate-fade-in">
+            <span className="text-sm rounded-full bg-[#d6340c] py-2 px-4">HA</span>
+            <h2 className="inline text-lg mx-4">Hauwa Abdulraheem</h2>
+            <p className="text-sm font-normal mt-4">
+              I have been learning so much from the JHI recently. I want to express my
+              heartfelt gratitude to its founder. This initiative is not just about
+              learning, it’s about building a community that empowers and uplifts each
+              other. Be a part of the community through their WhatsApp group.
+            </p>
+          </div>
         </article>
       </section>
+
+      <section className='bg-[#f1f1f1]'>
+        <article style={{ backgroundImage: 'url(/images/bgs/connect.svg)'}} className='w-full bg-cover bg-no-repeat lg:p-[3.75rem] p-[2rem]'>
+          <div className='m-auto text-[0.9rem] font-[400] max-w-[48rem] text-[#FFFFFF] text-center pt-[7.4rem]'>
+            <h3 className=' font-[700] text-[2.5rem]'>
+              Stay Connected With Us
+            </h3>
+            <p className=' py-[1.25rem] '>
+              Stay connected with JHI by joining our newsletter! Be the first to receive updates on our impactful initiatives, latest insights and stories of positive change.
+            </p>
+          </div>
+          
+        </article>
+      </section>
+      
     </div>
   );
 };
