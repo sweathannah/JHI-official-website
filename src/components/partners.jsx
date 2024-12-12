@@ -69,16 +69,6 @@ const PartnersSection = () => {
       link: 'https://www.nutritionintl.org',
     },
     {
-      name: 'Government of Canada',
-      logo: './images/partners_images/government_of_canada.svg',
-      link: 'https://www.canada.ca',
-    },
-    {
-      name: 'United Nations Global Compact',
-      logo: './images/partners_images/un_global_compact.svg',
-      link: 'https://www.unglobalcompact.org',
-    },
-    {
       name: 'UNFPA',
       logo: './images/partners_images/unfpa.svg',
       link: 'https://www.unfpa.org',
