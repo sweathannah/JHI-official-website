@@ -381,6 +381,9 @@ const Home = () => {
                 <a href="https://x.com/jhinitiative01?s=21">
                   <img src="/images/social_media_icons/X_icon.svg" alt="X_icon" />
                 </a>
+                <a href="#">
+                  <img src="/images/social_media_icons/linkedln_icon.svg" alt="linkedln_icon" />
+                </a>
               </div>
             </div>
 
@@ -472,13 +475,11 @@ const Home = () => {
           </div>
 
           {/* Footer Bottom Section */}
-          <div className="mt-10 border-t border-gray-300 pt-6 text-center text-gray-600 text-sm">
+          <div className="mt-20 border-t border-gray-300 pt-6 text-center text-gray-600 text-sm">
             © 2024 Jimoh Habibullah Initiative. All Rights Reserved.
           </div>
         </div>
       </footer>
-
-      
     </div>
   );
 };
