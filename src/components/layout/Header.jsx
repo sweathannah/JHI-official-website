@@ -180,7 +180,7 @@ const Header = () => {
                     News & Stories
                   </NavLink>
                   <NavLink
-                    to="/about/ourTeam"
+                    to="/media/Gallery"
                     className="block hover:text-[#258CCF]"
                   >
                    Gallery
