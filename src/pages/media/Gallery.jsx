@@ -18,6 +18,7 @@ const Gallery = () => {
       </section>
 
       {/* Content Section */}
+
       <GallerySection/>
     </>
     );
