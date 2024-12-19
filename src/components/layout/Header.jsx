@@ -204,10 +204,10 @@ const Header = () => {
                 </div>
                 <div className="absolute hidden group-hover:block w-[11rem] border bg-white rounded-md p-6 space-y-8  -left-6 font-[Mulish] z-20">
                   <NavLink
-                    to="/about/whoWeAre"
+                    to="/joinUs/ContactUs"
                     className="block hover:text-[#258CCF]"
                   >
-                    Who we are
+                    Contact Us
                   </NavLink>
                   <NavLink
                     to="/about/ourTeam"

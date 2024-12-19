@@ -17,7 +17,7 @@ const Gallery = () => {
       </section>
 
       {/* Content Section */}
-      <section className="py-10 px-[2rem]">
+      <section className="py-10 px-[2rem] mb-[7.5rem]">
         {/* Intro Section */}
         <article className="w-fit m-auto text-center flex flex-col items-center">
             <h4 className="my-[1.25rem] text-[#292666] font-[600] lg:text-[2.5rem] text-[1.8rem]">
