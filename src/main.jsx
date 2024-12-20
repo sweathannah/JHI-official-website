@@ -10,6 +10,8 @@ import Header from './components/layout/Header.jsx';
 import OurBoard from './pages/about/OurBoard.jsx';
 import OurTeam from './pages/about/OurTeam.jsx';
 import Gallery from './pages/media/Gallery.jsx';
+import Footer from './components/layout/Footer.jsx';
+import ContactUs from './pages/join-us/ContactUs.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
@@ -23,6 +25,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="mentorship" element={<Mentorship />} />
       <Route path="program" element={<Program />} />
       <Route path="team" element={<Team />} />
+      <Route path="/joinUs/contactUs" element={<ContactUs />} />
     </Routes>
+    <Footer />
   </BrowserRouter>
 );
