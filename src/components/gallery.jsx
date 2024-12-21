@@ -1,128 +1,53 @@
 import { useState } from "react";
 
-const GallerySection = () => {
-  const [activeTab, setActiveTab] = useState("photos");
+const PhotoSection = ({ title, images, widths }) => {
+  const [expanded, setExpanded] = useState(false);
 
-  // Array of image sources for the Photos tab
-  const imagePaths = [
-    "/images/Gallery_images/sec1_image1.svg",
-    "/images/Gallery_images/sec1_image2.svg",
-    "/images/Gallery_images/sec1_image3.svg",
-    "/images/Gallery_images/sec1_image4.svg",
-    "/images/Gallery_images/sec1_image5.svg",
-    "/images/Gallery_images/sec1_image6.svg",
-    "/images/Gallery_images/sec1_image3.svg",
-    "/images/Gallery_images/sec1_image2.svg",
-    "/images/Gallery_images/sec1_image7.svg",
-    "/images/Gallery_images/sec1_image8.svg",
-    "/images/Gallery_images/sec1_image6.svg",
-    "/images/Gallery_images/sec1_image9.svg",
-    "/images/Gallery_images/sec1_image6.svg",
-  ];
+  const toggleText = () => setExpanded(!expanded);
 
-  // Array of corresponding widths for each image
-  const imageWidths = [
-    "calc(38% - 1rem)",
-    "calc(35% - 1rem)",
-    "calc(33% - 6rem)",
-    "calc(33% - 2rem)",
-    "calc(33% - 4rem)",
-    "calc(40% - 2rem)",
-    "calc(25% - 1rem)",
-    "calc(25% - 1rem)",
-    "calc(25% - 1rem)",
-    "calc(25% - 1rem)",
-    "calc(34% - 1rem)",
-    "calc(38% - 1rem)",
-    "calc(28% - 1rem)",
-  ];
+  const displayText = expanded
+    ? title
+    : title.slice(0, 60) + (title.length > 60 ? "..." : "");
 
   return (
-    <section className="py-10 px-[2rem]">
-      {/* Intro Section */}
-      <article className="w-fit m-auto text-center flex flex-col items-center">
-        <h4 className="my-[1.25rem] text-[#292666] font-[600] lg:text-[2.5rem] text-[1.8rem]">
-          Photos & Videos
-        </h4>
-        <p className="font-[400] text-[1.125rem] leading-[1.9rem] text-[#333333] text-center mb-10 lg:max-w-[70rem] max-w-[20rem]">
-          JHI makes an effort to ensure that her members have the opportunity to
-          see all the videos and pictures about the old events. So, at JHI, all
-          the events organized are well documented.
-        </p>
+    <article className="flex flex-col mb-10">
+      {/* Expandable Title */}
+      <div className="flex justify-between items-center mt-[2rem]">
+        <p className="font-[600] text-[1.5rem] text-[#333333]">{displayText}</p>
+        <span
+          className="font-[700] text-[1rem] text-[#258CCF] cursor-pointer"
+          onClick={toggleText}
+        >
+          {expanded ? "View less" : "View more"}
+        </span>
+      </div>
 
-        {/* Tab Switcher */}
-        <div className="flex justify-center mb-16 bg-[#05175F26] rounded-[1.88rem] p-[0.3rem]">
-          <button
-            className={`lg:px-[5.4rem] px-[3rem] py-[1.125rem] rounded-full font-medium text-sm ${
-              activeTab === "photos"
-                ? "bg-[#292666] text-white"
-                : "text-[#333333]"
-            }`}
-            onClick={() => setActiveTab("photos")}
-          >
-            Photos
-          </button>
-          <button
-            className={`lg:px-[5.4rem] px-[3rem] py-[1.125rem] rounded-full font-medium text-sm ${
-              activeTab === "videos"
-                ? "bg-[#292666] text-white"
-                : "text-[#333333]"
-            }`}
-            onClick={() => setActiveTab("videos")}
-          >
-            Videos
-          </button>
-        </div>
-      </article>
-
-      {/* Videos Section */}
-      {activeTab === "videos" && (
-        <div className="flex flex-col items-center">
-          <p className="text-gray-600 text-lg mb-4">
-            Coming soon: Video gallery content
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-gray-200 w-full h-40 flex items-center justify-center">
-              <p>Video 1</p>
-            </div>
-            <div className="bg-gray-200 w-full h-40 flex items-center justify-center">
-              <p>Video 2</p>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Photos Section */}
-      {activeTab === "photos" && (
-        <article className="flex flex-col">
-          <div className="flex flex-row justify-between lg:items-center items-end my-[1rem]">
-            <p className="font-[600] text-[1.5rem] text-[#333333]">
-              Photos Of The Empowerment Youth Changemakers Leadership...
-              (12/09/24)
-            </p>
-            <span className="font-[700] text-[1rem] text-[#258CCF] cursor-pointer">
-              View less
-            </span>
-          </div>
-
-          {/* Dynamic Photo Grid */}
-          <div className="flex flex-wrap gap-4">
-            {imagePaths.map((path, index) => (
-              <img
-                key={index}
-                src={path}
-                alt={`Gallery Image ${index + 1}`}
-                style={{
-                  width: imageWidths[index],
-                }}
-                className="h-auto object-cover"
-              />
-            ))}
-          </div>
-        </article>
-      )}
-    </section>
+      {/* Dynamic Photo Grid */}
+      <div className="lg:flex hidden flex-wrap gap-4 mt-10">
+        {images.map((path, index) => (
+          <img
+            key={index}
+            src={path}
+            alt={`Gallery Image ${index + 1}`}
+            style={{
+              width: widths[index] || "calc(33% - 1rem)",
+            }}
+            className="h-auto object-cover"
+          />
+        ))}
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:hidden gap-4 mt-10">
+        {images.map((path, index) => (
+          <img
+            key={index}
+            src={path}
+            alt={`Gallery Image ${index + 1}`}
+            className="w-full h-auto object-cover rounded-[4px]"
+          />
+        ))}
+      </div>
+    </article>
   );
 };
 
-export default GallerySection;
+export default PhotoSection;
