@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 // Swiper modules
 import { Pagination, Navigation } from 'swiper/modules';
 import Hero from '../../components/Hero';
+import MentorshipCarousel from '../../components/home/MentorshipCarousel';
 
 
 const Home = () => {
@@ -157,6 +158,7 @@ const Home = () => {
             </a>
           </div>
         </article>
+        <MentorshipCarousel />
         <article className="relative w-full">
           <Swiper
             modules={[Pagination, Navigation]}
