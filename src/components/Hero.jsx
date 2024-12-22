@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 export default function Hero(props) {
   // Array of background images (update this list as needed)
   const images = [
-    './images/tab1.svg', // First image
+    './images/header.jpeg', // First image
     '/images/tab2.svg', // Second image
     './images/tab1.svg', // Third image
     // Add more images if needed
@@ -31,6 +31,15 @@ export default function Hero(props) {
   const handleTabClick = (index) => {
     setCurrentImageIndex(index); // Update the background image based on the clicked tab
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); 
+
+    // Clean up interval when the component is unmounted
+    return () => clearInterval(intervalId);
+  }, []); 
 
   return (
     <>
@@ -71,7 +80,7 @@ export default function Hero(props) {
               key={index}
               src={image}
               alt={`Tab ${index + 1}`}
-              className="cursor-pointer"
+              className="cursor-pointer w-8 h-8 rounded-full"
               onClick={() => handleTabClick(index)} // Update background when tab is clicked
             />
           ))}
