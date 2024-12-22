@@ -1,39 +1,14 @@
 import React, { useState } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import Slider1 from "./sliders/Slider1";
+import Slider3 from "./sliders/Slider3";
+import Slider2 from "./sliders/Slider2";
 
-const slides1 = [
-  {
-    id: 1,
-    title: "Mentorship Programs",
-    content: `Our Positive Impact Projects tackle social, economic, and environmental issues, while 
-              our Community Building Initiatives promote social cohesion through events and training.
-              Our approach emphasizes collaboration, sustainability, cultural sensitivity, and empowerment. 
-              By focusing on these principles, we aim to drive transformative change and enable individuals 
-              and communities to reach their full potential.`,
-    image: "/path-to-image.jpg",
-  },
-  {
-    id: 2,
-    title: "Mentorship Programs",
-    content: `Our Positive Impact Projects tackle social, economic, and environmental issues, while 
-              our Community Building Initiatives promote social cohesion through events and training.
-              Our approach emphasizes collaboration, sustainability, cultural sensitivity, and empowerment. 
-              By focusing on these principles, we aim to drive transformative change and enable individuals 
-              and communities to reach their full potential.`,
-    image: "/path-to-image.jpg",
-  },
-  // Add more slides as needed
-];
 
 const slides = [
   <Slider1 />,
-  <Slider1 />,
-  <Slider1 />,
-  <Slider1 />,
-  <Slider1 />,
-  <Slider1 />,
-  <Slider1 />,
+  <Slider2 />,
+  <Slider3 />,
 ]
 
 export default function MentorshipCarousel() {
@@ -48,7 +23,7 @@ export default function MentorshipCarousel() {
   };
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto overflow-hidden">
+    <div className="relative w-full overflow-hidden">
       {/* Slider */}
       <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {slides.map((slide, index) => (
@@ -60,23 +35,32 @@ export default function MentorshipCarousel() {
     
     
       {/* Navigation Buttons */}
-      <div className="absolute bottom-0 right-0 flex gap-3 w-fit">
+      <div className="absolute bottom-0 right-8 flex gap-3 w-fit">
         <button
           onClick={handlePrev}
-          className="transform bg-blue-600 text-white rounded-full p-1 hover:bg-blue-500"
+          className={`transform rounded-full p-1 ${
+            currentIndex === 0
+              ? "bg-gray-300 text-gray-600" // Inactive style
+              : "bg-blue-600 text-white hover:bg-blue-500" // Active style
+          }`}
         >
-          <BsChevronLeft className=" text-white"/>
+          <BsChevronLeft className={currentIndex === 0 ? "text-gray-600" : "text-white"} />
         </button>
         <button
           onClick={handleNext}
-          className="bg-blue-600 text-white rounded-full p-1 hover:bg-blue-500"
+          className={`rounded-full p-1 ${
+            currentIndex === slides.length - 1
+              ? "bg-gray-300 text-gray-600" // Inactive style
+              : "bg-blue-600 text-white hover:bg-blue-500" // Active style
+          }`}
         >
-          <BsChevronRight className=" text-white"/>
+          <BsChevronRight className={currentIndex === slides.length - 1 ? "text-gray-600" : "text-white"} />
         </button>
       </div>
 
+
       {/* Dots */}
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center">
         {slides.map((_, index) => (
           <button
             key={index}

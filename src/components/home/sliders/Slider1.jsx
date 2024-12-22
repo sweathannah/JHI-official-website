@@ -5,28 +5,44 @@ export default function Slider1(props) {
 
     return (
         <>
-          <div className="flex justify-center h-full">
-              <div className="w-[45%] flex items-stretch">
-                <img src="/images/header_image2.svg" alt="slide-2" className="w-full h-full object-cover rounded-s-[1.875rem]" />
-              </div>
-              <div className='flex flex-col  w-[45%]'>
-                <div className="flex items-start bg-[#292666] text-white px-4 py-2 rounded-t-[1rem] z-10 text-sm w-fit">
-                  Mentorship Programs
-                </div>
-                <div className="p-[1.875rem] bg-[#292666] rounded-e-[1.875rem] ">
-                <div className="bg-white rounded-[1.875rem] p-[1.875rem] h-full text-[#333333] mb-[4rem]">
-                  <h3 className="font-[600] text-[1.5rem] mb-[0.9rem]">Mentorship Programs</h3>
-                  <p className="font-[400] text-[0.9rem] leading-[1.5rem] w-[90%] mb-[1.5rem]">
-                    Our Positive Impact Projects tackle social, economic, and environmental issues, while our Community Building Initiatives promote social cohesion through events and training. Our approach emphasizes collaboration, sustainability, cultural sensitivity, and empowerment. By focusing on these principles, we aim to drive transformative change and enable individuals and communities to reach their full potential.
-                  </p>
-                  <a href="#" className="text-[#FFAA00] font-normal text-[1rem] my-[1.5rem] flex flex-row">
-                    Read More
-                    <img src="/images/yellow_arrow.svg" alt="Yellow arrow right" className='px-[0.6rem]' />
-                  </a>
-                </div>
-                </div>
-              </div>
-            </div>  
+        <div className='grid grid-cols-1 w-full'>
+            <div className=' hidden h-12 md:grid grid-cols-2 gap-0'>
+                <p className=''></p>
+                <p className=' p-2 bg-[#268ccf]  rounded-t-2xl w-fit text-white border-b-[1px]'>
+                    <span>Mentorship Programs</span>
+                </p>
+            </div>
+            <div className='grid grid-cols-2 h-full w-full'>
+                <div 
+                    className="bg-cover bg-center rounded-tl-3xl rounded-bl-3xl"
+                    style={{
+                    backgroundImage: 'url("/images/header_image2.svg")', 
+                    }}
+                > </div>
+                <div className=' p-8 rounded-r-3xl bg-[#268ccf]'>
+                    <div className=' flex flex-col gap-4 p-8 bg-white text-gray-700 rounded-3xl'>
+                        <h3 className="font-[600] text-[1.5rem] mb-[0.9rem]">
+                            Mentorship Programs
+                        </h3>
+                        <p>
+                            Our Positive Impact Projects tackle social, economic, and 
+                            environmental issues, while our Community Building Initiatives 
+                            promote social cohesion through events and training. 
+                            Our approach emphasizes collaboration, sustainability, cultural sensitivity, 
+                            and empowerment. By focusing on these principles, 
+                            we aim to drive transformative change and enable individuals and 
+                            communities to reach their full potential.
+                        </p>
+                        <a href="#" className="text-[#FFAA00] font-normal text-[1rem] my-[1.5rem] flex flex-row">
+                            Read More
+                            <img src="/images/yellow_arrow.svg" alt="Yellow arrow right" className='px-[0.6rem]' />
+                        </a>
+                    </div>
+            </div>
+            </div>
+        </div>
+
+
         </>
     )
 }

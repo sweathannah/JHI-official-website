@@ -158,77 +158,8 @@ const Home = () => {
             </a>
           </div>
         </article>
-        <MentorshipCarousel />
         <article className="relative w-full">
-          <Swiper
-            modules={[Pagination, Navigation]}
-            pagination={{ clickable: true }}
-            navigation={{
-              nextEl: '.swiper-button-next', // Custom next button
-              prevEl: '.swiper-button-prev', // Custom prev button
-            }}
-            // navigation
-            spaceBetween={30}
-            slidesPerView={1}
-            className="w-full h-fit"
-          >
-            <SwiperSlide>
-            <div className="flex justify-center h-full">
-              <div className="w-[45%] flex items-stretch">
-                <img src="/images/header_image2.svg" alt="slide-2" className="w-full h-full object-cover rounded-s-[1.875rem]" />
-              </div>
-              <div className='flex flex-col  w-[45%]'>
-                <div className="flex items-start bg-[#292666] text-white px-4 py-2 rounded-t-[1rem] z-10 text-sm w-fit">
-                  Mentorship Programs
-                </div>
-                <div className="p-[1.875rem] bg-[#292666] rounded-e-[1.875rem] ">
-                <div className="bg-white rounded-[1.875rem] p-[1.875rem] h-full text-[#333333] mb-[4rem]">
-                  <h3 className="font-[600] text-[1.5rem] mb-[0.9rem]">Mentorship Programs</h3>
-                  <p className="font-[400] text-[0.9rem] leading-[1.5rem] w-[90%] mb-[1.5rem]">
-                    Our Positive Impact Projects tackle social, economic, and environmental issues, while our Community Building Initiatives promote social cohesion through events and training. Our approach emphasizes collaboration, sustainability, cultural sensitivity, and empowerment. By focusing on these principles, we aim to drive transformative change and enable individuals and communities to reach their full potential.
-                  </p>
-                  <a href="#" className="text-[#FFAA00] font-normal text-[1rem] my-[1.5rem] flex flex-row">
-                    Read More
-                    <img src="/images/yellow_arrow.svg" alt="Yellow arrow right" className='px-[0.6rem]' />
-                  </a>
-                </div>
-                </div>
-              </div>
-              
-            </div>
-
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex items-center space-x-4">
-                <img src="/images/about_image.svg" alt="slide-1" />
-                <div className="p-4 bg-[#f3f3f3] rounded-lg">
-                  <h3>Mentorship Programs</h3>
-                  <p>Your slide content goes here.</p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex items-center space-x-4">
-                <img src="/images/header_image3.svg" alt="slide-3" />
-                <div className="p-4 bg-[#f3f3f3] rounded-lg">
-                  <h3>Impact Projects</h3>
-                  <p>Your slide content goes here.</p>
-                </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
-
-          {/* Custom Navigation Arrows */}
-          <div className="absolute bottom-8 right-12 flex space-x-2">
-            <button className="swiper-button-prev !h-8 !w-8 p-2 rounded-full shadow hover:bg-blue-600">
-              ◀
-            </button>
-            
-            <button className="swiper-button-next h-8 w-8 p-2 rounded-full shadow hover:bg-blue-600">
-              ▶
-            </button>
-          </div>
-
+        <MentorshipCarousel />
         </article>
       </section>
     </div>

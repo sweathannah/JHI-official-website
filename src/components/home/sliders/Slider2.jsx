@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Slider1(props) {
+export default function Slider2(props) {
     
 
     return (
