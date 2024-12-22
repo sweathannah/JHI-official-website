@@ -1,5 +1,7 @@
 import { useState } from "react";
-import PhotoSection from "../../components/gallery";
+import PhotoSection from "../../components/PhotoSection";
+import VideoSection from "../../components/VideoSection";
+import { motion } from "framer-motion";
 
 const GallerySection = () => {
   const [activeTab, setActiveTab] = useState("photos");
@@ -83,6 +85,34 @@ const GallerySection = () => {
     // Add more sections as needed
   ];
 
+  const videoSections = [
+    {
+      title: "Voices of Change: JHI Members Share Thoughts on International Girl Child Day (11/10/24)",
+      videos: [
+        "/videos/Gallery_videos/video1.mp4",
+        "/videos/Gallery_videos/video4.mp4",
+        "/videos/Gallery_videos/video3.mp4",
+      ],
+      widths: [
+        "calc(38% - 1rem)",
+        "calc(35% - 1rem)",
+        "calc(33% - 5rem)",
+      ],
+    },
+    {
+      title: "Videos Of The Cleaning Up Our Planet: Strategies For A Sustainable Environment (24/09/24)",
+      videos: [
+        "/videos/Gallery_videos/video5.mp4",
+        "/videos/Gallery_videos/video2.mp4",
+      ],
+      widths: [
+        "calc(50% - 1rem)",
+        "calc(50% - 1rem)",
+      ],
+    },
+  ];
+  
+
   return (
     <>
       {/* Header Section */}
@@ -92,10 +122,15 @@ const GallerySection = () => {
       >
         {/* Background Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-45"></div>
-
-        <h1 className="text-white text-[52px] leading-[62px] text-center font-bold font-[Montserrat] z-30">
-          Gallery
-        </h1>
+          <h1 className="text-white text-[52px] leading-[62px] text-center font-bold font-[Montserrat] z-30">
+            <motion.div
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              Gallery
+            </motion.div>
+          </h1>
       </section>
 
       <section className="py-10 px-[2rem]">
@@ -147,21 +182,16 @@ const GallerySection = () => {
           ))}
 
         {/* Videos Section */}
-        {activeTab === "videos" && (
-          <div className="flex flex-col items-center">
-            <p className="text-gray-600 text-lg mb-4">
-              Coming soon: Video gallery content
-            </p>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gray-200 w-full h-40 flex items-center justify-center">
-                <p>Video 1</p>
-              </div>
-              <div className="bg-gray-200 w-full h-40 flex items-center justify-center">
-                <p>Video 2</p>
-              </div>
-            </div>
-          </div>
-        )}
+        {activeTab === "videos" &&
+        videoSections.map((section, index) => (
+          <VideoSection
+            key={index}
+            title={section.title}
+            videos={section.videos}
+            widths={section.widths}
+          />
+        ))}
+
       </section>
 
       <section className="m-[5rem] bg-[#333333] p-[1.5rem] rounded-[0.5rem] border-[0.125rem] border-[#333333] text-[#FFFFFF] text-[1.125rem] font-[400] ">
