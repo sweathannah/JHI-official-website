@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { IoMdArrowDropdown } from "react-icons/io";
+
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -53,33 +54,41 @@ const Header = () => {
         </div>
       </section>
 
-      {/* Mobile Navbar */}
-      <div
-        className={`lg:hidden fixed w-[80%] inset-0 bg-white z-20 transform ${
-          isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300`}
-      >
-        {/* Close Button (X icon) */}
-        <button onClick={toggleMobileMenu} className="absolute top-4 right-4">
-          <img src="/images/close_icon.svg" alt="Close Icon" />
+    {/* Mobile Navbar */}
+    <div className={`lg:hidden fixed w-[80%] inset-0 bg-white z-20 transform ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300`}>
+      {/* Close Button (X icon) */}
+      <button onClick={toggleMobileMenu} className="absolute top-4 right-4">
+        <img src="/images/close_icon.svg" alt="Close Icon" />
+      </button>
+      <nav className="p-8">
+        <ul className="text-[#333333] text-lg space-y-6">
+          <li><a href="/" className="nav-link">Home</a></li>
+          <li><a href="/about" className="nav-link">About Us</a></li>
+          <li><a href="/programs" className="nav-link">Programs</a></li>
+          <li><a href="/media" className="nav-link">Media</a></li>
+          <li><a href="/join" className="nav-link">Join Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    {/* Header with Logo and Menu Icon */}
+    <section className="lg:px-[6.25rem] px-[1rem] py-[1.6rem] bg-white flex items-center justify-between">
+      <div className="flex flex-row items-center lg:w-[12rem] w-full">
+        <img src="/images/jhi_logo.svg" alt="JHI logo" className="w-[11rem] z-10" />
+        <button onClick={toggleMobileMenu} className="lg:hidden ml-auto">
+          <img src="/images/menu_icon.svg" alt="Menu Icon" className="w-8" />
         </button>
-        <nav className="p-8">
-          <ul className="text-[#333333] text-lg space-y-6">
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about">About Us</NavLink>
-            </li>
-            <li>
-              <NavLink to="/programs">Programs</NavLink>
-            </li>
-            <li>
-              <NavLink to="/media">Media</NavLink>
-            </li>
-            <li>
-              <NavLink to="/join">Join Us</NavLink>
-            </li>
+      </div>
+      {/* Desktop Navigation */}
+      <div className="lg:flex hidden">
+        <nav>
+          <ul className="font-[400] text-[1rem] text-[#333333] flex flex-row space-x-[2.6rem]">
+            <li><a href="/" className="nav-link">Home</a></li>
+            <li><a href="/about" className="nav-link">About Us</a></li>
+            <li><a href="/programs" className="nav-link">Programs</a></li>
+            <li><a href="/media" className="nav-link">Media</a></li>
+            <li><a href="/join" className="nav-link">Join Us</a></li>
+
           </ul>
         </nav>
       </div>

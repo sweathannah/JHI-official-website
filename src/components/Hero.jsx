@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useEffect, useState } from 'react';
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 
@@ -6,8 +7,9 @@ export default function Hero(props) {
   // Array of background images (update this list as needed)
   const images = [
     './images/header.jpeg', // First image
-    '/images/header_image2.svg', // Second image
-    './images/header_image3.svg', // Third image
+
+    '/images/tab2.svg', // Second image
+    './images/tab1.svg', // Third imagen
     // Add more images if needed
   ];
 
@@ -40,7 +42,8 @@ export default function Hero(props) {
 
     // Clean up interval when the component is unmounted
     return () => clearInterval(intervalId);
-  }, []);
+  }, []); 
+
 
   return (
     <>
@@ -81,7 +84,9 @@ export default function Hero(props) {
               key={index}
               src={image}
               alt={`Tab ${index + 1}`}
-              className="cursor-pointer h-12 border-[#258CCF] border-2 w-12 rounded-full"
+
+              className="cursor-pointer w-8 h-8 rounded-full"
+
               onClick={() => handleTabClick(index)} // Update background when tab is clicked
             />
           ))}
