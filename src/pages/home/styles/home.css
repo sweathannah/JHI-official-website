@@ -12,12 +12,12 @@ body{
     font-family: 'Mulish';
 }
 
-.swiper-button-prev,
+/* .swiper-button-prev,
 .swiper-button-next {
     top: 50%;
     transform: translateY(-50%);
-    color: #000; /* Change arrow color */
-    background-color: rgba(255, 255, 255, 0.8); /* Add a background */
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.8); 
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -28,10 +28,19 @@ body{
 }
 
 .swiper-button-prev {
-    left: -20px; /* Adjust distance from the left */
+    left: -20px;
 }
 
 .swiper-button-next {
+
+    right: -20px; 
+} */
+
+
+/* .swiper-button-next::after, .swiper-button-prev::after {
+    content: "";
+} */
+=======
     right: -20px; /* Adjust distance from the right */
 }
 
@@ -50,9 +59,4 @@ body{
     }
 }
   
-@media (max-width: 1024px) {
-.animate-mobileSlide {
-    animation: mobileSlide 1.5s ease-in-out;
-}
-  }
-  
+
