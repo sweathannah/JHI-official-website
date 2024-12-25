@@ -31,7 +31,7 @@ const Header = () => {
       subMenu: [
         { label: 'News & Stories', path: '/media/News_Stories' },
         { label: 'Gallery', path: '/media/gallery' },
-        { label: 'Events', path: '/media/events' },
+        { label: 'Events', path: '/media/Events' },
       ],
     },
     { label: 'Join Us', path: '/join' },

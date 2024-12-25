@@ -26,7 +26,7 @@ const News_Stories = () => {
 
       <section className="lg:p-[3rem] p-[1rem] flex lg:flex-row flex-col justify-between">
         <article className="flex flex-col gap-[3rem] w-[68%]">
-          <div style={{ backgroundImage: "url('/images/header.jpeg')" }}
+          <div style={{ backgroundImage: "url('/images/header_image3.svg')" }}
           className="bg-cover bg-no-repeat w-[full] lg:h-[30rem] h-[15rem] relative flex items-end justify-start p-[2rem] "
           >
             {/* Background Overlay */}

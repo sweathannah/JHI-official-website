@@ -11,6 +11,7 @@ import OurBoard from './pages/about/OurBoard.jsx';
 import OurTeam from './pages/about/OurTeam.jsx';
 import Gallery from './pages/media/Gallery.jsx';
 import News_Stories from './pages/media/News_Stories.jsx';
+import Events from './pages/media/Events.jsx';
 import Footer from './components/layout/Footer.jsx';
 import ContactUs from './pages/join-us/ContactUs.jsx';
 
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/about/whoWeAre" element={<WhoWeAre />} />
       <Route path="/media/Gallery" element={<Gallery />} />
       <Route path="/media/News_Stories" element={<News_Stories/>} />
+      <Route path="/media/Events" element={<Events/>} />
       <Route path="mentorship" element={<Mentorship />} />
       <Route path="program" element={<Program />} />
       <Route path="team" element={<Team />} />
