@@ -8,8 +8,8 @@ export default function Hero(props) {
   const images = [
     './images/header.jpeg', // First image
 
-    '/images/tab2.svg', // Second image
-    './images/tab1.svg', // Third imagen
+    '/images/header_image2.svg', // Second image
+    './images/header_image3.svg', // Third imagen
     // Add more images if needed
   ];
 

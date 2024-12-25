@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 // Swiper modules
 import { Pagination, Navigation } from 'swiper/modules';
 import Hero from '../../components/Hero';
+import PartnersSection from '../../components/partners';
 
 import MentorshipCarousel from '../../components/home/MentorshipCarousel';
 

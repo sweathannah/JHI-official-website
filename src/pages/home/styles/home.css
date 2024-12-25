@@ -40,9 +40,7 @@ body{
 /* .swiper-button-next::after, .swiper-button-prev::after {
     content: "";
 } */
-=======
-    right: -20px; /* Adjust distance from the right */
-}
+
 
 @keyframes mobileSlide {
     0% {
