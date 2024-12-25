@@ -29,7 +29,7 @@ const Header = () => {
     {
       label: 'Media',
       subMenu: [
-        { label: 'News & Stories', path: '/media/news' },
+        { label: 'News & Stories', path: '/media/News_Stories' },
         { label: 'Gallery', path: '/media/gallery' },
         { label: 'Events', path: '/media/events' },
       ],
