@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import PastEvents from "../../components/past_event";
 
 const Events = () => {
     const [activeTab, setActiveTab] = useState("photos");
@@ -59,7 +60,7 @@ const Events = () => {
             </div>
         </article>
 
-
+        <PastEvents/>
       </section>
     </>
   );
