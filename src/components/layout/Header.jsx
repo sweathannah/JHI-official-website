@@ -55,8 +55,9 @@ const Header = () => {
 
       {/* Mobile Navbar */}
       <div
-        className={`lg:hidden fixed w-[80%] inset-0 bg-white z-20 transform ${
-          isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+       onMouseLeave={toggleMobileMenu}
+        className={`lg:hidden fixed ml-auto w-[70%] inset-0 bg-white z-20 transform ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-[400%]"
         } transition-transform duration-300`}
       >
         {/* Close Button (X icon) */}
@@ -68,18 +69,126 @@ const Header = () => {
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
-            <li>
-              <NavLink to="/about">About Us</NavLink>
-            </li>
-            <li>
-              <NavLink to="/programs">Programs</NavLink>
-            </li>
-            <li>
-              <NavLink to="/media">Media</NavLink>
-            </li>
-            <li>
-              <NavLink to="/join">Join Us</NavLink>
-            </li>
+            <li className="relative group text-lg">
+                <div className="mb-6">
+                  <p className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
+                    About Us{" "}
+                    <span className="font-semibold">
+                      <IoMdArrowDropdown />
+                    </span>
+                  </p>
+                </div>
+                <div className=" hidden group-hover:block  space-y-6">
+                  <NavLink
+                    to="/about/whoWeAre"
+                    className="block"
+                  >
+                    Who we are
+                  </NavLink>
+                  <NavLink
+                    to="/about/ourTeam"
+                    className="block"
+                  >
+                    Our Team
+                  </NavLink>
+                  <NavLink
+                    to="/about/ourBoard"
+                    className="block"
+                  >
+                    Our Board
+                  </NavLink>
+                </div>
+              </li>
+              <li className="relative group text-lg">
+                <div className="mb-6">
+                  <p className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
+                    Programs{" "}
+                    <span className="font-semibold">
+                      <IoMdArrowDropdown />
+                    </span>
+                  </p>
+                </div>
+                <div className=" hidden group-hover:block  space-y-6">
+                  <NavLink
+                    to="/programs/mentorship"
+                    className="block"
+                  >
+                    Mentorship
+                  </NavLink>
+                  <NavLink
+                    to="/programs/social-impact"
+                    className="block"
+                  >
+                    Social Impact
+                  </NavLink>
+                  <NavLink
+                    to="/programs/community-building"
+                    className="block"
+                  >
+                    Community Building
+                  </NavLink>
+                </div>
+              </li>
+              <li className="relative group text-lg">
+                <div className="mb-6">
+                  <p className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
+                    Media{" "}
+                    <span className="font-semibold">
+                      <IoMdArrowDropdown />
+                    </span>
+                  </p>
+                </div>
+                <div className=" hidden group-hover:block  space-y-6">
+                  <NavLink
+                    to="/media/News&Stories"
+                    className="block"
+                  >
+                    News & Stories
+                  </NavLink>
+                  <NavLink
+                    to="/media/Gallery"
+                    className="block"
+                  >
+                    Gallery
+                  </NavLink>
+                  <NavLink
+                    to="/media/event"
+                    className="block"
+                  >
+                    Events
+                  </NavLink>
+                </div>
+              </li>
+              <li className="relative group text-lg">
+                <div className="mb-6">
+                  <p className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
+                    Join Us{" "}
+                    <span className="font-semibold">
+                      <IoMdArrowDropdown />
+                    </span>
+                  </p>
+                </div>
+                <div className=" hidden group-hover:block  space-y-6">
+                  <NavLink
+                    to="/joinUs/contactUs"
+                    className="block"
+                  >
+                    Contact Us
+                  </NavLink>
+                  <NavLink
+                    to="/joinUs/donate"
+                    className="block"
+                  >
+                    Donate
+                  </NavLink>
+                  <NavLink
+                    to="/joinUs/volunteer"
+                    className="block"
+                  >
+                    Volunteer
+                  </NavLink>
+                </div>
+              </li>
           </ul>
         </nav>
       </div>
@@ -144,22 +253,22 @@ const Header = () => {
                 </div>
                 <div className="absolute hidden group-hover:block w-[11rem] border bg-white rounded-md p-6 space-y-8  -left-6 font-[Mulish] z-20">
                   <NavLink
-                    to="/about/whoWeAre"
+                    to="/programs/mentorship"
                     className="block hover:text-[#258CCF]"
                   >
-                    Who we are
+                   Mentorship
                   </NavLink>
                   <NavLink
-                    to="/about/ourTeam"
+                    to="/programs/social-impact"
                     className="block hover:text-[#258CCF]"
                   >
-                    Our Team
+                    Social Impact
                   </NavLink>
                   <NavLink
-                    to="/about/ourBoard"
+                    to="/programs/community-building"
                     className="block hover:text-[#258CCF]"
                   >
-                    Our Board
+                    Community Building
                   </NavLink>
                 </div>
               </li>
@@ -204,22 +313,22 @@ const Header = () => {
                 </div>
                 <div className="absolute hidden group-hover:block w-[11rem] border bg-white rounded-md p-6 space-y-8  -left-6 font-[Mulish] z-20">
                   <NavLink
-                    to="/joinUs/ContactUs"
+                    to="/joinUs/contactUs"
                     className="block hover:text-[#258CCF]"
                   >
                     Contact Us
                   </NavLink>
                   <NavLink
-                    to="/about/ourTeam"
+                    to="/joinUs/donate"
                     className="block hover:text-[#258CCF]"
                   >
-                    Our Team
+                    Donate
                   </NavLink>
                   <NavLink
-                    to="/about/ourBoard"
+                    to="/joinUs/volunteer"
                     className="block hover:text-[#258CCF]"
                   >
-                    Our Board
+                    Volunteer
                   </NavLink>
                 </div>
               </li>

@@ -31,7 +31,7 @@ const Footer = () => {
             {/* Main Flex Container */}
             <div className="flex flex-wrap justify-between gap-8">
               {/* About Section */}
-              <div className=" w-[40%]">
+              <div className=" min-w-[20rem]">
                 <img
                   src="/images/jhi_logo.svg"
                   alt="Jimoh Habibullah Initiative Logo"

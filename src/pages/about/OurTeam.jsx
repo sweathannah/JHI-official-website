@@ -8,7 +8,7 @@ const OurTeam = () => {
         <div className="absolute inset-0 bg-black bg-opacity-45 "></div>
 
         <h1 className="text-white text-[52px] leading-[62px] text-center font-bold font-[Montserrat] z-30">
-          Our Board
+          Our Team
         </h1>
       </section>
       <section className="max-w-[76.5rem] mx-auto mt-[6.25rem]">

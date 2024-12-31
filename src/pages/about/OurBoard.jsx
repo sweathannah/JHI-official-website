@@ -3,9 +3,13 @@ import React from 'react'
 const OurBoard = () => {
   return (
     <>
-      <section className="bg-[url('/images/aboutImg/ourBoard_bg.png')] bg-cover bg-no-repeat h-[450px] w-full flex justify-center items-center font-[Montserrat]">
-        <h1 className='text-[3.25rem] leading-[3.8rem] font-bold text-white'>Our Board</h1>
+       <section className="bg-[url('/images/header.jpeg')] bg-cover bg-no-repeat h-[100vh] w-full relative flex items-center justify-center">
+        {/* Background Overlay  */}
+        <div className="absolute inset-0 bg-black bg-opacity-45 "></div>
 
+        <h1 className="text-white text-[52px] leading-[62px] text-center font-bold font-[Montserrat] z-30">
+          Our Board
+        </h1>
       </section>
       <section className='font-[Montserrat] max-w-[76.5rem] mx-auto mt-[6.25rem] mb-[7.5rem]'>
         <div>
