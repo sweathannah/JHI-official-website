@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { IoMdArrowDropdown } from "react-icons/io";
+
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -52,7 +53,6 @@ const Header = () => {
           </a>
         </div>
       </section>
-
       {/* Mobile Navbar */}
       <div
        onMouseLeave={toggleMobileMenu}
