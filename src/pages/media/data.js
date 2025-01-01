@@ -17,6 +17,7 @@ export const eventsData = {
             title: "World Mental Health Day Webinar",
             date: "Saturday, October 10, 2024 | 9:00PM | ",
             platform: "Google Meet",
+            status: "past", 
         },
         {
             id: "past-3", 
