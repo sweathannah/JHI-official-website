@@ -2,7 +2,7 @@
 export const eventsData = {
     pastEvents: [
         {
-            id: 1, 
+            id: "past-1", 
             type: "Conference",
             image: "/images/Events_images/past_events_images/stem.svg",
             title: "Combining STEM And Social Responsibility Initiatives",
