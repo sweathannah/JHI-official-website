@@ -16,7 +16,7 @@ const EventDetail = () => {
   return (
     <>
       <section className="border-t-[1px] p-[2.5rem]">
-        <p className=" text-[1.125rem] mb-[2.5rem] flex items-center">
+        <div className=" text-[1.125rem] mb-[2.5rem] flex items-center">
           <span className="font-[500] text-[#258CCF] ">
             {event.status === "past" ? "Past Events" : "Upcoming Events"}
           </span>
@@ -26,8 +26,8 @@ const EventDetail = () => {
           <span className="font-[400] text-[#33333380]">
             {event.title}
           </span>
-        </p>
-        <div className="flex justify-between">
+        </div>
+        <div className="flex justify-between items-center">
           <p className="text-[#292666] bg-[#05175F40] w-fit text-[0.8rem] py-[0.5rem] px-[1.16rem] font-[600] rounded-[0.3rem] ">
                     {event.type}
           </p>
@@ -47,17 +47,24 @@ const EventDetail = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="facebook-icon"></i> {/* Facebook icon */}
+              <img src="/images/Events_images/events_icons/Facebook_icon.svg" alt="facebook_icon" />
             </a>
             <a
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`Check out this event: ${currentUrl}`)}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="twitter-icon"></i> {/* X (Twitter) icon */}
+              <img src="/images/Events_images/events_icons/x_icon.svg" alt="x_icon" />
             </a>
           </div>
         </div>
+        <h1 className="font-semibold text-[#292666] text-[3rem] mt-[1.5rem]">
+          {event.title}
+        </h1>
+        <p className="text-gray-600 text-[13px] mb-1">
+                  <span>{event.date}</span>
+                  <span>{event.platform}</span>
+                </p>
       </section>
         
       <div className="py-10 px-6">
