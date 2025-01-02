@@ -15,7 +15,7 @@ const EventDetail = () => {
 
   return (
     <>
-      <section className="border-t-[1px] p-[2.5rem]">
+      <section className="border-t-[1px] py-[2.5rem] px-[4rem]">
         <div className=" text-[1.125rem] mb-[2.5rem] flex items-center">
           <span className="font-[500] text-[#258CCF] ">
             {event.status === "past" ? "Past Events" : "Upcoming Events"}
@@ -61,23 +61,55 @@ const EventDetail = () => {
         <h1 className="font-semibold text-[#292666] text-[3rem] mt-[1.5rem]">
           {event.title}
         </h1>
-        <p className="text-gray-600 text-[13px] mb-1">
-                  <span>{event.date}</span>
-                  <span>{event.platform}</span>
-                </p>
+        <p className="text-gray-600 text-[13px] mt-[1rem]">
+          <span>{event.date}</span>
+          <span>{event.platform}</span>
+        </p>
       </section>
         
-      <div className="py-10 px-6">
+      <section className="pt-10 px-[6.25rem]">
         <img
           src={event.image}
           alt={event.title}
-          className="w-full h-[400px] object-cover mb-6"
+          className="w-full object-cover mb-[6.25rem] "
         />
-        <h1 className="text-3xl font-bold">{event.title}</h1>
-        <p className="text-lg text-gray-600">{event.date}</p>
-        <p className="text-lg text-gray-600">{event.platform}</p>
-        <p className="mt-4 text-gray-800">{event.description}</p>
-      </div>
+      </section>
+
+      <section className="flex flex-rol px-[4rem] justify-between items-start my-[5rem] ">
+        <article className="w-[60%]">
+          <h2 className="font-semibold text-[#292666] text-[2.5rem]">
+            About {event.title}
+          </h2>
+          <p className="font-[400] text-[1rem] text-left text-[#333333] py-[1.1rem]">
+            {event.about}
+          </p>
+        </article>
+        <article>
+          <img
+            src={event.aboutimage}
+            alt={event.title}
+            className="h-[25rem]"
+          />
+        </article>
+      </section>
+
+      <section style={{ backgroundImage: 'url(/images/bgs/media_background.svg)'}} className='w-full bg-cover bg-no-repeat px-[4rem] flex flex-row py-[6rem] justify-between items-center'>
+        <article>
+          <img
+            src={event.aboutspeakerimage}
+            alt={event.title}
+            className="h-[25rem]"
+          />
+        </article>
+        <article className="w-[60%]">
+          <h2 className="font-semibold text-[#292666] text-[2.5rem]">
+            About The Speaker
+          </h2>
+          <p className="font-[400] text-[1rem] text-left text-[#333333] py-[1.1rem]">
+            {event.aboutspeaker}
+          </p>
+        </article>
+      </section>
     </>
   );
 };
