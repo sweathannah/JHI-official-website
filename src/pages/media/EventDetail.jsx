@@ -110,6 +110,40 @@ const EventDetail = () => {
           </p>
         </article>
       </section>
+
+      {event.status === "past" && (
+        <section className="flex flex-col px-[4rem] justify-between items-start my-[5rem]">
+          <h2 className="font-semibold text-[#292666] text-[2.25rem]">
+            Gallery From {event.title}
+          </h2>
+          <div className="lg:flex hidden flex-wrap gap-4 mt-10">
+            {event.gallery && event.gallery.length > 0 ? (
+              event.gallery.map((item, index) =>
+                item.type === "image" ? (
+                  <img
+                    key={index}
+                    src={item.src}
+                    alt={`Gallery item ${index + 1}`}
+                    loading="lazy"
+                    className="h-auto object-cover w-[20rem]"
+                  />
+                ) : (
+                  <video
+                    key={index}
+                    src={item.src}
+                    controls
+                    loading="lazy"
+                    className="h-[20rem] w-[13rem] object-cover"
+                  />
+                )
+              )
+            ) : (
+              <p>No gallery available for this event.</p>
+            )}
+          </div>
+        </section>
+      )}
+
     </>
   );
 };

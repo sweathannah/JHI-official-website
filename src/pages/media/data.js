@@ -21,7 +21,22 @@ export const eventsData = {
             about: "The theme for World Mental Health Day 2024, “Children, love your eyes” aligns with the theme of TYDF’s eye health programme – “Vision for a Brighter Future”.  Children are the cornerstone of our future, and their health and development determine the trajectory of our communities, societies, and the world.  The theme emphasises the indispensable role that healthy vision plays in shaping a child’s future. The theme for World Mental Health Day 2024, “Children, love your eyes” aligns with the theme of TYDF’s eye health programme – “Vision for a Brighter Future”.  Children are the cornerstone of our future, and their health and development determine the trajectory of our communities, societies, and the world.  The theme emphasises the indispensable role that healthy vision plays in shaping a child’s future.",
             aboutimage: "/images/Events_images/about_image.svg",
             aboutspeakerimage: "/images/Events_images/about_speaker1.svg",
-            aboutspeaker: "Omole Tosin Tabel is a growth, marketing and communications professional with 8 years of experience and a proven track record of finding innovative solutions to complex brand marketing problems, executing integrated marketing plans, and telling stories for brands in ways that elevate brand image, build trust, and reinforce reputation.Tosin specializes in helping brands find and articulate their voice, vision and successfully use strategic marketing and communications to achieve their growth goals. The past 8 years of his career has seen him lead growth, marketing efforts for some of the most ambitious brands and strategic industry leaders. These cuts across Finance, Wealth Tech, Insurance, Financial Technology (Fintech), Telecommunications, Political and Economic Think Tanks, Banking, Insurance, Agriculture, Development Organizations, and Governments.  Tosin simply helps businesses connect with audiences to identify their needs, build meaningful relationships through content, and tell stories in ways that deeply resonate.  Tosin holds a bachelor’s degree in Computer Engineering and an MITx Micromasters in Data, Economics, and Development Policy. A trained expert in Growth and Product Marketing, Digital Media and advertising, and Marketing Communications. With relevant certifications by Google, Hubspot, Digital Garage endorsed by the International Advertising Bureau (IAB) Europe, IBM’s Big Data University and Enterprise Design Thinking, UC Davis’ Content Strategy Course, among others, He has  a penchant for tweaking ideas and retooling processes that guarantee measurable business advantage."
+            aboutspeaker: "Omole Tosin Tabel is a growth, marketing and communications professional with 8 years of experience and a proven track record of finding innovative solutions to complex brand marketing problems, executing integrated marketing plans, and telling stories for brands in ways that elevate brand image, build trust, and reinforce reputation.Tosin specializes in helping brands find and articulate their voice, vision and successfully use strategic marketing and communications to achieve their growth goals. The past 8 years of his career has seen him lead growth, marketing efforts for some of the most ambitious brands and strategic industry leaders. These cuts across Finance, Wealth Tech, Insurance, Financial Technology (Fintech), Telecommunications, Political and Economic Think Tanks, Banking, Insurance, Agriculture, Development Organizations, and Governments.Tosin simply helps businesses connect with audiences to identify their needs, build meaningful relationships through content, and tell stories in ways that deeply resonate.Tosin holds a bachelor’s degree in Computer Engineering and an MITx Micromasters in Data, Economics, and Development Policy. A trained expert in Growth and Product Marketing, Digital Media and advertising, and Marketing Communications. With relevant certifications by Google, Hubspot, Digital Garage endorsed by the International Advertising Bureau (IAB) Europe, IBM’s Big Data University and Enterprise Design Thinking, UC Davis’ Content Strategy Course, among others, He has  a penchant for tweaking ideas and retooling processes that guarantee measurable business advantage.",
+            gallery: [
+                { type: "image", src: "/images/Gallery_images/sec2_image5.svg" },
+                { type: "image", src: "/images/Gallery_images/sec1_image3.svg" },
+                { type: "image", src: "/images/Gallery_images/sec1_image4.svg"},
+
+                { type: "video", src: "/videos/Gallery_videos/video1.mp4" },
+                { type: "video", src: "/videos/Gallery_videos/video1.mp4" },
+
+                { type: "image", src: "/images/Gallery_images/sec1_image1.svg" },
+                { type: "image", src: "/images/Gallery_images/sec1_image2.svg" },
+
+                { type: "image", src: "/images/Gallery_images/sec3_image1.svg" },
+                { type: "image", src: "/images/Gallery_images/sec1_image6.svg" },
+                { type: "image", src: "/images/Gallery_images/sec3_image2.svg" },
+            ],
         },
         {
             id: "past-3", 
@@ -65,6 +80,7 @@ export const eventsData = {
         date: "Saturday, October 19, 2024 | 5:00PM | ",
         platform: "Google Meet",
         description: "Detailed information about the webinar...",
+        gallery: null, // No gallery for upcoming events
       },
       {
         id: 'upcoming-2',
@@ -73,6 +89,7 @@ export const eventsData = {
         title: "Cleaning Up Our Planet: Strategies For A Sustainable Future",
         date: "Monday, January 10, 2025 | 1:00PM | ",
         platform: "Google Meet",
+        gallery: null, // No gallery for upcoming events
       },
       // Add more upcoming events here
     ],
