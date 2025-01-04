@@ -1,30 +1,41 @@
 import React from "react";
+import { linkVariants } from "../../animation/animation";
+import {motion} from 'framer-motion'
+import { link } from "framer-motion/client";
 
 const Footer = () => {
   return (
     <>
       <footer>
-        <section className='bg-[#f1f1f1]'>
-            <article style={{ backgroundImage: 'url(/images/bgs/connect.svg)'}} className='w-full bg-cover bg-no-repeat lg:p-[3.75rem] p-[2rem]'>
-            <div className='m-auto text-[0.9rem] font-[400] max-w-[48rem] text-[#FFFFFF] text-center pt-[7.4rem]'>
-                <h3 className=' font-[700] text-[2.5rem]'>
+        <section className="bg-[#f1f1f1]">
+          <article
+            style={{ backgroundImage: "url(/images/bgs/connect.svg)" }}
+            className="w-full bg-cover bg-no-repeat lg:p-[3.75rem] p-[2rem]"
+          >
+            <div className="m-auto text-[0.9rem] font-[400] max-w-[48rem] text-[#FFFFFF] text-center pt-[7.4rem]">
+              <h3 className=" font-[700] text-[2.5rem]">
                 Stay Connected With Us
-                </h3>
-                <p className=' py-[1.25rem] '>
-                Stay connected with JHI by joining our newsletter! Be the first to receive updates on our impactful initiatives, latest insights and stories of positive change.
-                </p>
-                <form action="#" className="flex bg-[#FFFFFF] rounded-[0.5rem] w-fit m-auto">
+              </h3>
+              <p className=" py-[1.25rem] ">
+                Stay connected with JHI by joining our newsletter! Be the first
+                to receive updates on our impactful initiatives, latest insights
+                and stories of positive change.
+              </p>
+              <form
+                action="#"
+                className="flex bg-[#FFFFFF] rounded-[0.5rem] w-fit m-auto"
+              >
                 <input
-                    type="email"
-                    placeholder="Enter email address"
-                    className="py-[1rem] lg:px-[1.5rem] px-[0.5rem] text-[1.125rem] rounded-s-[0.5rem] lg:w-fit w-[10rem] focus:outline-none focus:ring-2 focus:ring-[#FFAA00]"
+                  type="email"
+                  placeholder="Enter email address"
+                  className="py-[1rem] lg:px-[1.5rem] px-[0.5rem] text-[1.125rem] rounded-s-[0.5rem] lg:w-fit w-[10rem] focus:outline-none focus:ring-2 focus:ring-[#FFAA00]"
                 />
                 <button className="bg-[#FFAA00] rounded-[0.5rem] py-[1.4rem] lg:px-[3.25rem] px-[2rem] text-[#292666] font-[700] text-[0.8rem]">
-                    Subscribe
+                  Subscribe
                 </button>
-                </form>
+              </form>
             </div>
-            </article>
+          </article>
         </section>
         <section className="bg-gray-100 py-20 text-[#333333]">
           <div className="max-w-7xl mx-auto px-10">
@@ -45,36 +56,56 @@ const Footer = () => {
                 </p>
                 <div className="flex space-x-4 mt-6">
                   {/* Social Media Icons */}
-                  <a href="https://www.facebook.com/NYP2023?mibextid=LQQJ4d">
+                  <motion.a
+                  variants={linkVariants}
+                  whileHover="hover"
+                  className="inline-block"
+                  href="https://www.facebook.com/NYP2023?mibextid=LQQJ4d">
                     <img
                       src="/images/social_media_icons/facebook_icon.svg"
                       alt="facebook_icon"
                     />
-                  </a>
-                  <a href="https://www.instagram.com/jimohhabibullahi_initiative?igsh=czk2MTVkc3VubDgy&utm_source=qr">
+                  </motion.a>
+                  <motion.a
+                  variants={linkVariants}
+                  whileHover="hover"
+                  className="inline-block"
+                  href="https://www.instagram.com/jimohhabibullahi_initiative?igsh=czk2MTVkc3VubDgy&utm_source=qr">
                     <img
                       src="/images/social_media_icons/instagram_icon.svg"
                       alt="instagram_icon"
                     />
-                  </a>
-                  <a href="#">
+                  </motion.a>
+                  <motion.a
+                  variants={linkVariants}
+                  whileHover="hover"
+                  className="inline-block"
+                  href="#">
                     <img
                       src="/images/social_media_icons/youtube_icon.svg"
                       alt="youtube_icon"
                     />
-                  </a>
-                  <a href="https://x.com/jhinitiative01?s=21">
+                  </motion.a>
+                  <motion.a
+                  variants={linkVariants}
+                  whileHover="hover"
+                  className="inline-block"
+                  href="https://x.com/jhinitiative01?s=21">
                     <img
                       src="/images/social_media_icons/X_icon.svg"
                       alt="X_icon"
                     />
-                  </a>
-                  <a href="#">
+                  </motion.a>
+                  <motion.a
+                  variants={linkVariants}
+                  whileHover="hover"
+                  className="inline-block"
+                  href="#">
                     <img
                       src="/images/social_media_icons/linkedln_icon.svg"
                       alt="linkedln_icon"
                     />
-                  </a>
+                  </motion.a>
                 </div>
               </div>
 
@@ -85,44 +116,54 @@ const Footer = () => {
                 </h3>
                 <ul className="space-y-2">
                   <li>
-                    <a
+                    <motion.a
+                    variants={linkVariants}
+                    whileHover="hover"
                       href="#"
-                      className=" text-[1rem] hover:font-[500] hover:text-blue-600"
+                      className=" text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
                       Home
-                    </a>
+                    </motion.a>
                   </li>
                   <li>
-                    <a
+                    <motion.a
+                     variants={linkVariants}
+                     whileHover="hover"
                       href="#"
-                      className="text-[1rem] hover:font-[500] hover:text-blue-600"
+                      className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
                       About Us
-                    </a>
+                    </motion.a>
                   </li>
                   <li>
-                    <a
+                    <motion.a
+                    variants={linkVariants}
+                    whileHover="hover"
                       href="#"
-                      className="text-[1rem] hover:font-[500] hover:text-blue-600"
+                      className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
                       Programs
-                    </a>
+                    </motion.a>
                   </li>
                   <li>
-                    <a
+                    <motion.a
+                    variants={linkVariants}
+                    whileHover="hover"
                       href="#"
-                      className="text-[1rem] hover:font-[500] hover:text-blue-600"
+                      className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
                       Media
-                    </a>
+                    </motion.a>
                   </li>
                   <li>
-                    <a
+                    <motion.a
+                    variants={linkVariants}
+                    whileHover="hover"
                       href="#"
-                      className="text-[1rem] hover:font-[500] hover:text-blue-600"
+                      className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
                       Join Us
-                    </a>
+                    </motion.a>
                   </li>
                 </ul>
               </div>
@@ -134,36 +175,44 @@ const Footer = () => {
                 </h3>
                 <ul className="space-y-2">
                   <li>
-                    <a
+                    <motion.a
+                      variants={linkVariants}
+                      whileHover='hover'
                       href="#"
-                      className="text-[1rem] hover:font-[500] hover:text-blue-600"
+                      className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
                       Photos
-                    </a>
+                    </motion.a>
                   </li>
                   <li>
-                    <a
+                    <motion.a
+                    variants={linkVariants}
+                    whileHover="hover"
                       href="#"
-                      className="text-[1rem] hover:font-[500] hover:text-blue-600"
+                      className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
                       Videos
-                    </a>
+                    </motion.a>
                   </li>
                   <li>
-                    <a
+                    <motion.a
+                    variants={linkVariants}
+                    whileHover='hover'
                       href="#"
-                      className="text-[1rem] hover:font-[500] hover:text-blue-600"
+                      className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
                       News & Stories
-                    </a>
+                    </motion.a>
                   </li>
                   <li>
-                    <a
+                    <motion.a
+                     variants={linkVariants}
+                     whileHover="hover"
                       href="#"
-                      className="text-[1rem] hover:font-[500] hover:text-blue-600"
+                      className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
                       Events
-                    </a>
+                    </motion.a>
                   </li>
                 </ul>
               </div>
@@ -175,36 +224,44 @@ const Footer = () => {
                 </h3>
                 <ul className="space-y-2">
                   <li>
-                    <a
+                    <motion.a
                       href="#"
-                      className="text-[1rem] hover:font-[500] hover:text-blue-600"
+                      className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
+                      variants={linkVariants}
+                      whileHover="hover"
                     >
                       Privacy Policy
-                    </a>
+                    </motion.a>
                   </li>
                   <li>
-                    <a
+                    <motion.a
                       href="#"
-                      className="text-[1rem] hover:font-[500] hover:text-blue-600"
+                      className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
+                       variants={linkVariants}
+                      whileHover="hover"
                     >
                       Contact Us
-                    </a>
+                    </motion.a>
                   </li>
                   <li>
-                    <a
+                    <motion.a
                       href="#"
-                      className="text-[1rem] hover:font-[500] hover:text-blue-600"
+                      className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
+                       variants={linkVariants}
+                      whileHover="hover"
                     >
                       FAQs
-                    </a>
+                    </motion.a>
                   </li>
                   <li>
-                    <a
+                    <motion.a
                       href="#"
-                      className="text-[1rem] hover:font-[500] hover:text-blue-600"
+                      className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
+                       variants={linkVariants}
+                      whileHover="hover"
                     >
                       Community
-                    </a>
+                    </motion.a>
                   </li>
                 </ul>
               </div>

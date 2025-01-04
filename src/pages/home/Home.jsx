@@ -11,6 +11,9 @@ import { Pagination, Navigation } from 'swiper/modules';
 import Hero from '../../components/Hero';
 
 import MentorshipCarousel from '../../components/home/MentorshipCarousel';
+import PartnersSection from '../../components/partners';
+import { motion } from 'framer-motion';
+import {buttonVariants} from '../../animation/animation'
 
 
 
@@ -47,7 +50,7 @@ const Home = () => {
       <section className='w-full flex justify-between flex-row overflow-x-scroll'>
         <div className='bg-[#258CCF] px-[2.43rem] py-[3rem] '>
           <h2 className='font-[600] text-[1.375rem] leading-[1.875rem] text-white mb-[1.25rem] min-w-[19rem] '>The JHI call for application into the inaugural cohort set for 3 months</h2>
-          <a href="#" className='text-[1rem] text-[#FFAA00] flex items-center space-x-[0.5rem] '>
+          <a  href="#" className='text-[1rem] text-[#FFAA00] flex items-center space-x-[0.5rem] '>
             Learn More
             <img src="./images/yellow_arrow.svg" alt="" className='' />
           </a>
@@ -99,11 +102,12 @@ const Home = () => {
               </li>
             </div>
           </ul>
-          <a href="#" className='bg-[#258CCF] rounded-[0.5rem] py-[1.25rem] px-[3.06rem]'>
-            <button className='text-[#FFFFFF] font-[700] text-[1rem] Mulish'>
+          <motion.a href="#"
+          variants={buttonVariants}
+          whileHover="hover"
+          className='bg-[#258CCF] rounded-[0.5rem] py-[1.25rem] px-[3.06rem] text-[#FFFFFF] font-[700] text-[1rem] Mulish hover:bg-blue-600 inline-block'>
               Read More
-            </button>
-          </a>
+          </motion.a>
         </article>
         <article className='lg:flex hidden'>
           <img src="./images/about_image.svg" alt="about_image" />
@@ -153,11 +157,12 @@ const Home = () => {
             </p>
           </div>
           <div>
-            <a href="#" className='bg-[#258CCF] rounded-[0.5rem] py-[1.25rem] px-[3.06rem] '>
-              <button className='text-[#FFFFFF] font-[700] text-[1rem] Mulish'>
-                See More
-              </button>
-            </a>
+            <motion.a href="#" 
+            variants={buttonVariants}
+            whileHover="hover"
+            className='bg-[#258CCF] rounded-[0.5rem] py-[1.25rem] px-[3.06rem] text-[#FFFFFF] font-[700] text-[1rem] Mulish inline-block hover:bg-blue-600'>
+              See More
+            </motion.a>
           </div>
         </article>
         <article className="relative w-full">
@@ -178,11 +183,12 @@ const Home = () => {
           <p className='font-[400] text-[1.125rem] leading-[1.9rem] text-[#333333]'>
           By focusing on these principles, we aim to drive transformative change and enable individuals and communities to reach their full potential.
           </p>
-          <a href="#" className='bg-[#258CCF] rounded-[0.5rem] py-[1rem] px-[3.06rem] my-[2.5rem]'>
-            <button className='text-[#FFFFFF] font-[700] text-[1rem] Mulish'>
-              See More
-            </button>
-          </a>
+          <motion.a href="#" 
+          variants={buttonVariants}
+          whileHover="hover"
+          className='bg-[#258CCF] rounded-[0.5rem] py-[1rem] px-[3.06rem] my-[2.5rem] text-[#FFFFFF] font-[700] text-[1rem] Mulish inline-block hover:bg-blue-600 '>
+           See More
+          </motion.a>
         </article>
         <article className='mt-5'>
           <div className='flex flex-row m-auto w-fit gap-[2.5rem] flex-wrap relative z-10'>

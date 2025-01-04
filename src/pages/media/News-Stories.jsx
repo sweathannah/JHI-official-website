@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const News_Stories = () => {
   const [recentPost, setRecentPost] = useState(false);
@@ -12,18 +13,23 @@ const News_Stories = () => {
           News & Stories
         </h1>
       </section>
-      <section
-        className="flex flex-col lg:flex-row font-[Montserrat] lg:mx-[3rem] my-[5.5rem] justify-center items-center gap-10 "
-      >
+      <section className="flex flex-col lg:flex-row font-[Montserrat] lg:mx-[3rem] my-[5.5rem] justify-center items-center gap-10 ">
         <div className="max-lg:w-[90%] w-[70%] relative">
           <div className="bg-[url('/images/mediaImg/secondbg.png')] bg-cover bg-no-repeat h-[30rem]  pt-64 pl-8 relative">
             <div className="absolute bg-black opacity-45 "></div>
-            <h2 className="text-white text-[1.5rem] leading-8 md:text-[2rem] md:leading-[3rem] font-bold">
+            <motion.h2
+              initial={{ x: -650 }}
+              animate={{ x: 0 }}
+              transition={{delay: 0.2, type: 'spring', stiffness: 120}}
+              className="text-white text-[1.5rem] leading-8 md:text-[2rem] md:leading-[3rem] font-bold"
+            >
               Empowering Opportunities: Thriving Youth Summit
-            </h2>
-            <button className="w-[11rem] h-[3.5rem] text-white font-bold font-[Mulish] text-center border border-white rounded-lg mt-8">
+            </motion.h2>
+            <motion.button 
+            whileHover={{scale: 1.1, textShadow: '0px 0px 8px rgba(255, 255, 255)', boxShadow: '0px 0px 8px rgba(255, 255, 255)'}}
+            className="w-[11rem] h-[3.5rem] text-white font-bold font-[Mulish] text-center border border-white rounded-lg mt-8">
               Read more
-            </button>
+            </motion.button>
           </div>
           <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 mt-12 justify-center justify-items-center items-center ">
             <div className="w-[19.5rem] sm:w-[23.5rem] lg:w-[19.5rem] xl:w-[23.5rem] h-[41.5rem] border border-[#05175F40] space-y-3 rounded-lg p-3">
@@ -204,8 +210,10 @@ const News_Stories = () => {
             </div>
           </div>
         </div>
-        <div className="space-y-6 lg:w-[30%] bg-white max-lg:px-4
-        ">
+        <div
+          className="space-y-6 lg:w-[30%] bg-white max-lg:px-4
+        "
+        >
           <h2 className="text-[2rem] leading-[2.5rem] text-[#292666] font-semibold max-lg:text-center">
             Recent posts
           </h2>

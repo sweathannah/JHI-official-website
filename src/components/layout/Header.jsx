@@ -1,6 +1,9 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { IoMdArrowDropdown } from 'react-icons/io';
+import { Link, NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion'
+import { linkVariants } from '../../animation/animation';
 
 
 const Header = () => {
@@ -66,17 +69,22 @@ const Header = () => {
         </button>
         <nav className="p-8">
           <ul className="text-[#333333] text-lg space-y-6">
-            <li>
+            <motion.li
+            variants={linkVariants}
+            whileHover="hover">
               <NavLink to="/">Home</NavLink>
-            </li>
+            </motion.li>
             <li className="relative group text-lg">
                 <div className="mb-6">
-                  <p className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
+                  <motion.p 
+                  variants={linkVariants}
+                  whileHover="hover"
+                  className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
                     About Us{" "}
                     <span className="font-semibold">
                       <IoMdArrowDropdown />
                     </span>
-                  </p>
+                  </motion.p>
                 </div>
                 <div className=" hidden group-hover:block  space-y-6">
                   <NavLink
@@ -101,12 +109,15 @@ const Header = () => {
               </li>
               <li className="relative group text-lg">
                 <div className="mb-6">
-                  <p className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
+                  <motion.p 
+                   variants={linkVariants}
+                  whileHover="hover"
+                  className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
                     Programs{" "}
                     <span className="font-semibold">
                       <IoMdArrowDropdown />
                     </span>
-                  </p>
+                  </motion.p>
                 </div>
                 <div className=" hidden group-hover:block  space-y-6">
                   <NavLink
@@ -131,12 +142,15 @@ const Header = () => {
               </li>
               <li className="relative group text-lg">
                 <div className="mb-6">
-                  <p className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
+                  <motion.p 
+                  variants={linkVariants}
+                  whileHover="hover"
+                  className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
                     Media{" "}
                     <span className="font-semibold">
                       <IoMdArrowDropdown />
                     </span>
-                  </p>
+                  </motion.p>
                 </div>
                 <div className=" hidden group-hover:block  space-y-6">
                   <NavLink
@@ -161,12 +175,15 @@ const Header = () => {
               </li>
               <li className="relative group text-lg">
                 <div className="mb-6">
-                  <p className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
+                  <motion.p 
+                  variants={linkVariants}
+                  whileHover="hover"
+                  className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
                     Join Us{" "}
                     <span className="font-semibold">
                       <IoMdArrowDropdown />
                     </span>
-                  </p>
+                  </motion.p>
                 </div>
                 <div className=" hidden group-hover:block  space-y-6">
                   <NavLink

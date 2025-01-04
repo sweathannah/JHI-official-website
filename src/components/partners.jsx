@@ -1,4 +1,6 @@
 import React from 'react';
+import {motion} from 'framer-motion'
+import { linkVariants } from '../animation/animation';
 
 const PartnersSection = () => {
   // Example data for partners and sponsors
@@ -133,7 +135,9 @@ const PartnersSection = () => {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center"
             >
-                <img
+                <motion.img
+               variants={linkVariants}
+               whileHover="hover"
                 src={partner.logo}
                 alt={partner.name}
                 className="max-w-full h-auto object-contain"

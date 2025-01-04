@@ -1,6 +1,9 @@
 
 import React, { useEffect, useState } from 'react';
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import { motion } from 'framer-motion'
+import { bannerVariant } from '../animation/animation';
+import {buttonVariants} from '../animation/animation'
 
 
 export default function Hero(props) {
@@ -45,6 +48,10 @@ export default function Hero(props) {
   }, []); 
 
 
+
+ 
+
+
   return (
     <>
       <section
@@ -56,16 +63,27 @@ export default function Hero(props) {
 
         {/* Content Section */}
         <div className="relative z-10 h-fit flex flex-col justify-center items-start text-start lg:px-[6.25rem] px-[1rem] lg:space-y-[2.5rem]">
-          <h1 className="text-white text-[1.8rem] lg:text-[3.25rem] font-bold lg:mt-[7rem] mt-[5rem] leading-[2rem] lg:leading-[3.875rem] ">
+          <motion.h1
+          variants={bannerVariant}
+          initial="initial"
+          animate="animate"
+          className="text-white text-[1.8rem] lg:text-[3.25rem] font-bold lg:mt-[7rem] mt-[5rem] leading-[2rem] lg:leading-[3.875rem] ">
             Empowering Individuals & Communities to thrive through Mentorship, Impact Projects & Community Building
-          </h1>
-          <p className="text-white text-lg lg:text-[1.4rem] lg:mt-[1.5rem] mt-[3rem] max-w-2xl">
+          </motion.h1>
+          <motion.p 
+          variants={bannerVariant}
+          initial="initial"
+          animate="animate_p"
+          className="text-white text-lg lg:text-[1.4rem] lg:mt-[1.5rem] mt-[3rem] max-w-2xl">
             The Jimoh Habibullah Initiative is an NGO dedicated to fostering empathy,
             empowerment, and community growth. We offer ...
-          </p>
-          <button className="my-[2.125rem] lg:px-[3.06rem] px-[2rem] py-[1.25rem] bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-[700]">
+          </motion.p>
+          <motion.button 
+           variants={buttonVariants}
+           whileHover="hover"
+          className="my-[2.125rem] lg:px-[3.06rem] px-[2rem] py-[1.25rem] bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-[700]">
             Learn More
-          </button>
+          </motion.button>
         </div>
 
         {/* Arrows and Tabs Section */}

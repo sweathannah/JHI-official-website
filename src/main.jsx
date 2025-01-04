@@ -4,7 +4,7 @@ import Home from './pages/home/Home.jsx';
 import WhoWeAre from './pages/about/WhoWeAre.jsx';
 import Mentorship from './pages/programs/mentorship/MentorShip.jsx';
 // import Program from './pages/program/SocialImpact.jsx';
-import Team from './pages/team/Team.jsx';
+// import Team from './pages/team/Team.jsx';
 import './index.css'
 import Header from './components/layout/Header.jsx';
 import OurBoard from './pages/about/OurBoard.jsx';
@@ -30,7 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="programs/mentorship" element={<Mentorship />} />
       {/* <Route path="program" element={<Program />} /> */}
       <Route  path="/programs/social-impact" element={<SocialImpact />} />
-      <Route path="team" element={<Team />} />
+      {/* <Route path="team" element={<Team />} /> */}
       <Route path="/joinUs/contactUs" element={<ContactUs />} />
       <Route path="/joinUs/volunteer" element={<Volunteer />} />
       <Route path="/joinUs/donate" element={<Donate />} />
