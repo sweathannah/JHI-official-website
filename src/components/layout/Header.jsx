@@ -300,7 +300,7 @@ const Header = () => {
                 </div>
                 <div className="absolute hidden group-hover:block w-[11rem] border bg-white rounded-md p-6 space-y-8  -left-6 font-[Mulish] z-20">
                   <NavLink
-                    to="/about/whoWeAre"
+                    to="/media/News&Stories"
                     className="block hover:text-[#258CCF]"
                   >
                     News & Stories
@@ -312,7 +312,7 @@ const Header = () => {
                    Gallery
                   </NavLink>
                   <NavLink
-                    to="/about/ourBoard"
+                    to="/media/events"
                     className="block hover:text-[#258CCF]"
                   >
                   Events

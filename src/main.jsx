@@ -16,6 +16,7 @@ import Volunteer from './pages/join-us/Volunteer.jsx';
 import Donate from './pages/join-us/Donate.jsx';
 import News_Stories from './pages/media/News-Stories.jsx';
 import SocialImpact from './pages/programs/socialImpact/SocialImpact.jsx';
+import NotFound from './pages/not-found/NotFound.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
@@ -34,6 +35,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/joinUs/contactUs" element={<ContactUs />} />
       <Route path="/joinUs/volunteer" element={<Volunteer />} />
       <Route path="/joinUs/donate" element={<Donate />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
     <Footer />
   </BrowserRouter>
