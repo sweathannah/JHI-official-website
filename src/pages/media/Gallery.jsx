@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import GallerySection from '../../components/gallery';
+import {motion} from 'framer-motion'
+import {bannerVariant} from '../../animation/animation'
 
 const Gallery = () => {
   // State to track the active tab ('photos' or 'videos')
@@ -12,9 +14,13 @@ const Gallery = () => {
         {/* Background Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-45"></div>
 
-        <h1 className="text-white text-[52px] leading-[62px] text-center font-bold font-[Montserrat] z-30">
+        <motion.h1
+        variants={bannerVariant}
+        initial='initial'
+        animate='animate'
+        className="text-white text-[52px] leading-[62px] text-center font-bold font-[Montserrat] z-30">
           Gallery
-        </h1>
+        </motion.h1>
       </section>
 
       {/* Content Section */}

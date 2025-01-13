@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className="font-[Moteserrat]">
+    <header className="font-[Montserrat] sticky  top-0 w-full z-50">
       <section className="bg-[#258CCF] px-[6.25rem] py-[0.938rem] lg:flex hidden flex-row flex-wrap justify-between space-y-2">
         <div className="flex flex-row items-center text-[#FFFFFF] font-[400] text-[0.75rem] space-x-[0.625rem]">
           <a href="tel:+2348179969112">

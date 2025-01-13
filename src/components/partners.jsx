@@ -1,6 +1,6 @@
 import React from 'react';
 import {motion} from 'framer-motion'
-import { linkVariants } from '../animation/animation';
+import { imageVariants, linkVariants, textVariants } from '../animation/animation';
 
 const PartnersSection = () => {
   // Example data for partners and sponsors
@@ -115,7 +115,12 @@ const PartnersSection = () => {
 
   return (
     <section className="py-10">
-        <article className='w-fit m-auto text-center flex flex-col items-center max-w-[52rem] pt-[4rem]'>
+        <motion.article
+        variants={textVariants}
+        initial='initial'
+        whileInView='inView'
+        viewport={{once: true, amount:0.5}}
+        className='w-fit m-auto text-center flex flex-col items-center max-w-[52rem] pt-[4rem]'>
             <h3 className='font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] '>
             Join Us
             </h3>
@@ -125,7 +130,7 @@ const PartnersSection = () => {
             <p className='font-[400] text-[1.125rem] leading-[1.9rem] text-[#333333]'>
             Through the gracious support and commitment of our partners, we are able to empower hundreds of people in marginalized communities.
             </p>
-        </article>
+        </motion.article>
         <article className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 px-4 md:px-12 lg:px-20 mt-8">
             {partners.map((partner, index) => (
             <a
@@ -136,8 +141,11 @@ const PartnersSection = () => {
                 className="flex items-center justify-center"
             >
                 <motion.img
-               variants={linkVariants}
-               whileHover="hover"
+               variants={imageVariants}
+               initial='initial'
+               whileInView='inView'
+               viewport={{once: true, amount: 0.3}}
+               whileHover={{scale: 1.1, originX: 0, transition: {type: 'spring', stiffness: 300}}}
                 src={partner.logo}
                 alt={partner.name}
                 className="max-w-full h-auto object-contain"

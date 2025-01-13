@@ -1,31 +1,31 @@
 export const bannerVariant = {
     initial: {
       opacity: 0,
-      x: '-100vw'
     },
     animate: {
       opacity: 1,
-      x: 0,
       transition: {
-        type: 'spring',
-        delay: 0.2,
-        duration: 3
+        delay: 1,
+        duration: 1.5
       },
    
     },
     animate_p: {
       opacity: 1,
-      x: 0,
       transition: {
-        type: 'spring',
         delay: 2,
-        duration: 3
+        duration: 1.5
       }
     }
 
   }
 
+
+
 export  const buttonVariants = {
+    initial: {
+      opacity: 0,
+    },
     hover: {
       scale: 1.1,
       transition: {
@@ -46,5 +46,46 @@ export const linkVariants = {
       stiffness: 300
     }
 
+  }
+}
+
+export const imageVariants = {
+  initial: {
+    opacity: 0,
+    scale: 0
+  },
+  
+  inView: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.75
+    } 
+  },
+}
+
+export const textVariants = {
+  initial: {
+    opacity: 0
+  },
+  inView: {
+    opacity: 1,
+    transition: {
+      duration: 3
+    }
+  }
+}
+
+export const textScaleVariants = {
+  initial: {
+    opacity: 0,
+    scaleX: 0
+  },
+  inView: {
+    opacity: 1,
+    scaleX: 1,
+    transition: {
+      duration: 0.75
+    }
   }
 }
