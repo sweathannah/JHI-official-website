@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { textVariants, imageVariants } from "../animation/animation";
 
 const GallerySection = () => {
   const [activeTab, setActiveTab] = useState("photos");
@@ -41,14 +43,26 @@ const GallerySection = () => {
     <section className="py-10 px-[2rem]">
       {/* Intro Section */}
       <article className="w-fit m-auto text-center flex flex-col items-center">
-        <h4 className="my-[1.25rem] text-[#292666] font-[600] lg:text-[2.5rem] text-[1.8rem]">
+        <motion.h4
+          variants={textVariants}
+          initial="initial"
+          whileInView="inView"
+          viewport={{ once: true, amount: 0.5 }}
+          className="my-[1.25rem] text-[#292666] font-[600] lg:text-[2.5rem] text-[1.8rem]"
+        >
           Photos & Videos
-        </h4>
-        <p className="font-[400] text-[1.125rem] leading-[1.9rem] text-[#333333] text-center mb-10 lg:max-w-[70rem] max-w-[20rem]">
+        </motion.h4>
+        <motion.p
+          variants={textVariants}
+          initial="initial"
+          whileInView="inView"
+          viewport={{ once: true, amount: 0.5 }}
+          className="font-[400] text-[1.125rem] leading-[1.9rem] text-[#333333] text-center mb-10 lg:max-w-[70rem] max-w-[20rem]"
+        >
           JHI makes an effort to ensure that her members have the opportunity to
           see all the videos and pictures about the old events. So, at JHI, all
           the events organized are well documented.
-        </p>
+        </motion.p>
 
         {/* Tab Switcher */}
         <div className="flex justify-center mb-16 bg-[#05175F26] rounded-[1.88rem] p-[0.3rem]">
@@ -95,28 +109,38 @@ const GallerySection = () => {
       {/* Photos Section */}
       {activeTab === "photos" && (
         <article className="flex flex-col">
-          <div className="flex flex-row justify-between lg:items-center items-end my-[1rem]">
+          <motion.div
+            variants={textVariants}
+            initial="initial"
+            whileInView="inView"
+            viewport={{ once: true, amount: 0.5 }}
+            className="flex flex-row justify-between lg:items-center items-end my-[1rem]"
+          >
             <p className="font-[600] text-[1.5rem] text-[#333333]">
-              Photos Of The Empowerment Youth Changemakers Leadership...
+              Photos Of The Empowerment Youth Change-makers Leadership...
               (12/09/24)
             </p>
             <span className="font-[700] text-[1rem] text-[#258CCF] cursor-pointer">
               View less
             </span>
-          </div>
+          </motion.div>
 
           {/* Dynamic Photo Grid */}
           <div className="flex flex-wrap gap-4">
             {imagePaths.map((path, index) => (
-              <img
-                key={index}
-                src={path}
-                alt={`Gallery Image ${index + 1}`}
-                style={{
-                  width: imageWidths[index],
-                }}
-                className="h-auto object-cover"
-              />
+                <motion.img
+                variants={imageVariants}
+                initial='initial'
+                whileInView='inView'
+                viewport={{once: true, amount: 0.5}}
+                  key={index}
+                  src={path}
+                  alt={`Gallery Image ${index + 1}`}
+                  style={{
+                    width: imageWidths[index],
+                  }}
+                  className="h-auto object-cover"
+                />
             ))}
           </div>
         </article>

@@ -1,6 +1,9 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { IoMdArrowDropdown } from 'react-icons/io';
+import { Link, NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion'
+import { linkVariants } from '../../animation/animation';
 
 
 const Header = () => {
@@ -11,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className="font-[Moteserrat]">
+    <header className="font-[Montserrat] sticky  top-0 w-full z-50">
       <section className="bg-[#258CCF] px-[6.25rem] py-[0.938rem] lg:flex hidden flex-row flex-wrap justify-between space-y-2">
         <div className="flex flex-row items-center text-[#FFFFFF] font-[400] text-[0.75rem] space-x-[0.625rem]">
           <a href="tel:+2348179969112">
@@ -53,42 +56,156 @@ const Header = () => {
           </a>
         </div>
       </section>
-
-    {/* Mobile Navbar */}
-    <div className={`lg:hidden fixed w-[80%] inset-0 bg-white z-20 transform ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300`}>
-      {/* Close Button (X icon) */}
-      <button onClick={toggleMobileMenu} className="absolute top-4 right-4">
-        <img src="/images/close_icon.svg" alt="Close Icon" />
-      </button>
-      <nav className="p-8">
-        <ul className="text-[#333333] text-lg space-y-6">
-          <li><a href="/" className="nav-link">Home</a></li>
-          <li><a href="/about" className="nav-link">About Us</a></li>
-          <li><a href="/programs" className="nav-link">Programs</a></li>
-          <li><a href="/media" className="nav-link">Media</a></li>
-          <li><a href="/join" className="nav-link">Join Us</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    {/* Header with Logo and Menu Icon */}
-    <section className="lg:px-[6.25rem] px-[1rem] py-[1.6rem] bg-white flex items-center justify-between">
-      <div className="flex flex-row items-center lg:w-[12rem] w-full">
-        <img src="/images/jhi_logo.svg" alt="JHI logo" className="w-[11rem] z-10" />
-        <button onClick={toggleMobileMenu} className="lg:hidden ml-auto">
-          <img src="/images/menu_icon.svg" alt="Menu Icon" className="w-8" />
+      {/* Mobile Navbar */}
+      <div
+       onMouseLeave={toggleMobileMenu}
+        className={`lg:hidden fixed ml-auto w-[70%] inset-0 bg-white z-20 transform ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-[400%]"
+        } transition-transform duration-300`}
+      >
+        {/* Close Button (X icon) */}
+        <button onClick={toggleMobileMenu} className="absolute top-4 right-4">
+          <img src="/images/close_icon.svg" alt="Close Icon" />
         </button>
-      </div>
-      {/* Desktop Navigation */}
-      <div className="lg:flex hidden">
-        <nav>
-          <ul className="font-[400] text-[1rem] text-[#333333] flex flex-row space-x-[2.6rem]">
-            <li><a href="/" className="nav-link">Home</a></li>
-            <li><a href="/about" className="nav-link">About Us</a></li>
-            <li><a href="/programs" className="nav-link">Programs</a></li>
-            <li><a href="/media" className="nav-link">Media</a></li>
-            <li><a href="/join" className="nav-link">Join Us</a></li>
-
+        <nav className="p-8">
+          <ul className="text-[#333333] text-lg space-y-6">
+            <motion.li
+            variants={linkVariants}
+            whileHover="hover">
+              <NavLink to="/">Home</NavLink>
+            </motion.li>
+            <li className="relative group text-lg">
+                <div className="mb-6">
+                  <motion.p 
+                  variants={linkVariants}
+                  whileHover="hover"
+                  className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
+                    About Us{" "}
+                    <span className="font-semibold">
+                      <IoMdArrowDropdown />
+                    </span>
+                  </motion.p>
+                </div>
+                <div className=" hidden group-hover:block  space-y-6">
+                  <NavLink
+                    to="/about/whoWeAre"
+                    className="block"
+                  >
+                    Who we are
+                  </NavLink>
+                  <NavLink
+                    to="/about/ourTeam"
+                    className="block"
+                  >
+                    Our Team
+                  </NavLink>
+                  <NavLink
+                    to="/about/ourBoard"
+                    className="block"
+                  >
+                    Our Board
+                  </NavLink>
+                </div>
+              </li>
+              <li className="relative group text-lg">
+                <div className="mb-6">
+                  <motion.p 
+                   variants={linkVariants}
+                  whileHover="hover"
+                  className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
+                    Programs{" "}
+                    <span className="font-semibold">
+                      <IoMdArrowDropdown />
+                    </span>
+                  </motion.p>
+                </div>
+                <div className=" hidden group-hover:block  space-y-6">
+                  <NavLink
+                    to="/programs/mentorship"
+                    className="block"
+                  >
+                    Mentorship
+                  </NavLink>
+                  <NavLink
+                    to="/programs/social-impact"
+                    className="block"
+                  >
+                    Social Impact
+                  </NavLink>
+                  <NavLink
+                    to="/programs/community-building"
+                    className="block"
+                  >
+                    Community Building
+                  </NavLink>
+                </div>
+              </li>
+              <li className="relative group text-lg">
+                <div className="mb-6">
+                  <motion.p 
+                  variants={linkVariants}
+                  whileHover="hover"
+                  className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
+                    Media{" "}
+                    <span className="font-semibold">
+                      <IoMdArrowDropdown />
+                    </span>
+                  </motion.p>
+                </div>
+                <div className=" hidden group-hover:block  space-y-6">
+                  <NavLink
+                    to="/media/News&Stories"
+                    className="block"
+                  >
+                    News & Stories
+                  </NavLink>
+                  <NavLink
+                    to="/media/Gallery"
+                    className="block"
+                  >
+                    Gallery
+                  </NavLink>
+                  <NavLink
+                    to="/media/event"
+                    className="block"
+                  >
+                    Events
+                  </NavLink>
+                </div>
+              </li>
+              <li className="relative group text-lg">
+                <div className="mb-6">
+                  <motion.p 
+                  variants={linkVariants}
+                  whileHover="hover"
+                  className="cursor-pointer flex gap-4 items-center  transition-all duration-200 ease-in-out">
+                    Join Us{" "}
+                    <span className="font-semibold">
+                      <IoMdArrowDropdown />
+                    </span>
+                  </motion.p>
+                </div>
+                <div className=" hidden group-hover:block  space-y-6">
+                  <NavLink
+                    to="/joinUs/contactUs"
+                    className="block"
+                  >
+                    Contact Us
+                  </NavLink>
+                  <NavLink
+                    to="/joinUs/donate"
+                    className="block"
+                  >
+                    Donate
+                  </NavLink>
+                  <NavLink
+                    to="/joinUs/volunteer"
+                    className="block"
+                  >
+                    Volunteer
+                  </NavLink>
+                </div>
+              </li>
           </ul>
         </nav>
       </div>
@@ -153,22 +270,22 @@ const Header = () => {
                 </div>
                 <div className="absolute hidden group-hover:block w-[11rem] border bg-white rounded-md p-6 space-y-8  -left-6 font-[Mulish] z-20">
                   <NavLink
-                    to="/about/whoWeAre"
+                    to="/programs/mentorship"
                     className="block hover:text-[#258CCF]"
                   >
-                    Who we are
+                   Mentorship
                   </NavLink>
                   <NavLink
-                    to="/about/ourTeam"
+                    to="/programs/social-impact"
                     className="block hover:text-[#258CCF]"
                   >
-                    Our Team
+                    Social Impact
                   </NavLink>
                   <NavLink
-                    to="/about/ourBoard"
+                    to="/programs/community-building"
                     className="block hover:text-[#258CCF]"
                   >
-                    Our Board
+                    Community Building
                   </NavLink>
                 </div>
               </li>
@@ -183,7 +300,7 @@ const Header = () => {
                 </div>
                 <div className="absolute hidden group-hover:block w-[11rem] border bg-white rounded-md p-6 space-y-8  -left-6 font-[Mulish] z-20">
                   <NavLink
-                    to="/about/whoWeAre"
+                    to="/media/News&Stories"
                     className="block hover:text-[#258CCF]"
                   >
                     News & Stories
@@ -195,7 +312,7 @@ const Header = () => {
                    Gallery
                   </NavLink>
                   <NavLink
-                    to="/about/ourBoard"
+                    to="/media/events"
                     className="block hover:text-[#258CCF]"
                   >
                   Events
@@ -213,22 +330,22 @@ const Header = () => {
                 </div>
                 <div className="absolute hidden group-hover:block w-[11rem] border bg-white rounded-md p-6 space-y-8  -left-6 font-[Mulish] z-20">
                   <NavLink
-                    to="/joinUs/ContactUs"
+                    to="/joinUs/contactUs"
                     className="block hover:text-[#258CCF]"
                   >
                     Contact Us
                   </NavLink>
                   <NavLink
-                    to="/about/ourTeam"
+                    to="/joinUs/donate"
                     className="block hover:text-[#258CCF]"
                   >
-                    Our Team
+                    Donate
                   </NavLink>
                   <NavLink
-                    to="/about/ourBoard"
+                    to="/joinUs/volunteer"
                     className="block hover:text-[#258CCF]"
                   >
-                    Our Board
+                    Volunteer
                   </NavLink>
                 </div>
               </li>
