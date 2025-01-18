@@ -2,6 +2,7 @@ import { useState } from "react";
 import PhotoSection from "../../components/PhotoSection";
 import VideoSection from "../../components/VideoSection";
 import { motion } from "framer-motion";
+import {bannerVariant} from '../../animation/animation'
 
 const GallerySection = () => {
   const [activeTab, setActiveTab] = useState("photos");
@@ -122,15 +123,14 @@ const GallerySection = () => {
       >
         {/* Background Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-45"></div>
-          <h1 className="text-white text-[52px] leading-[62px] text-center font-bold font-[Montserrat] z-30">
-            <motion.div
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1 }}
-            >
-              Gallery
-            </motion.div>
-          </h1>
+
+        <motion.h1
+        variants={bannerVariant}
+        initial='initial'
+        animate='animate'
+        className="text-white text-[52px] leading-[62px] text-center font-bold font-[Montserrat] z-30">
+          Gallery
+        </motion.h1>
       </section>
 
       <section className="py-10 px-[2rem]">
