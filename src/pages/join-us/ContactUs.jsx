@@ -5,6 +5,7 @@ import {
   buttonVariants,
   textScaleVariants,
   textVariants,
+  viewport,
 } from "../../animation/animation";
 
 const ContactUs = () => {
@@ -30,7 +31,7 @@ const ContactUs = () => {
               variants={textVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="max-w-[40.7rem] text-white flex flex-col flex-1"
             >
               <h2 className="text-h1 leading-[4.5rem] font-semibold">
@@ -46,7 +47,7 @@ const ContactUs = () => {
               variants={textScaleVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="w-[16.5rem] sm:w-[30rem] md:w-[40.7rem] flex flex-col justify-center items-center px-4 py-6 md:p-10 gap-6 h-[24rem] bg-white rounded-[1.25rem] flex-1"
             >
               <input
@@ -78,7 +79,7 @@ const ContactUs = () => {
             variants={textVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="max-lg:text-center text-white text-h1 leading-[4.5rem] font-semibold p-8"
           >
             Visit Our Social <br /> Media Page
@@ -88,7 +89,7 @@ const ContactUs = () => {
               variants={textScaleVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="bg-white flex max-sm:flex-col items-center px-6 py-7
               rounded-[1.5rem] gap-4 max-w-[36rem]"
             >
@@ -105,7 +106,7 @@ const ContactUs = () => {
               variants={textScaleVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="bg-white flex max-sm:flex-col items-center px-6 py-7
               rounded-[1.5rem] gap-4 lg:self-end max-w-[36rem] "
             >
@@ -122,7 +123,7 @@ const ContactUs = () => {
               variants={textScaleVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="bg-white flex max-sm:flex-col items-center px-6 py-7 rounded-[1.5rem] gap-4 max-w-[36rem]"
             >
               <img
@@ -138,7 +139,7 @@ const ContactUs = () => {
               variants={textScaleVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="bg-white flex max-sm:flex-col items-center px-6 py-7 rounded-[1.5rem] gap-4 max-w-[36rem] lg:self-end"
             >
               <img
@@ -154,7 +155,7 @@ const ContactUs = () => {
               variants={textScaleVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="bg-white  px-6 py-10 rounded-[1.5rem] gap-4  self-center"
             >
               {/* <img src="/images/joinUsImg/instagram.png" alt="instagram" /> */}

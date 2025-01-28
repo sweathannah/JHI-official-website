@@ -5,7 +5,10 @@ import {
   textScaleVariants,
   textVariants,
   imageVariants,
+  viewport,
 } from "../../animation/animation";
+import LazyLoad from "react-lazyload";
+import LazyBackground from "../../components/LazyBackground";
 
 const Donate = () => {
   return (
@@ -29,7 +32,7 @@ const Donate = () => {
             variants={textVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className=" font-semibold uppercase max-w-[52.5rem] mx-auto"
           >
             Be part of the change you wish to see
@@ -38,7 +41,7 @@ const Donate = () => {
             variants={textVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
           >
             We are proudly Non- governmental Organization. People like you help
             contribute to the progress of this organization. We rely on donation
@@ -53,23 +56,19 @@ const Donate = () => {
             variants={imageVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className=""
           >
+            <LazyLoad height={300} offset={200}>
             <img
               className="w-[49rem] sm:h-[45rem] rounded-lg"
               src="/images/joinUsImg/donate_1.png"
               alt="donate_1"
             />
+            </LazyLoad>
           </motion.div>
-          <motion.div
-            variants={textScaleVariants}
-            initial="initial"
-            whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
-            className="bg-[url('/images/joinUsImg/donate_2.png')] w-[20rem] sm:w-[33rem] h-[34rem] bg-contain bg-no-repeat text-center uppercase text-[1rem] leading-[1.5rem] sm:text-[2rem] sm:leading-[2.5rem] font-semibold text-white space-y-10"
-          >
-            <p className="text-black">
+          <LazyBackground src='/images/joinUsImg/donate_2.png' className='w-[20rem] sm:w-[33rem] h-[34rem] bg-contain bg-no-repeat text-center uppercase text-[1rem] leading-[1.5rem] sm:text-[2rem] sm:leading-[2.5rem] font-semibold text-white space-y-10' variants={textScaleVariants}>
+          <p className="text-black">
               Account <br /> Detail
             </p>
             <p>
@@ -83,7 +82,7 @@ const Donate = () => {
             <p>
               Bank Name <br /> Uba
             </p>
-          </motion.div>
+          </LazyBackground>
         </div>
       </section>
     </>

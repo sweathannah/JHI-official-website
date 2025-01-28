@@ -4,6 +4,7 @@ import {
   textScaleVariants,
   textVariants,
   imageVariants,
+  viewport,
 } from "../../../animation/animation";
 const MentorShip = () => {
   return (
@@ -26,7 +27,7 @@ const MentorShip = () => {
           variants={textVariants}
           initial="initial"
           whileInView="inView"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={viewport}
         >
           <h2 className="text-[#292666] text-center text-[2.5rem] leading-[3rem] font-semibold">
             Mentorship and Capacity Building
@@ -45,14 +46,14 @@ const MentorShip = () => {
               variants={imageVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="bg-[#00B919] w-[90%] lg:w-[65%] h-[39.5rem]"
             ></motion.div>
             <motion.div
               variants={textScaleVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="w-[85%] md:w-[29rem] h-[28.5rem] border border-[rgba(0, 0, 0, 0.5)] rounded-lg flex flex-col justify-center"
             >
               <h3 className="text-[#292666] text-center text-[1.5rem] leading-[2rem] md:text-[2.5rem] md:leading-[3rem] font-semibold">
@@ -69,14 +70,14 @@ const MentorShip = () => {
               variants={imageVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="bg-[#D9D9D9] w-[90%] lg:w-[65%] h-[39.5rem]"
             ></motion.div>
             <motion.div
               variants={textScaleVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="w-[85%] md:w-[29rem] h-[28.5rem] border border-[rgba(0, 0, 0, 0.5)] rounded-lg flex flex-col justify-center"
             >
               <h3 className="text-[#292666] text-center text-[1.5rem] leading-[2rem] md:text-[2.5rem] md:leading-[3rem] font-semibold">
@@ -93,14 +94,14 @@ const MentorShip = () => {
               variants={imageVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="bg-[#258CCF9C] w-[90%] lg:w-[65%] h-[39.5rem]"
             ></motion.div>
             <motion.div
               variants={textScaleVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="w-[85%] md:w-[29rem] h-[28.5rem] border border-[rgba(0, 0, 0, 0.5)] rounded-lg flex flex-col justify-center"
             >
               <h3 className="text-[#292666] text-center text-[1.5rem] leading-[2rem] md:text-[2.5rem] md:leading-[3rem] font-semibold">
@@ -117,14 +118,14 @@ const MentorShip = () => {
               variants={imageVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="bg-[#FFF2D9] w-[90%] lg:w-[65%] h-[39.5rem]"
             ></motion.div>
             <motion.div
               variants={textScaleVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="w-[85%] md:w-[29rem] h-[28.5rem] border border-[rgba(0, 0, 0, 0.5)] rounded-lg flex flex-col justify-center"
             >
               <h3 className="text-[#292666] text-center text-[1.5rem] leading-[2rem] md:text-[2.5rem] md:leading-[3rem] font-semibold">
@@ -141,14 +142,14 @@ const MentorShip = () => {
               variants={imageVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="bg-[#1E74C7] w-[90%] lg:w-[65%] h-[39.5rem]"
             ></motion.div>
             <motion.div
               variants={textScaleVariants}
               initial="initial"
               whileInView="inView"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={viewport}
               className="w-[85%] md:w-[29rem] h-[28.5rem] border border-[rgba(0, 0, 0, 0.5)] rounded-lg flex flex-col justify-center"
             >
               <h3 className="text-[#292666] text-center text-[1.5rem] leading-[2rem] md:text-[2rem] md:leading-[3rem] font-semibold">
@@ -167,7 +168,7 @@ const MentorShip = () => {
           variants={textVariants}
           initial="initial"
           whileInView="inView"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={viewport}
           className="text-h1 text-[#05175F] font-semibold text-center mb-16"
         >
           Impact
@@ -177,7 +178,7 @@ const MentorShip = () => {
             variants={textScaleVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
           >
             <p>Increased self-confidence and career readiness.</p>
             <p>Enhanced leadership and communication skills</p>

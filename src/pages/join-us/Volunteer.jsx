@@ -5,6 +5,7 @@ import {
   bannerVariant,
   textVariants,
   textScaleVariants,
+  viewport,
 } from "../../animation/animation";
 
 const Volunteer = () => {
@@ -29,7 +30,7 @@ const Volunteer = () => {
             variants={textVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
           >
             <h2 className="font-semibold mb-4">Become a Volunteer</h2>
             <p className="max-w-[34rem] mb-8">
@@ -49,7 +50,7 @@ const Volunteer = () => {
             variants={textScaleVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="bg-[#C4C4C4] w-[50%] p-8 space-y-7 min-w-[22rem]"
           >
             <p className="text-[1rem] leading-[1.25rem] font-bold text-center text-black">

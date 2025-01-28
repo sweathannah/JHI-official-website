@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { textVariants, imageVariants } from "../animation/animation";
+import { textVariants, imageVariants, viewport } from "../animation/animation";
+import LazyLoad from "react-lazyload";
 
 const GallerySection = () => {
   const [activeTab, setActiveTab] = useState("photos");
@@ -47,7 +48,7 @@ const GallerySection = () => {
           variants={textVariants}
           initial="initial"
           whileInView="inView"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={viewport}
           className="my-[1.25rem] text-[#292666] font-[600] lg:text-[2.5rem] text-[1.8rem]"
         >
           Photos & Videos
@@ -56,7 +57,7 @@ const GallerySection = () => {
           variants={textVariants}
           initial="initial"
           whileInView="inView"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={viewport}
           className="font-[400] text-[1.125rem] leading-[1.9rem] text-[#333333] text-center mb-10 lg:max-w-[70rem] max-w-[20rem]"
         >
           JHI makes an effort to ensure that her members have the opportunity to
@@ -113,7 +114,7 @@ const GallerySection = () => {
             variants={textVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="flex flex-row justify-between lg:items-center items-end my-[1rem]"
           >
             <p className="font-[600] text-[1.5rem] text-[#333333]">
@@ -128,19 +129,41 @@ const GallerySection = () => {
           {/* Dynamic Photo Grid */}
           <div className="flex flex-wrap gap-4">
             {imagePaths.map((path, index) => (
-                <motion.img
+              <motion.div
                 variants={imageVariants}
-                initial='initial'
-                whileInView='inView'
-                viewport={{once: true, amount: 0.5}}
-                  key={index}
-                  src={path}
-                  alt={`Gallery Image ${index + 1}`}
-                  style={{
-                    width: imageWidths[index],
-                  }}
-                  className="h-auto object-cover"
-                />
+                initial="initial"
+                whileInView="inView"
+                viewport={viewport}
+                style={{
+                  width: imageWidths[index],
+                }}
+                key={index}
+              >
+                <LazyLoad offset={200}>
+                  <img
+                    key={index}
+                    src={path}
+                    alt={`Gallery Image ${index + 1}`}
+                    style={{
+                      width: "100%",
+                      height: "20rem",
+                    }}
+                    className="h-auto object-cover"
+                  />
+                </LazyLoad>
+              </motion.div>
+
+              // <img
+
+              //  key={index}
+              //    src={path}
+              //    alt={`Gallery Image ${index + 1}`}
+              //    style={{
+              //      width: imageWidths[index],
+
+              //    }}
+              //    className="h-auto object-cover"
+              //  />
             ))}
           </div>
         </article>
