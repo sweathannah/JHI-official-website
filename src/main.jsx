@@ -8,6 +8,8 @@ import Header from "./components/layout/Header.jsx";
 import OurBoard from "./pages/about/OurBoard.jsx";
 import OurTeam from "./pages/about/OurTeam.jsx";
 import Gallery from "./pages/media/Gallery.jsx";
+import Events from "./pages/media/Events.jsx";
+import EventDetail from "./pages/media/EventDetail.jsx";
 import Footer from "./components/layout/Footer.jsx";
 import ContactUs from "./pages/join-us/ContactUs.jsx";
 import Volunteer from "./pages/join-us/Volunteer.jsx";
@@ -27,8 +29,10 @@ const App = () => {
         {/* <Route path="/about/ourBoard" element={<OurBoard />} /> */}
         <Route path="/about/ourTeam" element={<OurTeam />} />
         <Route path="/about/whoWeAre" element={<WhoWeAre />} />
-        <Route path="/media/gallery" element={<Gallery />} />
-        <Route path="/media/news&Stories" element={<News_Stories />} />
+        <Route path="/media/Gallery" element={<Gallery />} />
+        <Route path="/media/Events" element={<Events />} />
+        <Route path="/events/:id" element={<EventDetail />} />
+        <Route path="/media/News&Stories" element={<News_Stories />} />
         <Route path="programs/mentorship" element={<Mentorship />} />
         <Route path="/programs/socialImpact" element={<SocialImpact />} />
         <Route path="/joinUs/contactUs" element={<ContactUs />} />
