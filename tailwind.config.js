@@ -11,5 +11,17 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({addUtilities}) {
+      const newUtilities = {
+        '.all-unset': {
+          all: 'unset',
+        },
+        'scrollbar-none': {
+          scrollbarWidth: 'none',
+        }
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 }

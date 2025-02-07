@@ -1,7 +1,8 @@
 import React from "react";
 import { linkVariants } from "../../animation/animation";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 import { link } from "framer-motion/client";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -57,50 +58,55 @@ const Footer = () => {
                 <div className="flex space-x-4 mt-6">
                   {/* Social Media Icons */}
                   <motion.a
-                  variants={linkVariants}
-                  whileHover="hover"
-                  className="inline-block"
-                  href="https://www.facebook.com/NYP2023?mibextid=LQQJ4d">
+                    variants={linkVariants}
+                    whileHover="hover"
+                    className="inline-block"
+                    href="https://www.facebook.com/NYP2023?mibextid=LQQJ4d"
+                  >
                     <img
                       src="/images/social_media_icons/facebook_icon.svg"
                       alt="facebook_icon"
                     />
                   </motion.a>
                   <motion.a
-                  variants={linkVariants}
-                  whileHover="hover"
-                  className="inline-block"
-                  href="https://www.instagram.com/jimohhabibullahi_initiative?igsh=czk2MTVkc3VubDgy&utm_source=qr">
+                    variants={linkVariants}
+                    whileHover="hover"
+                    className="inline-block"
+                    href="https://www.instagram.com/jimohhabibullahi_initiative?igsh=czk2MTVkc3VubDgy&utm_source=qr"
+                  >
                     <img
                       src="/images/social_media_icons/instagram_icon.svg"
                       alt="instagram_icon"
                     />
                   </motion.a>
                   <motion.a
-                  variants={linkVariants}
-                  whileHover="hover"
-                  className="inline-block"
-                  href="#">
+                    variants={linkVariants}
+                    whileHover="hover"
+                    className="inline-block"
+                    href="#"
+                  >
                     <img
                       src="/images/social_media_icons/youtube_icon.svg"
                       alt="youtube_icon"
                     />
                   </motion.a>
                   <motion.a
-                  variants={linkVariants}
-                  whileHover="hover"
-                  className="inline-block"
-                  href="https://x.com/jhinitiative01?s=21">
+                    variants={linkVariants}
+                    whileHover="hover"
+                    className="inline-block"
+                    href="https://x.com/jhinitiative01?s=21"
+                  >
                     <img
                       src="/images/social_media_icons/X_icon.svg"
                       alt="X_icon"
                     />
                   </motion.a>
                   <motion.a
-                  variants={linkVariants}
-                  whileHover="hover"
-                  className="inline-block"
-                  href="#">
+                    variants={linkVariants}
+                    whileHover="hover"
+                    className="inline-block"
+                    href="#"
+                  >
                     <img
                       src="/images/social_media_icons/linkedln_icon.svg"
                       alt="linkedln_icon"
@@ -115,56 +121,46 @@ const Footer = () => {
                   Quick Links
                 </h3>
                 <ul className="space-y-2">
-                  <li>
-                    <motion.a
-                    variants={linkVariants}
-                    whileHover="hover"
-                      href="#"
-                      className=" text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
+                <motion.li variants={linkVariants} whileHover="hover">
+                    <Link
+                      to="/"
+                      className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
                       Home
-                    </motion.a>
-                  </li>
-                  <li>
-                    <motion.a
-                     variants={linkVariants}
-                     whileHover="hover"
-                      href="#"
+                    </Link>
+                  </motion.li>
+                  <motion.li variants={linkVariants} whileHover="hover">
+                    <Link
+                      to="/about/whoWeAre"
                       className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
-                      About Us
-                    </motion.a>
-                  </li>
-                  <li>
-                    <motion.a
-                    variants={linkVariants}
-                    whileHover="hover"
-                      href="#"
+                      Who we are
+                    </Link>
+                  </motion.li>
+                  <motion.li variants={linkVariants} whileHover="hover">
+                    <Link
+                      to="/programs/mentorship"
                       className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
-                      Programs
-                    </motion.a>
-                  </li>
-                  <li>
-                    <motion.a
-                    variants={linkVariants}
-                    whileHover="hover"
-                      href="#"
+                      Mentorship
+                    </Link>
+                  </motion.li>
+                  <motion.li variants={linkVariants} whileHover="hover">
+                    <Link
+                      to="/programs/socialImpact"
                       className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
-                      Media
-                    </motion.a>
-                  </li>
-                  <li>
-                    <motion.a
-                    variants={linkVariants}
-                    whileHover="hover"
-                      href="#"
+                      Social impacts
+                    </Link>
+                  </motion.li>
+                  <motion.li variants={linkVariants} whileHover="hover">
+                    <Link
+                      to="/joinUs/donate"
                       className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
-                      Join Us
-                    </motion.a>
-                  </li>
+                      Donate
+                    </Link>
+                  </motion.li>
                 </ul>
               </div>
 
@@ -174,46 +170,38 @@ const Footer = () => {
                   Resources
                 </h3>
                 <ul className="space-y-2">
-                  <li>
-                    <motion.a
-                      variants={linkVariants}
-                      whileHover='hover'
-                      href="#"
+                <motion.li variants={linkVariants} whileHover="hover">
+                    <Link
+                      to="/media/gallery?id=photos"
                       className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
                       Photos
-                    </motion.a>
-                  </li>
-                  <li>
-                    <motion.a
-                    variants={linkVariants}
-                    whileHover="hover"
-                      href="#"
+                    </Link>
+                  </motion.li>
+                  <motion.li variants={linkVariants} whileHover="hover">
+                    <Link
+                      to="/media/gallery/?id=videos"
                       className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
-                      Videos
-                    </motion.a>
-                  </li>
-                  <li>
-                    <motion.a
-                    variants={linkVariants}
-                    whileHover='hover'
-                      href="#"
+                     Videos
+                    </Link>
+                  </motion.li>
+                  <motion.li variants={linkVariants} whileHover="hover">
+                    <Link
+                      to="/media/news&Stories"
                       className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
-                      News & Stories
-                    </motion.a>
-                  </li>
-                  <li>
-                    <motion.a
-                     variants={linkVariants}
-                     whileHover="hover"
-                      href="#"
+                     New & Stories
+                    </Link>
+                  </motion.li>
+                  <motion.li variants={linkVariants} whileHover="hover">
+                    <Link
+                      to="/media/events"
                       className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
                     >
                       Events
-                    </motion.a>
-                  </li>
+                    </Link>
+                  </motion.li>
                 </ul>
               </div>
 
@@ -223,46 +211,38 @@ const Footer = () => {
                   Support
                 </h3>
                 <ul className="space-y-2">
-                  <li>
-                    <motion.a
-                      href="#"
+                <motion.li variants={linkVariants} whileHover="hover">
+                    <Link
+                      to="/about/whoWeAre"
                       className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
-                      variants={linkVariants}
-                      whileHover="hover"
                     >
-                      Privacy Policy
-                    </motion.a>
-                  </li>
-                  <li>
-                    <motion.a
-                      href="#"
+                      Privacy policy
+                    </Link>
+                  </motion.li>
+                  <motion.li variants={linkVariants} whileHover="hover">
+                    <Link
+                      to="/aboutUs/contactUs"
                       className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
-                       variants={linkVariants}
-                      whileHover="hover"
                     >
                       Contact Us
-                    </motion.a>
-                  </li>
-                  <li>
-                    <motion.a
-                      href="#"
+                    </Link>
+                  </motion.li>
+                  <motion.li variants={linkVariants} whileHover="hover">
+                    <Link
+                      to="/about/whoWeAre"
                       className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
-                       variants={linkVariants}
-                      whileHover="hover"
                     >
-                      FAQs
-                    </motion.a>
-                  </li>
-                  <li>
-                    <motion.a
-                      href="#"
+                     FAQS
+                    </Link>
+                  </motion.li>
+                  <motion.li variants={linkVariants} whileHover="hover">
+                    <Link
+                      to="/joinUs/community"
                       className="text-[1rem] hover:font-[500] hover:text-blue-600 inline-block"
-                       variants={linkVariants}
-                      whileHover="hover"
                     >
                       Community
-                    </motion.a>
-                  </li>
+                    </Link>
+                  </motion.li>
                 </ul>
               </div>
             </div>

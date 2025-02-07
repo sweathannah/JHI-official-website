@@ -48,7 +48,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="font-[Montserrat]">
+    <div className="font-[Montserrat]" id="home">
       <Hero />
 
       <section className="w-full flex justify-between flex-row overflow-x-scroll">

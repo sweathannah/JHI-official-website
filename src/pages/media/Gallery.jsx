@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GallerySection from '../../components/gallery';
 import {motion} from 'framer-motion'
 import {bannerVariant} from '../../animation/animation'
@@ -6,6 +6,7 @@ import {bannerVariant} from '../../animation/animation'
 const Gallery = () => {
   // State to track the active tab ('photos' or 'videos')
   const [activeTab, setActiveTab] = useState("photos");
+
 
   return (
     <>

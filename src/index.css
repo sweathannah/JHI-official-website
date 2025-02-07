@@ -5,3 +5,8 @@
 .dashed-custom {
     border-image: dashed 10; /* Adjust the 10 for more/less spacing */
   }
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

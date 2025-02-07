@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { textVariants, imageVariants, viewport } from "../animation/animation";
 import LazyLoad from "react-lazyload";
+import { useLocation } from "react-router-dom";
 
 const GallerySection = () => {
   const [activeTab, setActiveTab] = useState("photos");
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location?.search)
+
+  useEffect(() => {
+    if(queryParams) {
+      const id = queryParams.get('id')
+      setActiveTab(id)
+    }
+  },[queryParams])
 
   // Array of image sources for the Photos tab
   const imagePaths = [
