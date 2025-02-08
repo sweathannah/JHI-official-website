@@ -1,6 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { bannerVariant, imageVariants, textScaleVariants, textVariants } from "../../animation/animation";
+import {
+  bannerVariant,
+  imageVariants,
+  textScaleVariants,
+  textVariants,
+  viewport,
+} from "../../animation/animation";
+import LazyLoad from "react-lazyload";
 
 const OurTeam = () => {
   const managementTeam = [
@@ -62,7 +69,7 @@ const OurTeam = () => {
     },
   ];
 
-    const technicalTeam = [
+  const technicalTeam = [
     {
       name: "Jimoh Habibullah",
       position: "Chief Technology Officer",
@@ -142,7 +149,7 @@ const OurTeam = () => {
             variants={textVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="text-[#292666] text-center text-[2.5rem] leading-[3rem] font-semibold"
           >
             Management Team
@@ -151,7 +158,7 @@ const OurTeam = () => {
             variants={textVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="text-[1.2rem] leading-[1.85rem] text-[#333333] mt-5 text-center"
           >
             Our team is a diverse group of professionals with a shared passion
@@ -163,21 +170,25 @@ const OurTeam = () => {
           {managementTeam.map(({ name, position, image, icon1, icon2 }, i) => (
             <div key={i} className="space-y-4 w-[17rem] h-[28rem]">
               <motion.div
-              variants={imageVariants}
-              initial='initial'
-              whileInView='inView'
-              viewport={{once: true, amount: 0.5}}>
-                <img
-                  className="w-[17rem] h-[18.5rem]"
-                  src={image}
-                  alt={`team${i}`}
-                />
+                variants={imageVariants}
+                initial="initial"
+                whileInView="inView"
+                viewport={viewport}
+              >
+                <LazyLoad height={300} offset={200}>
+                  <img
+                    className="w-[17rem] h-[18.5rem]"
+                    src={image}
+                    alt={`team${i}`}
+                  />
+                </LazyLoad>
               </motion.div>
               <motion.div
-               variants={textScaleVariants}
-              initial='initial'
-              whileInView='inView'
-              viewport={{once: true, amount: 0.5}}>
+                variants={textScaleVariants}
+                initial="initial"
+                whileInView="inView"
+                viewport={viewport}
+              >
                 <h3 className="text-[1.25rem] font-semibold leading-[2.5rem] text-center">
                   {name}
                 </h3>
@@ -195,10 +206,11 @@ const OurTeam = () => {
       </section>
       <section className="max-w-[76.5rem] mx-auto mt-[6.25rem]">
         <motion.div
-         variants={textVariants}
-              initial='initial'
-              whileInView='inView'
-              viewport={{once: true, amount: 0.5}}>
+          variants={textVariants}
+          initial="initial"
+          whileInView="inView"
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <h2 className="text-[#292666] text-center text-[2.5rem] leading-[3rem] font-semibold">
             Technical Team
           </h2>
@@ -212,21 +224,25 @@ const OurTeam = () => {
           {technicalTeam.map(({ name, position, image, icon1, icon2 }, i) => (
             <div key={i} className="space-y-4 w-[17rem] h-[28rem]">
               <motion.div
-              variants={imageVariants}
-              initial='initial'
-              whileInView='inView'
-              viewport={{once: true, amount: 0.5}}>
-                <img
-                  className="w-[17rem] h-[18.5rem]"
-                  src={image}
-                  alt={`team${i}`}
-                />
+                variants={imageVariants}
+                initial="initial"
+                whileInView="inView"
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                <LazyLoad height={300} offset={200}>
+                  <img
+                    className="w-[17rem] h-[18.5rem]"
+                    src={image}
+                    alt={`team${i}`}
+                  />
+                </LazyLoad>
               </motion.div>
               <motion.div
-               variants={textScaleVariants}
-              initial='initial'
-              whileInView='inView'
-              viewport={{once: true, amount: 0.5}}>
+                variants={textScaleVariants}
+                initial="initial"
+                whileInView="inView"
+                viewport={{ once: true, amount: 0.5 }}
+              >
                 <h3 className="text-[1.25rem] font-semibold leading-[2.5rem] text-center">
                   {name}
                 </h3>

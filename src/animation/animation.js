@@ -71,7 +71,7 @@ export const textVariants = {
   inView: {
     opacity: 1,
     transition: {
-      duration: 3
+      duration: 2.5
     }
   }
 }
@@ -89,3 +89,5 @@ export const textScaleVariants = {
     }
   }
 }
+
+export const viewport = { once: true, amount: 0.5 }

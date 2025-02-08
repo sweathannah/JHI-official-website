@@ -26,7 +26,7 @@ const App = () => {
       <Header />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
-        <Route path="/about/ourBoard" element={<OurBoard />} />
+        {/* <Route path="/about/ourBoard" element={<OurBoard />} /> */}
         <Route path="/about/ourTeam" element={<OurTeam />} />
         <Route path="/about/whoWeAre" element={<WhoWeAre />} />
         <Route path="/media/Gallery" element={<Gallery />} />
@@ -34,7 +34,7 @@ const App = () => {
         <Route path="/events/:id" element={<EventDetail />} />
         <Route path="/media/News&Stories" element={<News_Stories />} />
         <Route path="programs/mentorship" element={<Mentorship />} />
-        <Route path="/programs/social-impact" element={<SocialImpact />} />
+        <Route path="/programs/socialImpact" element={<SocialImpact />} />
         <Route path="/joinUs/contactUs" element={<ContactUs />} />
         <Route path="/joinUs/volunteer" element={<Volunteer />} />
         <Route path="/joinUs/donate" element={<Donate />} />

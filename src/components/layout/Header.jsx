@@ -120,12 +120,7 @@ const Header = () => {
                   >
                     Our Team
                   </NavLink>
-                  <NavLink
-                    to="/about/ourBoard"
-                    className="block"
-                  >
-                    Our Board
-                  </NavLink>
+                 
                 </div>
               </li>
               <li className="relative group text-lg">
@@ -148,7 +143,7 @@ const Header = () => {
                     Mentorship
                   </NavLink>
                   <NavLink
-                    to="/programs/social-impact"
+                    to="/programs/socialImpact"
                     className="block"
                   >
                     Social Impact
@@ -175,13 +170,13 @@ const Header = () => {
                 </div>
                 <div className=" hidden group-hover:block  space-y-6">
                   <NavLink
-                    to="/media/News&Stories"
+                    to="/media/news&Stories"
                     className="block"
                   >
                     News & Stories
                   </NavLink>
                   <NavLink
-                    to="/media/Gallery"
+                    to="/media/gallery"
                     className="block"
                   >
                     Gallery
@@ -268,12 +263,6 @@ const Header = () => {
                   >
                     Our Team
                   </NavLink>
-                  <NavLink
-                    to="/about/ourBoard"
-                    className="block hover:text-[#258CCF]"
-                  >
-                    Our Board
-                  </NavLink>
                 </div>
               </li>
               <li className="relative group">
@@ -293,7 +282,7 @@ const Header = () => {
                    Mentorship
                   </NavLink>
                   <NavLink
-                    to="/programs/social-impact"
+                    to="/programs/socialImpact"
                     className="block hover:text-[#258CCF]"
                   >
                     Social Impact
@@ -317,13 +306,13 @@ const Header = () => {
                 </div>
                 <div className="absolute hidden group-hover:block w-[11rem] border bg-white rounded-md p-6 space-y-8  -left-6 font-[Mulish] z-20">
                   <NavLink
-                    to="/media/News&Stories"
+                    to="/media/news&Stories"
                     className="block hover:text-[#258CCF]"
                   >
                     News & Stories
                   </NavLink>
                   <NavLink
-                    to="/media/Gallery"
+                    to="/media/gallery"
                     className="block hover:text-[#258CCF]"
                   >
                    Gallery

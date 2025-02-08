@@ -1,4 +1,6 @@
-import { useState } from "react";
+
+import React, { useEffect, useState } from "react";
+import GallerySection from '../../components/gallery';
 import PhotoSection from "../../components/PhotoSection";
 import VideoSection from "../../components/VideoSection";
 import { motion } from "framer-motion";
@@ -6,7 +8,6 @@ import {bannerVariant} from '../../animation/animation'
 
 const GallerySection = () => {
   const [activeTab, setActiveTab] = useState("photos");
-
   const photoSections = [
     {
       title: "Photos Of The Empowerment Youth Changemakers Leadership Summit (12/09/24)",
@@ -112,7 +113,6 @@ const GallerySection = () => {
       ],
     },
   ];
-  
 
   return (
     <>

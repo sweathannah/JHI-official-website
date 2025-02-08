@@ -4,6 +4,7 @@ import {
   textVariants,
   textScaleVariants,
   imageVariants,
+  viewport,
 } from "../../../animation/animation";
 import {motion} from 'framer-motion'
 
@@ -28,7 +29,7 @@ const SocialImpact = () => {
           variants={textVariants}
           initial="initial"
           whileInView="inView"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={viewport}
         >
           <h2 className="text-[#292666] text-center text-[2.5rem] leading-[3rem] font-semibold">
             Social Impact & Advocacy Projects
@@ -48,7 +49,7 @@ const SocialImpact = () => {
             variants={textVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="text-[#292666] text-center text-[2.5rem] leading-[3rem] font-semibold"
           >
             Education For All Initiative
@@ -57,14 +58,14 @@ const SocialImpact = () => {
             variants={imageVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="h-[28rem] bg-[#333333]"
           ></motion.div>
           <motion.p
             variants={textScaleVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="text-[1.8rem] leading-[2.5rem] md:text-[2.5rem] md:leading-[3rem] text-black text-center"
           >
             Expanding access to quality education, supporting schools, and
@@ -76,7 +77,7 @@ const SocialImpact = () => {
             variants={textVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="text-[#292666] text-center text-[2.5rem] leading-[3rem] font-semibold"
           >
             Healthcare Access Campaign
@@ -85,14 +86,14 @@ const SocialImpact = () => {
             variants={imageVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="h-[28rem] bg-[#D9D9D9]"
           ></motion.div>
           <motion.p
             variants={textScaleVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="text-[1.8rem] leading-[2.5rem] md:text-[2.5rem] md:leading-[3rem] text-black text-center"
           >
             {" "}
@@ -105,7 +106,7 @@ const SocialImpact = () => {
             variants={textVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="text-[#292666] text-center text-[2.5rem] leading-[3rem] font-semibold"
           >
             Economic Empowerment Programs
@@ -114,14 +115,14 @@ const SocialImpact = () => {
             variants={imageVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="h-[28rem] bg-[#258CCF]"
           ></motion.div>
           <motion.p
             variants={textScaleVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="text-[1.8rem] leading-[2.5rem] md:text-[2.5rem] md:leading-[3rem] text-black text-center"
           >
             Job training, entrepreneurship workshops, and access to resources
@@ -136,14 +137,14 @@ const SocialImpact = () => {
             variants={imageVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="h-[28rem] bg-[#E0EFF8]"
           ></motion.div>
           <motion.p
             variants={textScaleVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="text-[1.8rem] leading-[2.5rem] md:text-[2.5rem] md:leading-[3rem] text-black text-center"
           >
             Awareness programs, clean-up drives, tree planting, and sustainable
@@ -155,7 +156,7 @@ const SocialImpact = () => {
             variants={textVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="text-[#292666] text-center text-[2.5rem] leading-[3rem] font-semibold"
           >
             Emergency Response and Humanitarian Aid
@@ -164,14 +165,14 @@ const SocialImpact = () => {
             variants={imageVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="h-[28rem] bg-[#05175F]"
           ></motion.div>
           <motion.p
             variants={textScaleVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="text-[1.8rem] leading-[2.5rem] md:text-[2.5rem] md:leading-[3rem] text-black text-center"
           >
             Crisis support, including disaster relief and post-disaster recovery
@@ -182,7 +183,7 @@ const SocialImpact = () => {
             variants={textVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="text-[#292666] text-center text-[2.5rem] leading-[3rem] font-semibold"
           >
             Policy Advocacy Campaigns
@@ -191,14 +192,14 @@ const SocialImpact = () => {
             variants={imageVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="h-[28rem] bg-[#F5F5F5]"
           ></motion.div>
           <motion.p
             variants={textScaleVariants}
             initial="initial"
             whileInView="inView"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={viewport}
             className="text-[1.8rem] leading-[2.5rem] md:text-[2.5rem] md:leading-[3rem] text-black text-center"
           >
             Raising awareness and pushing for policy changes to benefit
