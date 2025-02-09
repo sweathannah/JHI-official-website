@@ -6,10 +6,9 @@ import { bannerVariant, buttonVariants } from "../animation/animation";
 export default function Hero(props) {
   // Array of background images (update this list as needed)
   const images = [
-    "./images/header.jpeg", // First image
-
-    "/images/tab2.svg", // Second image
-    "./images/tab1.svg", // Third imagen
+    './images/header.jpeg', // First image
+    '/images/header_image2.svg', // Second image
+    './images/header_image3.svg', // Third imagen
     // Add more images if needed
   ];
 
@@ -47,11 +46,11 @@ export default function Hero(props) {
   return (
     <>
       <section
-        className="w-full h-[100vh] bg-cover bg-no-repeat flex flex-col justify-between"
+        className="bg-cover bg-no-repeat h-[100vh] w-full relative flex flex-col items-center justify-center"
         style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
       >
         {/* Background Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-45 lg:mt-[10rem] mt-[6rem] h-full"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-45"></div>
 
         {/* Content Section */}
         <div className="relative z-10 h-fit flex flex-col justify-center items-start text-start lg:px-[6.25rem] px-[1rem] lg:space-y-[2.5rem]">
@@ -83,7 +82,7 @@ export default function Hero(props) {
         </div>
 
         {/* Arrows and Tabs Section */}
-        <div className="relative z-10 flex justify-end items-center space-x-[1.3rem] px-4 pb-4">
+        <div className="relative z-10 flex justify-end items-end space-x-[1.3rem] px-4 pb-4">
           {/* Left Arrow */}
           <span
             onClick={handleLeftClick}
