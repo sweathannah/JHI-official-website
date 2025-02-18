@@ -66,12 +66,14 @@ export const imageVariants = {
 
 export const textVariants = {
   initial: {
+    y: 70,
     opacity: 0
   },
   inView: {
+    y: 0,
     opacity: 1,
     transition: {
-      duration: 2.5
+      duration: .5
     }
   }
 }

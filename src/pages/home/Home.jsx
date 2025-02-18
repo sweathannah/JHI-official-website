@@ -52,11 +52,7 @@ const Home = () => {
       <Hero />
 
       <section className="w-full flex justify-between flex-row overflow-x-scroll">
-        <motion.div
-          variants={imageVariants}
-          initial="initial"
-          whileInView="inView"
-          viewport={viewport}
+        <div
           className="bg-[#258CCF] px-[2.43rem] py-[3rem] "
         >
           <h2 className="font-[600] text-[1.375rem] leading-[1.875rem] text-white mb-[1.25rem] min-w-[19rem] ">
@@ -70,12 +66,8 @@ const Home = () => {
             Learn More
             <img src="./images/yellow_arrow.svg" alt="" className="" />
           </a>
-        </motion.div>
-        <motion.div
-          variants={imageVariants}
-          initial="initial"
-          whileInView="inView"
-          viewport={viewport}
+        </div>
+        <div
           className="bg-[#000000] px-[2.43rem] py-[3rem] "
         >
           <h2 className="font-[600] text-[1.375rem] leading-[1.875rem] text-white mb-[1.25rem] min-w-[22rem] ">
@@ -88,12 +80,8 @@ const Home = () => {
             Donate Now
             <img src="./images/yellow_arrow.svg" alt="" className="" />
           </a>
-        </motion.div>
-        <motion.div
-          variants={imageVariants}
-          initial="initial"
-          whileInView="inView"
-          viewport={{ once: true, amount: 0.2 }}
+        </div>
+        <div
           className="bg-[#258CCF] px-[2.43rem] py-[3rem] "
         >
           <h2 className="font-[600] text-[1.375rem] leading-[1.875rem] text-white mb-[1.25rem] min-w-[22rem] ">
@@ -106,7 +94,7 @@ const Home = () => {
             Join Now
             <img src="./images/yellow_arrow.svg" alt="" className="" />
           </a>
-        </motion.div>
+        </div>
       </section>
 
       <section className="lg:px-[4rem] p-[2rem] lg:pt-[10rem] flex flex-row space-x-[3rem] ">

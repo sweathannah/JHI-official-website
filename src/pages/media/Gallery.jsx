@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import GallerySection from '../../components/gallery';
+// import GallerySection from '../../components/gallery';
 import PhotoSection from "../../components/PhotoSection";
 import VideoSection from "../../components/VideoSection";
 import { motion } from "framer-motion";
