@@ -1,6 +1,4 @@
-
 import React, { useEffect, useState } from "react";
-import GallerySection from '../../components/gallery';
 import PhotoSection from "../../components/PhotoSection";
 import VideoSection from "../../components/VideoSection";
 import { motion } from "framer-motion";
@@ -113,6 +111,10 @@ const GallerySection = () => {
       ],
     },
   ];
+<<<<<<< HEAD
+
+=======
+>>>>>>> 87eafc1789fc3ac1bb924782a92d0241139dd01f
 
   return (
     <>

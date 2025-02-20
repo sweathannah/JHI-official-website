@@ -366,7 +366,7 @@ const ContactUs = () => {
               {showAnswer[index] && (
                 <button
                   onClick={() => toggleShowAnswers(index)}
-                  className="h-10 w-10 rounded-full text-white bg-[#292666] text-3xl font-semibold flex justify-center items-center max-sm:h-8 max-sm:w-8 max-sm:text-xl"
+                  className="h-10 w-10 rounded-full text-white bg-[#292666] text-3xl font-semibold flex justify-center items-center max-sm:h-8 max-sm:w-6 max-sm:text-xl"
                 >
                   <IoIosClose />
                 </button>
