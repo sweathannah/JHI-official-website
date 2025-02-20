@@ -4,7 +4,7 @@ import VideoSection from "../../components/VideoSection";
 import { motion } from "framer-motion";
 import {bannerVariant} from '../../animation/animation'
 
-const GallerySection = () => {
+const GalleryPage = () => {
   const [activeTab, setActiveTab] = useState("photos");
   const photoSections = [
     {
@@ -111,10 +111,6 @@ const GallerySection = () => {
       ],
     },
   ];
-<<<<<<< HEAD
-
-=======
->>>>>>> 87eafc1789fc3ac1bb924782a92d0241139dd01f
 
   return (
     <>
@@ -206,4 +202,4 @@ const GallerySection = () => {
   );
 };
 
-export default GallerySection;
+export default GalleryPage;
