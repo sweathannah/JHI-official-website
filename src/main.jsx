@@ -29,10 +29,10 @@ const App = () => {
         {/* <Route path="/about/ourBoard" element={<OurBoard />} /> */}
         <Route path="/about/ourTeam" element={<OurTeam />} />
         <Route path="/about/whoWeAre" element={<WhoWeAre />} />
-        <Route path="/media/Gallery" element={<Gallery />} />
+        <Route path="/media/gallery" element={<Gallery />} />
         <Route path="/media/Events" element={<Events />} />
         <Route path="/events/:id" element={<EventDetail />} />
-        <Route path="/media/News&Stories" element={<News_Stories />} />
+        <Route path="/media/news&Stories" element={<News_Stories />} />
         <Route path="programs/mentorship" element={<Mentorship />} />
         <Route path="/programs/socialImpact" element={<SocialImpact />} />
         <Route path="/joinUs/contactUs" element={<ContactUs />} />
