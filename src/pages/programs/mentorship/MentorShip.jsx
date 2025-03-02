@@ -6,10 +6,12 @@ import {
   imageVariants,
   viewport,
 } from "../../../animation/animation";
+
+import LazyBackground from "../../../components/LazyBackground";
 const MentorShip = () => {
   return (
     <>
-      <section className="bg-[url('/images/header.jpeg')] bg-cover bg-no-repeat h-[100vh] w-full relative flex items-center justify-center font-[Montserrat]">
+      <section className="bg-[url('/images/header.jpeg')] bg-cover bg-no-repeat h-[100vh] w-full relative flex flex-col items-center justify-center font-[Montserrat]">
         {/* Background Overlay  */}
         <div className="absolute inset-0 bg-black bg-opacity-45 "></div>
 
@@ -17,39 +19,47 @@ const MentorShip = () => {
           variants={bannerVariant}
           initial="initial"
           animate="animate"
-          className="text-white text-h1 leading-[62px] text-center font-bold font-[Montserrat] z-30"
+          className="text-white text-[1.8rem] lg:text-[3.25rem] text-center font-bold font-[Montserrat] z-30"
         >
           Mentorship
         </motion.h1>
-      </section>
-      <section className="max-w-[80.5rem] mx-auto mt-[6.25rem] px-4 font-[Montserrat]">
-        <motion.div
-          variants={textVariants}
+        <motion.p
+          variants={bannerVariant}
           initial="initial"
-          whileInView="inView"
-          viewport={viewport}
+          animate="animate_p"
+          className="text-white font-bold text-center text-lg lg:text-[1.4rem] lg:mt-[3rem] mt-[3rem] max-w-5xl"
         >
-          <h2 className="text-[#292666] text-center text-[2.5rem] leading-[3rem] font-semibold">
-            Mentorship and Capacity Building
-          </h2>
-          <p className="text-[1.2rem] leading-[1.85rem] text-[#333333] mt-5 text-center">
-            The mentorship and Capacity building program is designed to support
-            individuals in their personal and professional development. By
-            providing personalized guidance, skill-building workshops, and group
-            coaching, the initiative helps individuals unlock their full
-            potential.
-          </p>
-        </motion.div>
-        <div className="space-y-24 mt-[6.25rem]">
-          <div className="flex items-center gap-10 flex-col xl:flex-row justify-center max-lg:mx-6">
-            <motion.div
-              variants={imageVariants}
-              initial="initial"
-              whileInView="inView"
-              viewport={viewport}
-              className="bg-[#00B919] w-[90%] lg:w-[65%] h-[39.5rem]"
-            ></motion.div>
-            <motion.div
+          The mentorship and Capacity building program is designed to support
+          individuals in their personal and professional development. By
+          providing personalized guidance, skill-building workshops, and group
+          coaching, the initiative helps individuals unlock their full
+          potential.
+        </motion.p>
+      </section>
+      <section className="max-w-[80.5rem] mx-auto px-4 font-[Montserrat]">
+        <div className="flex flex-wrap">
+          <div className="flex flex-col justify-center w-[50%]">
+            <LazyBackground
+            src="/images/mediaImg/secondbg.png"
+            className="bg-cover bg-no-repeat h-[30rem]  pt-64 pl-8 relative"
+            variants={imageVariants}
+          >
+            <div className="absolute bg-black opacity-45 "></div>
+            <h2 className="text-white text-[1.5rem] leading-8 md:text-[2rem] md:leading-[3rem] font-bold">
+              Empowering Opportunities: Thriving Youth Summit
+            </h2>
+            <motion.button
+              whileHover={{
+                scale: 1.1,
+                textShadow: "0px 0px 8px rgba(255, 255, 255)",
+                boxShadow: "0px 0px 8px rgba(255, 255, 255)",
+              }}
+              className="w-[11rem] h-[3.5rem] text-white font-bold font-[Mulish] text-center border border-white rounded-lg mt-8"
+            >
+              Read more
+            </motion.button>
+          </LazyBackground>
+            {/* <motion.div
               variants={textScaleVariants}
               initial="initial"
               whileInView="inView"
@@ -63,7 +73,7 @@ const MentorShip = () => {
                 Tailored mentorship sessions for personal growth, career
                 development, and overcoming specific challenges.
               </p>
-            </motion.div>
+            </motion.div> */}
           </div>
           <div className="flex items-center gap-10 flex-col xl:flex-row justify-center mx-6">
             <motion.div

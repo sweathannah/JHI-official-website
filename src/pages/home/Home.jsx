@@ -53,7 +53,7 @@ const Home = () => {
 
       <section className="w-full flex justify-between flex-row overflow-x-scroll">
         <div
-          className="bg-[#258CCF] px-[2.43rem] py-[3rem] "
+          className="bg-[#258CCF] px-[2rem] py-[3rem] "
         >
           <h2 className="font-[600] text-[1.375rem] leading-[1.875rem] text-white mb-[1.25rem] min-w-[19rem] ">
             The JHI call for application into the inaugural cohort set for 3
@@ -68,7 +68,7 @@ const Home = () => {
           </a>
         </div>
         <div
-          className="bg-[#000000] px-[2.43rem] py-[3rem] "
+          className="bg-[#000000] px-[2rem] py-[3rem] "
         >
           <h2 className="font-[600] text-[1.375rem] leading-[1.875rem] text-white mb-[1.25rem] min-w-[22rem] ">
             Help JHI to in her impacting of projects and community building
@@ -82,7 +82,7 @@ const Home = () => {
           </a>
         </div>
         <div
-          className="bg-[#258CCF] px-[2.43rem] py-[3rem] "
+          className="bg-[#258CCF] px-[2rem] py-[3rem] "
         >
           <h2 className="font-[600] text-[1.375rem] leading-[1.875rem] text-white mb-[1.25rem] min-w-[22rem] ">
             Join our community to help empower individuals & communities
@@ -256,7 +256,7 @@ const Home = () => {
         </article>
       </motion.section>
 
-      <section className="lg:px-[4rem] p-[2rem] lg:pt-[10rem] flex flex-col space-y-[3.4rem] ">
+      <section className="lg:px-[4rem] px-[2rem] lg:pt-[2rem] pt-[4rem] flex flex-col ">
         <article className="flex flex-row flex-wrap items-center lg:gap-[8rem] gap-[3rem]">
           <motion.div
             variants={textVariants}
@@ -292,7 +292,7 @@ const Home = () => {
             </motion.a>
           </div>
         </article>
-        <article className="relative w-full">
+        <article className="relative w-full h-fit">
           <MentorshipCarousel />
         </article>
       </section>
@@ -301,7 +301,7 @@ const Home = () => {
           src="/images/bgs/media_background.svg"
           className="w-full lg:h-[65rem] h-[140rem] bg-cover bg-no-repeat px-6"
         >
-          <article className="w-fit m-auto text-center flex flex-col items-center max-w-[52rem] pt-[10rem]">
+          <article className="w-fit m-auto text-center flex flex-col items-center max-w-[52rem] pt-[15rem]">
             <h3 className="font-[600] text-[#292666] text-[0.8rem] px-[1rem] py-[0.5rem] bg-[#05175F40] w-fit rounded-[0.3rem] ">
               Media
             </h3>

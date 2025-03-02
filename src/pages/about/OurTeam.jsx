@@ -14,123 +14,91 @@ const OurTeam = () => {
     {
       name: "Jimoh Habibullah",
       position: "Founder/ Executive Director",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
     {
       name: " Taofeeq Alata",
       position: "Chief Operating Officer",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
     {
-      name: "Ijeoma Hamzee",
-      position: "Communication Manager",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      name: "Princewell Udochukwu",
+      position: "Operational Manager ",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
     {
-      name: "Rahman Islau",
-      position: "Director of Programmers",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      name: "Michael Oluwaseun",
+      position: "Social Media Manager",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
     {
-      name: "Sunday Festus",
-      position: "Director of Community Engagement/Programs",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      name: "Daud Salahudeen",
+      position: "Lead Graphic Designer",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
     {
-      name: "Edward Hamzan",
-      position: "Communication Assistant",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      name: "Yisa-Apata Taofeek ",
+      position: "Director of Plannings",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
     {
-      name: "Basit Faruoq",
-      position: "Programmers Assistant",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      name: "Abeeb MUTALIB",
+      position: "Lead at Grant and Documentation",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
     {
-      name: "Shina Lambed",
-      position: "Programmers Coordinator",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      name: "Aishat Opeyemi",
+      position: "Director of communication",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
   ];
 
   const technicalTeam = [
     {
-      name: "Jimoh Habibullah",
-      position: "Chief Technology Officer",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      name: "Makanjuola Ayanfe",
+      position: "Web project Manager",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
     {
-      name: " Taofeeq Alata",
-      position: "Project Manager",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      name: "Durosinmi Quadri",
+      position: "UI/UX Designer I",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
     {
-      name: "Ijeoma Hamzee",
-      position: "Senior Web Developer",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      name: "Atolagbe Joshua",
+      position: "UIUX designer II",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
     {
-      name: "Rahman Islau",
-      position: "Senior UI/UX Designer",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      name: " Yusuf Roheemat",
+      position: "UI/UX Designer III",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
     {
-      name: "Sunday Festus",
-      position: "UI/UX Designer",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      name: "Issa Wasilat",
+      position: "Project Manager team",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
     {
-      name: "Edward Hamzan",
-      position: "Graphics Designer",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      name: "Bashir Sultanat",
+      position: "Front-end developer I",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
     {
-      name: "Basit Faruoq",
-      position: "Programmer 1",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      name: "Olanrewaju AbdulKabee",
+      position: "Backend Developer",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
     {
-      name: "Shina Lambed",
-      position: "Junior Designer",
-      image: "/images/aboutImg/teamImg_1.png",
-      icon1: "/images/aboutImg/in.png",
-      icon2: "/images/aboutImg/x.png",
+      name: "Bisiriyu Olamiposi",
+      position: "Web developer",
+      image: "https://www.w3schools.com/howto/img_avatar.png",
     },
   ];
 
   return (
     <>
-      <section className="bg-[url('/images/header.jpeg')] bg-cover bg-no-repeat h-[100vh] w-full relative flex items-center justify-center">
+      <section className="bg-[url('images/header_image3.svg')] bg-cover bg-no-repeat h-[100vh] w-full relative flex items-center justify-center">
         {/* Background Overlay  */}
         <div className="absolute inset-0 bg-black bg-opacity-45 "></div>
 
@@ -195,9 +163,13 @@ const OurTeam = () => {
                 <p className="text-[1rem] leading-[1.25rem] text-center">
                   {position}
                 </p>
-                <div className="flex justify-center items-center gap-4">
-                  <img src={icon1} alt="linkedIn" />
-                  <img src={icon2} alt="twitter" />
+                <div className="flex justify-center items-center gap-4 mt-5">
+                  <a href="#">
+                    <img src="/images/aboutImg/in.png" alt="linkedIn" />
+                  </a>
+                  <a href="#">
+                    <img src="/images/aboutImg/x.png" alt="twitter" />
+                  </a>
                 </div>
               </motion.div>
             </div>
@@ -249,9 +221,13 @@ const OurTeam = () => {
                 <p className="text-[1rem] leading-[1.25rem] text-center">
                   {position}
                 </p>
-                <div className="flex justify-center items-center gap-4">
-                  <img src={icon1} alt="linkedIn" />
-                  <img src={icon2} alt="twitter" />
+                <div className="flex justify-center items-center gap-4 mt-5">
+                  <a href="#">
+                    <img src="/images/aboutImg/in.png" alt="linkedIn" />
+                  </a>
+                  <a href="#">
+                    <img src="/images/aboutImg/x.png" alt="twitter" />
+                  </a>
                 </div>
               </motion.div>
             </div>
