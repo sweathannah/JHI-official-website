@@ -49,13 +49,13 @@ const Footer = () => {
                   alt="Jimoh Habibullah Initiative Logo"
                   className="mb-6"
                 />
-                <p className="text-[0.8rem] font-[500] lg:w-[26rem] w-[20rem]">
+                <p className="text-[0.8rem] font-[500] lg:w-[26rem] w-[17rem]">
                   The Jimoh Habibullah Initiative is an NGO dedicated to
                   fostering empathy, empowerment, and community growth. We offer
                   mentorship programs, including one-on-one mentoring and
                   workshops, to help individuals achieve their goals.
                 </p>
-                <div className="flex space-x-4 mt-6">
+                <div className="flex space-x-3 mt-6">
                   {/* Social Media Icons */}
                   <motion.a
                     variants={linkVariants}

@@ -38,7 +38,7 @@ const MentorShip = () => {
       </section>
       <section className=" mx-auto p-4 font-[Montserrat]">
         <div className="flex flex-wrap gap-[3rem]">
-          <div className="flex flex-col justify-center lg:w-[30%] w-fit ">
+          <div className="flex flex-col justify-center lg:w-[30%]  ">
             <LazyBackground
               src="https://i.pinimg.com/736x/7a/36/e7/7a36e7ef4469b720a44118290b875c6a.jpg"
               className="relative bg-cover bg-no-repeat h-[24rem] pt-[10rem] font-[Mulish] border border-white rounded-lg"
@@ -49,10 +49,10 @@ const MentorShip = () => {
 
               {/* Text Content */}
               <div className="relative z-10 p-6">
-                <h2 className="text-white text-[3rem] leading-[2rem] md:text-[2rem] font-bold">
+                <h2 className="text-white lg:text-[3rem]  leading-[2rem] text-[2rem] font-bold">
                   One - on - One Mentoring
                 </h2>
-                <p className="text-white text-lg md:text-base pt-3">
+                <p className="text-white lg:text-lg text-[0.8rem] pt-3">
                   Tailored mentorship sessions for personal growth, career development, and overcoming specific challenges.
                 </p>
               </div>
@@ -69,10 +69,10 @@ const MentorShip = () => {
 
               {/* Text Content */}
               <div className="relative z-10 p-6">
-                <h2 className="text-white text-[3rem] leading-[2rem] md:text-[2rem] font-bold">
+                <h2 className="text-white lg:text-[3rem] leading-[2rem] text-[2rem] font-bold">
                   Group Coaching Session
                 </h2>
-                <p className="text-white text-lg md:text-base pt-3">
+                <p className="text-white lg:text-lg text-[0.8rem] pt-3">
                   Focused group discussions and coaching to address common
                   community issues or shared goals.
                 </p>
@@ -90,10 +90,10 @@ const MentorShip = () => {
 
               {/* Text Content */}
               <div className="relative z-10 p-6">
-                <h2 className="text-white text-[3rem] leading-[2rem] md:text-[2rem] font-bold">
+                <h2 className="text-white lg:text-[3rem] leading-[2rem] text-[2rem] font-bold">
                   Skills Development Workshops
                 </h2>
-                <p className="text-white text-lg md:text-base pt-3">
+                <p className="text-white lg:text-lg text-[0.8rem] pt-3">
                 Interactive sessions designed to teach practical skills, from
                 leadership to technical expertise.
                 </p>
@@ -111,10 +111,10 @@ const MentorShip = () => {
 
               {/* Text Content */}
               <div className="relative z-10 p-6">
-                <h2 className="text-white text-[3rem] leading-[2rem] md:text-[2rem] font-bold">
+                <h2 className="text-white lg:text-[3rem] leading-[2rem] text-[2rem] font-bold">
                   Women’s Leadership Academy
                 </h2>
-                <p className="text-white text-lg md:text-base pt-3">
+                <p className="text-white lg:text-lg text-[0.8rem] pt-3">
                   The Women’s Leadership Academy equips women with the skills and confidence to lead, break barriers, and create lasting impact through mentorship and hands-on training
                 </p>
               </div>
@@ -131,10 +131,10 @@ const MentorShip = () => {
 
               {/* Text Content */}
               <div className="relative z-10 p-6">
-                <h2 className="text-white text-[3rem] leading-[2rem] md:text-[2rem] font-bold">
+                <h2 className="text-white lg:text-[3rem] leading-[2rem] text-[2rem] font-bold">
                   Youth Empowerment Network
                 </h2>
-                <p className="text-white text-lg md:text-base pt-3">
+                <p className="text-white lg:text-lg text-[0.8rem] pt-3">
                   The Youth Empowerment Network fosters growth and innovation by equipping young minds with the skills, mentorship, and opportunities they need to thrive and lead.
                 </p>
               </div>
