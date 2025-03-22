@@ -37,7 +37,7 @@ const SocialImpact = () => {
         </motion.p>
       </section>
 
-      <section className="flex lg:flex-row flex-col gap-2 justify-between items-center my-[5rem] px-[4rem]">
+      <section className="flex lg:flex-row flex-col gap-2 justify-between items-center mt-[5rem] px-[4rem]">
         <div className="items-start max-w-[50%] space-y-[1rem]">
           <motion.h2
             variants={textVariants}
@@ -72,7 +72,7 @@ const SocialImpact = () => {
         </div>
       </section>
 
-      <section className="flex lg:flex-row flex-col gap-2 justify-between items-center my-[5rem] px-[4rem]">
+      <section className="flex lg:flex-row flex-col items-center gap-6 mt-[3rem] px-[4rem]">
         <div>
           <motion.img
             variants={imageVariants}
@@ -107,8 +107,8 @@ const SocialImpact = () => {
         </div>
       </section>
 
-      <section className="flex lg:flex-row flex-col gap-2 justify-between items-center my-[5rem] px-[4rem]">
-        <div className="items-start max-w-[50%] space-y-[1rem]">
+      <section className="flex lg:flex-row flex-col items-center gap-14 mt-[3rem] px-[4rem]">
+        <div className="items-start max-w-[51.6%] space-y-[1rem]">
           <motion.h2
             variants={textVariants}
             initial="initial"
@@ -142,7 +142,7 @@ const SocialImpact = () => {
         </div>
       </section>
 
-      <section className="flex lg:flex-row flex-col gap-2 justify-between items-center my-[5rem] px-[4rem]">
+      <section className="flex lg:flex-row flex-col items-center gap-6 mt-[3rem] px-[4rem]">
         <div>
           <motion.img
             variants={imageVariants}
@@ -172,13 +172,13 @@ const SocialImpact = () => {
             viewport={viewport}
            className="font-[400] text-[1rem] text-left text-[#333333]"
           >
-            Protecting our environment is a shared responsibility. At Jimoah Habibullahi Initiative, we promote eco-friendly practices, tree-planting drives, waste management initiatives, and community education to ensure a cleaner, healthier, and more sustainable future for all.
+            Protecting our environment is a shared responsibility. At Jimoh Habibullahi Initiative, we promote eco-friendly practices, tree-planting drives, waste management initiatives, and community education to ensure a cleaner, healthier, and more sustainable future for all.
           </motion.p>
         </div>
       </section>
 
-      <section className="flex lg:flex-row flex-col gap-2 justify-between items-center my-[5rem] px-[4rem]">
-        <div className="items-start max-w-[50%] space-y-[1rem]">
+      <section className="flex lg:flex-row flex-col items-center gap-6 mt-[3rem] px-[4rem]">
+        <div className="items-start max-w-[55%] space-y-[1rem]">
           <motion.h2
             variants={textVariants}
             initial="initial"
@@ -195,7 +195,7 @@ const SocialImpact = () => {
             viewport={viewport}
            className="font-[400] text-[1rem] text-left text-[#333333]"
           >
-            Crisis support, including disaster relief and post-disaster recovery
+            In times of crisis, we step in to provide immediate relief and long-term support. Whether through disaster relief, food distribution, or shelter provisions, our Emergency Response and Humanitarian Aid program is dedicated to restoring hope and rebuilding lives.
           </motion.p>
         </div>
         <div>
@@ -233,7 +233,7 @@ const SocialImpact = () => {
             viewport={viewport}
             className="text-[#292666] text-[3rem] font-semibold"
           >
-            Environmental Sustainability Projects
+            Policy Advocacy Campaigns
           </motion.h2>
           <motion.p
             variants={textScaleVariants}
@@ -242,41 +242,7 @@ const SocialImpact = () => {
             viewport={viewport}
            className="font-[400] text-[1rem] text-left text-[#333333]"
           >
-            Awareness programs, clean-up drives, tree planting, and sustainable
-            agricultural initiatives.
-          </motion.p>
-        </div>
-      </section>
-
-      <section className="max-w-[80.5rem] mx-auto px-6 my-[7.5rem] font-[Montserrat] space-y-[7.5rem]">
-        
-        
-        <div className="space-y-16">
-          <motion.h2
-            variants={textVariants}
-            initial="initial"
-            whileInView="inView"
-            viewport={viewport}
-            className="text-[#292666] text-center text-[2.5rem] leading-[3rem] font-semibold"
-          >
-            Policy Advocacy Campaigns
-          </motion.h2>
-          <motion.div
-            variants={imageVariants}
-            initial="initial"
-            whileInView="inView"
-            viewport={viewport}
-            className="h-[28rem] bg-[#F5F5F5]"
-          ></motion.div>
-          <motion.p
-            variants={textScaleVariants}
-            initial="initial"
-            whileInView="inView"
-            viewport={viewport}
-            className="text-[1.8rem] leading-[2.5rem] md:text-[2.5rem] md:leading-[3rem] text-black text-center"
-          >
-            Raising awareness and pushing for policy changes to benefit
-            marginalized communities.
+            At Jimoh Habibullahi Initiative, we drive meaningful change by advocating for policies that promote social justice, equity, and community development. Through strategic partnerships, research, and grassroots engagement, we amplify voices and influence policies that create a better future for all.
           </motion.p>
         </div>
       </section>
